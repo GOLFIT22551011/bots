@@ -56,7 +56,7 @@ if($text == "สวัสดีแดงโต"){
         replyMsg($arrayHeader,$arrayPostData);
     }
     else if($text == "ดูพื้นที่ลดน้ำ"){
-        $image_url = "https://goo.gl/images/3CGVxm";
+        $image_url = "https://i.pinimg.com/originals/cc/22/d1/cc22d10d9096e70fe3dbe3be2630182b.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
