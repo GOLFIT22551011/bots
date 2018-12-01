@@ -2,11 +2,12 @@
  require("pub.php");
  require("line.php");
 // Get POST body content
-$content = file_get_contents('php://input');
+//$content = file_get_contents('php://input');
+$content = file_get_contents('line.php');
 // Parse JSON
 $events = json_decode($content, true);
 // Validate parsed JSON data
-$san;
+
 if (!is_null($events['ESP'])) {
 	
 	send_LINE($events['ESP']);
