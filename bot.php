@@ -74,7 +74,7 @@ if($text == "สวัสดีแตงโต"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
-        $arrayPostData['messages'][0]['previewImageUrl'] = $san;
+        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
          $arrayPostData['messages'][1]['type'] = "text";
         $arrayPostData['messages'][1]['text'] = "จัดการให้แลัวค้าา";
         replyMsg($arrayHeader,$arrayPostData);
@@ -89,8 +89,8 @@ if($text == "สวัสดีแตงโต"){
         $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
          $arrayPostData['messages'][1]['type'] = "text";
         $arrayPostData['messages'][1]['text'] = "จัดการให้แลัวค้าา";
-	      $arrayPostData['messages'][1]['type'] = "text";
-        $arrayPostData['messages'][1]['text'] =$san;
+	      $arrayPostData['messages'][2]['type'] = "text";
+        $arrayPostData['messages'][2]['text'] =$san;
         replyMsg($arrayHeader,$arrayPostData);
     }
 else if($text == "ลดน้ำ3"){
