@@ -80,7 +80,7 @@ if($text == "สวัสดีแตงโต"){
         replyMsg($arrayHeader,$arrayPostData);
 	
 	   public function san(){
-	   	$sna='3';
+	   	$globals['b']='3';
 	   }
     }
 
