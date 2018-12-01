@@ -6,7 +6,7 @@ $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
 // Validate parsed JSON data
-public static  $san='';
+
 if (!is_null($events['ESP'])) {
 	
 	send_LINE($events['ESP']);
@@ -78,7 +78,10 @@ if($text == "สวัสดีแตงโต"){
          $arrayPostData['messages'][1]['type'] = "text";
         $arrayPostData['messages'][1]['text'] = "จัดการให้แลัวค้าา";
         replyMsg($arrayHeader,$arrayPostData);
-	$san='1';
+	
+	   public function san(){
+	   	$sna='3';
+	   }
     }
 
     else if($text == "ลดน้ำ2"){
@@ -90,7 +93,7 @@ if($text == "สวัสดีแตงโต"){
          $arrayPostData['messages'][1]['type'] = "text";
         $arrayPostData['messages'][1]['text'] = "จัดการให้แลัวค้าา";
 	      $arrayPostData['messages'][2]['type'] = "text";
-        $arrayPostData['messages'][2]['text'] =$san;
+        $arrayPostData['messages'][2]['text'] =san();
         replyMsg($arrayHeader,$arrayPostData);
     }
 else if($text == "ลดน้ำ3"){
