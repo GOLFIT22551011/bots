@@ -64,7 +64,7 @@ if($text == "สวัสดีแตงโต"){
         replyMsg($arrayHeader,$arrayPostData);
     }
     else if($text == "ลดน้ำหนึ่ง"){
-        $image_url = "https://ftqgwa.bn.files.1drv.com/y4pg51qNMHOOFiI4cUiebIk6c5ve4MtzAQwfc56k20nWJLMnzdJ8sJPzItbtaJAt9AQyTlQI5OWIIqjZ5Na7HNH6jOaIFMGTve0sZv7BV24MhCxMB45J7EKpeVhLVG0O60_0lkJ5cPxHPfiXdTFXkYo3ivCqa1ecGnQOh63ToFqpt6nRHkBf_dqzshRiAs8AgRREXa-J3fAQU-1_jed11wnMw/New%20Bitmap%20Image.bmp?psid=1";
+        $image_url = "https://vdp9jg.bn.files.1drv.com/y4mKerg48xUmjhD0xK7QLgfKWu5B5S6LfQv3-L7s7FJMvgZ_6WZ-KQBiP27oM3P4Pf2Pkcx6_cls9cEqZsxoF7E03Oou7VO9ASEVi7u9yH9QlgMp2DDispSmdpDyoPoCuMWzAGDHaxuv18YkYVTY2T47o1rYOR5_RgC_jEg78QZZawMtHYmMW8dcwONmdeV8uohrQAtcfFjfN22PlyS_WvZ5g?width=656&height=296&cropmode=none";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
