@@ -34,7 +34,7 @@ if (!is_null($events['events'])) {
 }
 $Topic = "NodeMCU1" ;
 //$text = "Test";
-getMqttfromlineMsg($Topic);
+getMqttfromlineMsg($text);
 echo "OK3";
 
     $accessToken = "'+RAgZsXSoIB12rh5ilBLg3BySGaIGHSvVROMcOJ9yw0B96H9VLORNgQs+a6Og5wS/MOplVEgqgYoVs5BosxYieMV5GGaOqnXhNrFje4NnnPhc04X57HVXsYDisV4JycZ2OovPF6jkSq6EHAN6xijpQdB04t89/1O/w1cDnyilFU=";//copy Channel access token ตอนที่ตั้งค่ามาใส่
@@ -44,7 +44,7 @@ echo "OK3";
     $arrayHeader[] = "Content-Type: application/json";
     $arrayHeader[] = "Authorization: Bearer {$accessToken}";
 
-if($Topic == "สวัสดีแตงโต"){
+if($text == "สวัสดีแตงโต"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา มีอะไรให้รับใช้ค่ะ";
