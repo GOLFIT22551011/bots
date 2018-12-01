@@ -90,7 +90,7 @@ if($text == "สวัสดีแตงโต"){
          $arrayPostData['messages'][1]['type'] = "text";
         $arrayPostData['messages'][1]['text'] = "จัดการให้แลัวค้าา";
 	      $arrayPostData['messages'][1]['type'] = "text";
-        $arrayPostData['messages'][1]['text'] ='$san';
+        $arrayPostData['messages'][1]['previewImageUrl'] =$san;
         replyMsg($arrayHeader,$arrayPostData);
     }
 else if($text == "ลดน้ำ3"){
