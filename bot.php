@@ -91,8 +91,7 @@ else if($text == "ดูสถานะ"){
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
         $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
-	$arrayPostData['messages'][1]['type'] = "text";
-        $arrayPostData['messages'][1]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
+	
         replyMsg($arrayHeader,$arrayPostData);
     }
 
@@ -103,14 +102,6 @@ else if($text == "ยกเลิกทั้งหมด"){
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
         $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
-        replyMsg($arrayHeader,$arrayPostData);
-    }
-else if($text == "ยกเลิกลดน้ำ"){
-        $image_url = "https://vdp9jg.bn.files.1drv.com/y4mKerg48xUmjhD0xK7QLgfKWu5B5S6LfQv3-L7s7FJMvgZ_6WZ-KQBiP27oM3P4Pf2Pkcx6_cls9cEqZsxoF7E03Oou7VO9ASEVi7u9yH9QlgMp2DDispSmdpDyoPoCuMWzAGDHaxuv18YkYVTY2T47o1rYOR5_RgC_jEg78QZZawMtHYmMW8dcwONmdeV8uohrQAtcfFjfN22PlyS_WvZ5g?width=656&height=296&cropmode=none";
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "image";
-        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
-        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
 	$arrayPostData['messages'][1]['type'] = "text";
         $arrayPostData['messages'][1]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
         replyMsg($arrayHeader,$arrayPostData);
@@ -125,6 +116,7 @@ else if($text == "ยกเลิกลดน้ำ"){
         $arrayPostData['messages'][1]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
         replyMsg($arrayHeader,$arrayPostData);
     }
+
     else{
 	$arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
