@@ -89,6 +89,46 @@ if($text == "สวัสดีแตงโต"){
         $arrayPostData['messages'][1]['text'] = "จัดการให้แลัวค้าา";
         replyMsg($arrayHeader,$arrayPostData);
     }
+else if($text == "ลดน้ำ3"){
+        $image_url = "https://umptha.bn.files.1drv.com/y4mDEZjNYOFD2RR8kHF10P-B-Oc5xelWGbiskH-krPwYGI_OL2qy25FJrb5O7lE6IXLQQ6KSmJGzmRHWS6bCYs9WinhMaO3RJ6tH35nToHoW8MV9mmyH-Q1Oq3miI6U0ZWI7xDb_3-ol-M0QHQo5sA03FAOtFWI66Xtr49p23lL-oX9jZjHpp4p7gB6MF50YjX9HT4xO6QLwFbvg4Miat0RVw?width=656&height=296&cropmode=none";
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "image";
+        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+         $arrayPostData['messages'][1]['type'] = "text";
+        $arrayPostData['messages'][1]['text'] = "จัดการให้แลัวค้าา";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+else if($text == "ลดน้ำ4"){
+        $image_url = "https://umqcvg.bn.files.1drv.com/y4mLLhxlinGjZUdU75RkbqMACvN22AL2HKJi2Mn3HMyxE3b0oh56iQ5qhDgGakOB38CKr1aBplH63d-48DknxJCGl78etjWJX8bNbzeTq7p9kbcKDTt4Q8Z6gXPAmasa-FTMGNuxXfqUKRowcAQEr-3eCw4TtUFzHtNy7VsqFx5TSpfDWHpzjIc0h33x6B4pPO4Yd_H3Y0v_x--5vYijgRG0w?width=656&height=296&cropmode=none";
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "image";
+        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+         $arrayPostData['messages'][1]['type'] = "text";
+        $arrayPostData['messages'][1]['text'] = "จัดการให้แลัวค้าา";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+else if($text == "ลดน้ำ5"){
+        $image_url = "https://umodmw.bn.files.1drv.com/y4meeDXcgTAIEuhCY5sRPI5HZRtbuvtL1BSqFtiE4xwSiHiUA2Pnr_McS5jaIJ_91EpK4_PomeXgARugjoCkwe4L0knuA0AGcCQgLOmxrSCUsUJ9zCacIwJS6V9CL03VdNvCVEdhcKaBGm7edqXbmuTmkuDdBknzG22PNF_1ODaVAN5vD8Adh9aIqQT481dke8JRAUztopJYnFtbRKz3A-rrg?width=656&height=296&cropmode=none";
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "image";
+        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+         $arrayPostData['messages'][1]['type'] = "text";
+        $arrayPostData['messages'][1]['text'] = "จัดการให้แลัวค้าา";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+else if($text == "ลดน้ำ6"){
+        $image_url = "https://umq4pw.bn.files.1drv.com/y4mKo9HhaTQ4DNOKmS2RWd_br7BR61WBqQxF4xUsRhdWnDWaiYPzeZxPiT4-CKDcavONceEdLJDhZV0FDevWaXxFuW0Kuf2mVWF6F-TV4Jey4JqdZ8quN97o1ukz4QadQw_B4uRI5RRyyD0aUjvzzgqSKEkfOROtblS_HAtxUYltqGj1eALDRlULvAdmxRr-QH-Y1UD7_hJq0xlUw7GcSwUjw?width=656&height=296&cropmode=none";
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "image";
+        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+         $arrayPostData['messages'][1]['type'] = "text";
+        $arrayPostData['messages'][1]['text'] = "จัดการให้แลัวค้าา";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
 
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
