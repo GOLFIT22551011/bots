@@ -64,7 +64,7 @@ if($text == "สวัสดีแตงโต"){
         replyMsg($arrayHeader,$arrayPostData);
     }
     else if($text == "ลดน้ำหนึ่ง"){
-        $image_url = "https://www.dropbox.com/s/y3t0clvzuv7eggz/download.jpg?dl=0";
+        $image_url = "https://i.pinimg.com/originals/e3/63/9f/e3639f842fa944d184588114124ed56f.jpg";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
