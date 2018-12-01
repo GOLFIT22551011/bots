@@ -79,9 +79,7 @@ if($text == "สวัสดีแตงโต"){
         $arrayPostData['messages'][1]['text'] = "จัดการให้แลัวค้าา";
         replyMsg($arrayHeader,$arrayPostData);
 	
-	   public function san(){
-	   	$globals['b']='3';
-	   }
+	 
     }
 
     else if($text == "ลดน้ำ2"){
