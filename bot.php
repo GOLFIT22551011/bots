@@ -170,10 +170,10 @@ else if($text == "ยกเลิกลดน้ำ"){
     }
 
     else{
-	$arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "ไม่เข้าใจคำสั้งค่ะ";
-        replyMsg($arrayHeader,$arrayPostData);
+	//$arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        //$arrayPostData['messages'][0]['type'] = "text";
+        //$arrayPostData['messages'][0]['text'] = "ไม่เข้าใจคำสั้งค่ะ";
+       // replyMsg($arrayHeader,$arrayPostData);
     }
 
 
