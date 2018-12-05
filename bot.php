@@ -166,7 +166,8 @@ else if($text == "01.00" || $text == "02.00" || $text == "03.00" || $text == "04
         $arrayPostData['messages'][0]['text'] = "จัดให้ค่าาา ตั้งเวลาลดน้ำเรีบยร้อนแลัวค่ะ";
         replyMsg($arrayHeader,$arrayPostData);
 	$nums=$substr($text,1);
-	getMqttfromlineMsg($Topic,$nums);
+	getMqttfromlineMsg($Topic,$substr($text,1));
+	getMqttfromlineMsg($Topic,"2");
     }
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
