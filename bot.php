@@ -147,12 +147,6 @@ else if($text == "ดูสถานะ"){
     }
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
-else if($text == "ตั้งเวลาลดน้ำ"){
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "ตัวอย่างตั้งเวลาการ 09:09 ,18:09"
-        replyMsg($arrayHeader,$arrayPostData);
-    }
 
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
