@@ -44,14 +44,14 @@ echo "OK3";
     $arrayHeader[] = "Content-Type: application/json";
     $arrayHeader[] = "Authorization: Bearer {$accessToken}";
 
-if($text == "สวัสดีแตงโต"){
+if($text == "สวัสดีต้นข้าว"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา มีอะไรให้รับใช้ค่ะ";
         replyMsg($arrayHeader,$arrayPostData);
     }
 
-   else if($text == "แตงโต"){
+   else if($text == "ต้นข้าว"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "มีอะไรให้รับใช้ค่ะ";
