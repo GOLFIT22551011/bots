@@ -167,7 +167,7 @@ else if($text == "01.00" || $text == "02.00" || $text == "03.00" || $text == "04
         replyMsg($arrayHeader,$arrayPostData);
 	//$nums=$substr($text,1);
 	//getMqttfromlineMsg($Topic,$substr($text,1));
-	getMqttfromlineMsg($Topic,"sa");
+	getMqttfromlineMsg($Topic,substr($text,1));
     }
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
