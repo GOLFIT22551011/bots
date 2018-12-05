@@ -168,6 +168,7 @@ else if($text == "01.00" || $text == "02.00" || $text == "03.00" || $text == "04
 	//$nums=$substr($text,1);
 	//getMqttfromlineMsg($Topic,$substr($text,1));
 	getMqttfromlineMsg($Topic,substr($text,0,2));
+	getMqttfromlineMsg($Topic,substr($text,3,5));
     }
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
