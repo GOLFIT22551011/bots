@@ -153,7 +153,13 @@ else if($text == "ตั้งเวลาลดน้ำ"){
         $arrayPostData['messages'][0]['text'] = "ตัวอย่างตั้งเวลาการ 09:09 ,18:09";
         replyMsg($arrayHeader,$arrayPostData);
     }
-
+else if($text == "01.00" || $text == "02.00" || $text == "03.00" || $text == "04.00" || $text == "05.00"  || $text == "06.00" || $text == "07.00" || $text == "08.00" || $text == "09.00"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "จัดให้ค่าาา ตั้งเวลาลดน้ำเรีบยร้อนแลัวค่ะ";
+        replyMsg($arrayHeader,$arrayPostData);
+	getMqttfromlineMsg($Topic,"09");
+    }
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
 else if($text == "ยกเลิกทั้งหมด"){
