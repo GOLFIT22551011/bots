@@ -34,7 +34,7 @@ if (!is_null($events['events'])) {
 }
 $Topic = "NodeMCU1" ;
 //$text = "Test";
-getMqttfromlineMsg($Topic,$text);
+
 echo "OK3";
 
     $accessToken = "+RAgZsXSoIB12rh5ilBLg3BySGaIGHSvVROMcOJ9yw0B96H9VLORNgQs+a6Og5wS/MOplVEgqgYoVs5BosxYieMV5GGaOqnXhNrFje4NnnPhc04X57HVXsYDisV4JycZ2OovPF6jkSq6EHAN6xijpQdB04t89/1O/w1cDnyilFU=";//copy Channel access token ตอนที่ตั้งค่ามาใส่
@@ -56,6 +56,7 @@ if($text == "สวัสดีต้นข้าว"){
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "มีอะไรให้รับใช้ค่ะ";
         replyMsg($arrayHeader,$arrayPostData);
+	   getMqttfromlineMsg($Topic,$text);
     }
 
 ////////////////////////////////////////////////////
