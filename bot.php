@@ -10,7 +10,7 @@ $events = json_decode($content, true);
 
 if (!is_null($events['ESP'])) {
 	
-	send_LINE($events['ESP']);
+	send_LINE('B');
 		
 	echo "OK";
 	}
