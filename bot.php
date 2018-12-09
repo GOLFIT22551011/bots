@@ -81,7 +81,7 @@ if($text == "สวัสดีต้นข้าว"){
         $arrayPostData['messages'][1]['text'] = "จัดการให้แลัวค้าา";
         replyMsg($arrayHeader,$arrayPostData);
 	  getMqttfromlineMsg($Topic,$text);
-	 send_LINE('ลดน้ำ2');
+	 
     }
 
     else if($text == "ลดน้ำ2"){
