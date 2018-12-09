@@ -94,7 +94,7 @@ if($text == "สวัสดีต้นข้าว"){
         $arrayPostData['messages'][1]['text'] = "จัดการให้แลัวค้าา";
         replyMsg($arrayHeader,$arrayPostData);
 	      getMqttfromlineMsg($Topic,$text);
-	    send_LINE('B');
+	    send_LINE($events['ESP']);
     }
 else if($text == "ลดน้ำ3"){
         $image_url = "https://umptha.bn.files.1drv.com/y4mDEZjNYOFD2RR8kHF10P-B-Oc5xelWGbiskH-krPwYGI_OL2qy25FJrb5O7lE6IXLQQ6KSmJGzmRHWS6bCYs9WinhMaO3RJ6tH35nToHoW8MV9mmyH-Q1Oq3miI6U0ZWI7xDb_3-ol-M0QHQo5sA03FAOtFWI66Xtr49p23lL-oX9jZjHpp4p7gB6MF50YjX9HT4xO6QLwFbvg4Miat0RVw?width=656&height=296&cropmode=none";
