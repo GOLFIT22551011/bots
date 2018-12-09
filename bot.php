@@ -1,5 +1,5 @@
 <?php
- ("pub.php");
+ require("pub.php");
  require("line.php");
 // Get POST body content
 $content = file_get_contents('php://input');
