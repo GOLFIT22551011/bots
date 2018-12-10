@@ -1,2 +1,6 @@
 <?php
-echo '<a href="http:/www.google.co.th"><button type="button">Click Me!</button></a>';
+echo '<button type="button" onclick="myFunction()">Click Me!</button>';
+
+function myFunction() {
+  alert("Hi");
+}
