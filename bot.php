@@ -58,6 +58,14 @@ if($text == "สวัสดีต้นข้าว"){
         replyMsg($arrayHeader,$arrayPostData);
 	 
     }
+	else if($text != "ต้นข้าว"){
+		echo $text;
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = $text;
+        replyMsg($arrayHeader,$arrayPostData);
+	 
+    }
 
 ////////////////////////////////////////////////////
     else if($text == "ดูพื้นที่ลดน้ำ"){
