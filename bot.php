@@ -58,7 +58,7 @@ echo "OK3";
 	      	//send_LINE(substr($_POST['stime'],3,5));
 		//send_LINE(substr($_POST['etime'],0,2));
 		//send_LINE(substr($_POST['etime'],3,5));
-		send_LINE(" ตั้งเวลาตั้งแต่ " .$_POST['stime']." ถึง " .$_POST['etime']." ให้เรียบร้อยแลัวค่ะ);
+		send_LINE(" ตั้งเวลาตั้งแต่ " .$_POST['stime']." ถึง " .$_POST['etime']." ให้เรียบร้อยแลัวค่ะ");
 		
 		//send_LINE("จัดให้ค่าาา ตั้งเวลาลดน้ำเรียบร้อยแลัวค่ะ");
 		getMqttfromlineMsg($_POST['stime']);
