@@ -64,11 +64,10 @@ if($text == "สวัสดีต้นข้าว"){
 	      	//send_LINE(substr($_POST['stime'],3,5));
 		//send_LINE(substr($_POST['etime'],0,2));
 		//send_LINE(substr($_POST['etime'],3,5));
+		send_LINE("จัดให้ค่าาา ตั้งเวลาลดน้ำเรียบร้อยแลัวค่ะ");
 		
-		$arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-               $arrayPostData['messages'][0]['type'] = "text";
-                $arrayPostData['messages'][0]['text'] = "จัดให้ค่าาา ตั้งเวลาลดน้ำเรียบร้อยแลัวค่ะ";
-                replyMsg($arrayHeader,$arrayPostData);
+            
+              
 		
 		getMqttfromlineMsg($Topic,substr($_POST['stime'],0,2));
 		getMqttfromlineMsg($Topic,substr($_POST['stime'],3,5));
