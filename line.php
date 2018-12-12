@@ -6,7 +6,7 @@ function send_LINE($msg){
    
   $messages = [
         'type' => 'text',
-        'text' => 'holle'
+        'text' => 'ต้นข้าว'
         //'text' => $msg
         //'text' => $text
       ];
