@@ -59,8 +59,12 @@ if($text == "สวัสดีต้นข้าว"){
 	 
     }
 	else if($_POST['stime'] != null && $_POST['etime'] != null && $_POST['scrnN'] == "setDuration"){
-		echo substr($_POST['stime'],0,2) + substr($_POST['stime'],3,5) + substr($_POST['etime'],0,2) + substr($_POST['etime'],3,5) ;
-		send_LINE("จัดให้ค่าาา ตั้งเวลาลดน้ำเรียบร้อยแลัวค่ะ");
+
+		send_LINE(substr($_POST['stime'],0,2));
+	      	send_LINE(substr($_POST['stime'],3,5));
+		send_LINE(substr($_POST['etime'],0,2));
+		send_LINE(substr($_POST['etime'],3,5));
+		
 		getMqttfromlineMsg($Topic,substr($_POST['stime'],0,2));
 		getMqttfromlineMsg($Topic,substr($_POST['stime'],3,5));
 		getMqttfromlineMsg($Topic,substr($_POST['etime'],0,2));
