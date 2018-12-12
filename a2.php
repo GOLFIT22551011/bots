@@ -13,7 +13,7 @@
         <strong>: </strong>
   <div align="center">
         <?php
-            <h1>ตั้งเวลาสำเร็จแลัวค่ะ</h1><br>
+            <h1>ตั้งเวลาสำเร็จแลัวค่ะ</h1>
             echo $_POST['stime'];
   
         ?>
