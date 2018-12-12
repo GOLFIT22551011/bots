@@ -21,7 +21,7 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
-			$text = $events['events'];
+			$text = $event['message']['text'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			// Build message to reply back
@@ -55,12 +55,6 @@ if($text == "สวัสดีต้นข้าว"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "มีอะไรให้รับใช้ค่ะ";
-        replyMsg($arrayHeader,$arrayPostData);
-	 
-    }else if("ต้นข้าว" == "ต้นข้าว"){
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = $text;
         replyMsg($arrayHeader,$arrayPostData);
 	 
     }
