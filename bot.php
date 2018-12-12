@@ -58,9 +58,9 @@ if($text == "สวัสดีต้นข้าว"){
         replyMsg($arrayHeader,$arrayPostData);
 	 
     }
-	else if($text == "" || $text == null){
-		echo "llll";
-		send_LINE("abc");	 
+	else if($_POST['stime'] != null){
+		echo $_POST['stime'];
+		send_LINE($_POST['stime']);		
     }
 
 ////////////////////////////////////////////////////
