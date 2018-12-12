@@ -10,10 +10,10 @@
   
         <body>
   
-    
+     <strong> ตั้งเวลาสำเร็จแลัวค่ะ</strong>
  
         <?php
-           <strong> ตั้งเวลาสำเร็จแลัวค่ะ</strong>
+          
             echo $_POST['stime'];
   
         ?>
