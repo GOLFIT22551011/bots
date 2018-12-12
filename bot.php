@@ -58,11 +58,11 @@ if($text == "สวัสดีต้นข้าว"){
         replyMsg($arrayHeader,$arrayPostData);
 	 
     }
-	else if($text != "ต้นข้าว"){
-		echo $text;
+	else if($text == "" || $text == null){
+		echo "llll";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = $text;
+        $arrayPostData['messages'][0]['text'] = "kbc";
         replyMsg($arrayHeader,$arrayPostData);
 	 
     }
