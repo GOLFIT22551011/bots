@@ -42,7 +42,7 @@
     $response = curl_exec($ch);
     
       curl_close($ch);
-      echo $response . "\r\n";
+      //echo $response . "\r\n";
     return $response;
 }
  //$Topic = "NodeMCU1";
