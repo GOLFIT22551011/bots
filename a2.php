@@ -10,7 +10,7 @@
   
         <body>
   
-        <strong>: </strong>
+    
  
         <?php
            <strong> ตั้งเวลาสำเร็จแลัวค่ะ</strong>
