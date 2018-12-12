@@ -10,13 +10,14 @@
   
         <body>
   <div align="center">
-     <h1> ตั้งเวลาสำเร็จแลัวค่ะ</h1>
+     <h1> ตั้งเวลาสำเร็จแลัวค่ะ
  
         <?php
           
             echo $_POST['stime'];
   
         ?>
+       </h1>
       </div>
         </body>
   
