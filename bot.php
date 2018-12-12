@@ -61,22 +61,22 @@
         <table align="center" border="0" width="10%" >
             <tr>
               <td>  
-               <img border="0" onclick="setTime('10')" alt="W3Schools"  src="ENDCODE/10.jpg" width="200" height="200"></button>
+               <img border="0" onclick="setTime('10')" alt="W3Schools"  src="ENDCODE/10.jpg" width="200" height="200">
                
                 
             </td>
-              <td><a href="https://www.google.com/">
-                <img border="0" onclick="setTime('10')" alt="W3Schools" src="ENDCODE/15.jpg" width="200" height="200">
-                </a></td>
+             
+                <img border="0" onclick="setTime('15')" alt="W3Schools" src="ENDCODE/15.jpg" width="200" height="200">
+               </td>
              
             </tr>
             <tr>
-              <td><a href="https://www.google.com/">
-                <img border="0" alt="W3Schools" src="ENDCODE/20.jpg" width="200" height="200">
-                </a></td>
-              <td><a href="https://www.google.com/">
-                <img border="0" alt="W3Schools" src="ENDCODE/30.jpg" width="200" height="200">
-                </a></td>
+              <td>
+                <img border="0" onclick="setTime('20')" alt="W3Schools" src="ENDCODE/20.jpg" width="200" height="200">
+                </td>
+              <td>
+                <img border="0" onclick="setTime('30')" alt="W3Schools" src="ENDCODE/30.jpg" width="200" height="200">
+                </td>
               
             </tr>
             <tr>
