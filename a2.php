@@ -10,7 +10,7 @@
   
         <body>
   
-        <strong>สวัสดี: </strong>
+        <strong>: </strong>
   
         <?php
   
