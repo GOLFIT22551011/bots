@@ -14,7 +14,7 @@
   
         <?php
   
-            echo $_POST['eTime'];
+            echo $_GET['eTime'];
   
         ?>
   
