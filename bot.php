@@ -62,7 +62,7 @@ if($text == "สวัสดีต้นข้าว"){
 		echo "llll";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "kbc";
+        $arrayPostData['messages'][0]['text'] = "มีอะไรให้รับใช้ค่ะ";
         replyMsg($arrayHeader,$arrayPostData);
 	 
     }
