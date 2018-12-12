@@ -58,9 +58,13 @@ if($text == "สวัสดีต้นข้าว"){
         replyMsg($arrayHeader,$arrayPostData);
 	 
     }
-	else if($_POST['stime'] != null){
-		echo $_POST['stime'];
-		send_LINE($_POST['stime']);		
+	else if($_POST['stime'] != null && $_POST['etime'] != null && $_POST['scrnN'] == "setDuration"){
+		echo substr($_POST['stime'],0,2) + substr($_POST['stime'],3,5) + substr($_POST['etime'],0,2) + substr($_POST['etime'],3,5) ;
+		send_LINE("จัดให้ค่าาา ตั้งเวลาลดน้ำเรียบร้อยแลัวค่ะ");
+		getMqttfromlineMsg($Topic,substr($_POST['stime'],0,2));
+		getMqttfromlineMsg($Topic,substr($_POST['stime'],3,5));
+		getMqttfromlineMsg($Topic,substr($_POST['etime'],0,2));
+		getMqttfromlineMsg($Topic,substr($_POST['etime'],3,5));
     }
 
 ////////////////////////////////////////////////////
