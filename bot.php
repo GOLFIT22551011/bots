@@ -1,6 +1,6 @@
 <?php
  require("pub.php");
- //require("line.php");
+ require("line.php");
 // Get POST body content
 $content = file_get_contents('php://input');
 
@@ -60,11 +60,7 @@ if($text == "สวัสดีต้นข้าว"){
     }
 	else if($text == "" || $text == null){
 		echo "llll";
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "มีอะไรให้รับใช้ค่ะ";
-        replyMsg($arrayHeader,$arrayPostData);
-	 
+		send_LINE("abc");	 
     }
 
 ////////////////////////////////////////////////////
