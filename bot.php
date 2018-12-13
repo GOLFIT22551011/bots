@@ -63,6 +63,8 @@ echo "OK3";
 		//send_LINE("จัดให้ค่าาา ตั้งเวลาลดน้ำเรียบร้อยแลัวค่ะ");
 		getMqttfromlineMsg($_POST['stime']);
 		getMqttfromlineMsg($_POST['etime']);
+		replyMsg($arrayHeader,$_POST['stime']);
+		
 		
 	}
 ////////////////////////////////////////////////////
