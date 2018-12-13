@@ -29,7 +29,7 @@
                 document.getElementById("eTime").value = endTime;
                // document.getElementById("bsubmit").click();
                 document.getElementById("scrnN").value = "setDuration";
-                document.getElementById("form2").submit().formaction="a2.php";
+                document.getElementById("form2").submit();
                // alert(endTime);
                 
 
@@ -48,7 +48,7 @@
 </head>
 <body>
         <center>
-            <form id="form2" name="form2" method="POST" action="bot.php" action="a2.php">
+            <form id="form2" name="form2" method="POST" action="bot.php" >
                 <input type="hidden" name="etime" id="eTime">
                 <input type="hidden" name="stime" id="sTime">
                 <input type="hidden" name="scrnN" id="scrnN">
@@ -63,7 +63,7 @@
         <table align="center" border="0" width="10%" >
             <tr>
               <td>  
-               <img border="0" onclick="setTime('10')" alt="W3Schools"  src="ENDCODE/10.jpg" width="200" height="200">
+               <img border="0" onclick="setTime('10')" alt="W3Schools"  src="ENDCODE/10.jpg" width="200" height="200" formaction="a2.php">
                
                 
             </td>
