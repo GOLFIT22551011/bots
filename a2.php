@@ -14,7 +14,7 @@
           เริ่ม
         <?php
           
-            echo $_POST['stime'];
+            echo $_GET['stime'];
   
         ?>
        </h1>
