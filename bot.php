@@ -65,6 +65,9 @@ echo "OK3";
 		getMqttfromlineMsg($Topic,$_POST['stime']);
 		getMqttfromlineMsg($Topic,$_POST['etime']);
 		
+		echo '<script type="text/javascript">
+          	 window.location = "http://www.google.com/"
+     		 </script>';
 		
 		//replyMsg($arrayHeader,$_POST['stime']);
 		
@@ -223,6 +226,7 @@ function replyMsg($arrayHeader,$arrayPostData){
         $result = curl_exec($ch);
         curl_close ($ch);
     }
+
    exit;
 
 ?>
