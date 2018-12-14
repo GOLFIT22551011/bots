@@ -64,10 +64,16 @@ echo "OK3";
 		getMqttfromlineMsg($Topic,"ตั้งเวลาลดน้ำ");
 		getMqttfromlineMsg($Topic,$_POST['stime']);
 		getMqttfromlineMsg($Topic,$_POST['etime']);
+		var $URL = "https://golfais.herokuapp.com/a2.php?stime="
 		
 		echo '<script type="text/javascript">
-          	 window.location = "http://www.google.com/"
-     		 </script>';
+          	 window.location = $URL;
+		 </script>';
+		//echo ''
+		 
+		 
+		// +$_POST['stime']+"&&"+
+     		// </script>';
 		
 		//replyMsg($arrayHeader,$_POST['stime']);
 		
