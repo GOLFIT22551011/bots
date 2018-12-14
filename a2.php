@@ -14,7 +14,7 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 26px;
     margin: 4px 2px;
     cursor: pointer;
 }
@@ -40,7 +40,7 @@
   
         ?>
        </h1>
-    <button class="button button4">บันทึกข้อมูล</button>
+    <button class="button button4" style="width:200px;">บันทึกข้อมูล</button>
       </div>
         </body>
   
