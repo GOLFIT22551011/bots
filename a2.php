@@ -40,7 +40,7 @@
   
         ?>
        </h1>
-    <button class="button button4">12px</button>
+    <button class="button button4">บันทึกข้อมูล</button>
       </div>
         </body>
   
