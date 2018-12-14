@@ -67,7 +67,7 @@ echo "OK3";
 	        $URL = "https://golfais.herokuapp.com/a2.php?stime=".$_POST['stime']."&&etime=".$_POST['etime'];
 		
 		echo '<script type="text/javascript">
-          	 window.location = '.$URL.'</script>';
+          	 window.location = "'.$URL.'"</script>';
 		 
 		//echo ''
 		 
