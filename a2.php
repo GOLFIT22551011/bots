@@ -17,6 +17,12 @@
             echo $_GET['stime'];
   
         ?>
+       -
+       <?php
+          
+            echo $_GET['etime'];
+  
+        ?>
        </h1>
       </div>
         </body>
