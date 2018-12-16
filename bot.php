@@ -30,10 +30,9 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-if($events['ESP']=="010000")
-{
+
 	send_LINE("AAAA");
-}
+
 
 $Topic = "NodeMCU1" ;
 //$text = "Test";
