@@ -48,7 +48,7 @@ function closeWindow() { self.opener=this; self.close();  }
   
         ?>
        </h1>
-    <button id="closeWindow()" class="button button4" style="width:200px;" Onclick="window.close();">บันทึกข้อมูล</button>
+    <button id="closeWindow()" class="button button4" style="width:200px;" onclick="closeWindow()">บันทึกข้อมูล</button>
     
       </div>
         </body>
