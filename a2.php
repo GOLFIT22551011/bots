@@ -20,6 +20,9 @@
 }
 .button4 {border-radius: 12px;}
 </style>
+          <script>
+function closeWindow() { self.opener=this; self.close();  }
+</script>
   
         </head>
   
