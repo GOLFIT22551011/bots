@@ -9,7 +9,7 @@ $events = json_decode($content, true);
  if (!is_null($events['ESP'])) {
 	
 	send_LINE($events['ESP']);
-		
+		send_LINE('AAAA');
 	echo "OK";
 	}
 if (!is_null($events['events'])) {
@@ -31,7 +31,7 @@ if (!is_null($events['events'])) {
 	}
 }
 
-	send_LINE('AAAA');
+	
 
 
 $Topic = "NodeMCU1" ;
