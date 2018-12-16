@@ -9,9 +9,9 @@ $events = json_decode($content, true);
  if (!is_null($events['ESP'])) {
 	
 	send_LINE($events['ESP']);
-	 if(($events['ESP'])==($events['ESP: 010000']){
+	 if(($events['ESP'])==($events['ESP: 010000'])){
 		 
-		send_LINE('AAAA');
+		send_LINE('A');
 	 }
 		 echo "OK";
 	}
