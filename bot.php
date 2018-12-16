@@ -6,12 +6,7 @@ $content = file_get_contents('php://input');
  // Parse JSON
 $events = json_decode($content, true);
 // Validate parsed JSON data
- if (!is_null($events['ESP'])) {
-	
-	send_LINE($events['ESP']);
-	
-	 echo "OK";
-	}
+
 if (!is_null($events['events'])) {
 	echo "line bot";
 	// Loop through each event
@@ -44,6 +39,13 @@ echo "OK3";
     $arrayHeader = array();
     $arrayHeader[] = "Content-Type: application/json";
     $arrayHeader[] = "Authorization: Bearer {$accessToken}";
+
+ if (!is_null($events['ESP'])) {
+	
+	send_LINE($events['ESP']);
+	
+	 echo "OK";
+	}
  if($text == "สวัสดีต้นข้าว"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
