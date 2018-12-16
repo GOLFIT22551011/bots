@@ -30,7 +30,7 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-if($events['ESP']=='010000')
+if($events['ESP']=="010000")
 {
 	send_LINE("AAAA");
 }
