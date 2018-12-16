@@ -10,7 +10,7 @@ $events = json_decode($content, true);
 	
 	send_LINE($events['ESP']);
 		
-	echo send_LINE($events['ESP']);
+	echo "OK";
 	}
 if (!is_null($events['events'])) {
 	echo "line bot";
