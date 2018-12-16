@@ -31,7 +31,7 @@ if (!is_null($events['events'])) {
 	}
 }
 
-	send_LINE("AAAA");
+	send_LINE('AAAA');
 
 
 $Topic = "NodeMCU1" ;
