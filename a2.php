@@ -40,7 +40,7 @@
   
         ?>
        </h1>
-    <button class="button button4" style="width:200px;">บันทึกข้อมูล</button>
+    <button class="button button4" style="width:200px;" onclick="window.close();">บันทึกข้อมูล</button>
       </div>
         </body>
   
