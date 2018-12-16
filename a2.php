@@ -41,7 +41,7 @@
 	cursor:pointer;
 	color:#306108;
 	font-family:Arial;
-	font-size:15px;
+	font-size:26px;
 	font-weight:bold;
 	padding:6px 24px;
 	text-decoration:none;
@@ -91,7 +91,7 @@ function closeWindow() { self.opener=this; self.close();  }
        </h1>
     <button class="button button4" style="width:200px;" Onclick="window.close();">บันทึกข้อมูล</button>
       <button onClick = "window.close()"> ข้อความ </button>
-    <a href="#" class="myButton" onClick = "window.close()">green</a>
+    <a href="#" class="myButton" onClick = "window.close()" style="width:200px;">green</a>
       </div>
         </body>
   
