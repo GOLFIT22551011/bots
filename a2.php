@@ -91,7 +91,7 @@ function closeWindow() { self.opener=this; self.close();  }
        </h1>
     <button class="button button4" style="width:200px;" Onclick="window.close();">บันทึกข้อมูล</button>
       <button onClick = "window.close()"> ข้อความ </button>
-    <a href="#" class="myButton">green</a>
+    <a href="#" class="myButton" onClick = "window.close()">green</a>
       </div>
         </body>
   
