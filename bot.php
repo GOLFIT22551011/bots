@@ -30,6 +30,10 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
+if($events['ESP']=='010000')
+{
+	send_LINE("AAAA");
+}
 
 $Topic = "NodeMCU1" ;
 //$text = "Test";
@@ -91,6 +95,8 @@ echo "OK3";
     }
   
 ////////////////////////////////////////////////////
+
+
 ////////////////////////////////////////////////////
     else if($text == "ลดน้ำ1"){
         $image_url = "https://umruka.bn.files.1drv.com/y4mA41Cp8TuDWolARkgMzNbDr9ZjBWXVX44LXuvLGAjtZQvXCDR9__tamiInDaslOor6ojZl8TcN1CJNYh3ya6yFymc_THNLK16CF680o3ghvbRZ1eSa_bFblOmEttHkcLF_J_P0vdrE3cIkNsqC4FpVaTAUHvj45uDzp2kWz3uU1IZtYLNbP1mGsN6_spMAfObT4_zf2i_6jXsJSnKBX5TnQ?width=656&height=296&cropmode=none";
