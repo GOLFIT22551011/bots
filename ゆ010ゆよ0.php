@@ -1,6 +1,6 @@
 <?php
- require("cHViLnBocA==.php");
- require("bGluZeOBig==.php");
+ require("sゆ249よおうtq.php");
+ require("あr23ぐぎゃEAs.php");
 // Get POST body content
 $content = file_get_contents('php://input');
  // Parse JSON
