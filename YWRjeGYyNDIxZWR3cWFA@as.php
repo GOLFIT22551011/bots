@@ -74,7 +74,7 @@ echo "OK3";
 		getMqttfromlineMsg($Topic,"ตั้งเวลาลดน้ำ");
 		getMqttfromlineMsg($Topic,$_POST['stime']);
 		getMqttfromlineMsg($Topic,$_POST['etime']);
-	        $URL = "https://golfais.herokuapp.com/a2.php?stime=".$_POST['stime']."&&etime=".$_POST['etime'];
+	        $URL = "https://golfais.herokuapp.com/4LmA4LiB4LiB4LiU4Lit4LiU4LiB4Lib4Lit4LirZXdzZGZzZGU=.php?stime=".$_POST['stime']."&&etime=".$_POST['etime'];
 		
 		echo '<script type="text/javascript">
           	 window.location = "'.$URL.'"</script>';
