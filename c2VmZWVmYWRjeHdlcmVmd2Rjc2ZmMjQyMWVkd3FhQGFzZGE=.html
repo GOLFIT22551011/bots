@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script>
+            function setTime(duration) {
+                // alert(i);
+                var nowDate = new Date();
+                var startTime = document.getElementById("iPut");
+                var timePart1 = startTime.value.substring(0, 2);
+                var timePart2 = startTime.value.substring(3, 5);
+                var newStartTime = timePart1+"."+timePart2;
+                      
+                var newDate = new Date(nowDate.getFullYear(),nowDate.getMonth(),nowDate.getDay(),timePart1,timePart2);
+                var endDate = new Date(nowDate.getFullYear(),nowDate.getMonth(),nowDate.getDay(),timePart1,parseInt(timePart2)+parseInt(duration));
+                var hour = ""+endDate.getHours();
+                var minute =""+endDate.getMinutes();
+                
+                if (hour.length < 2) hour = '0' + hour;
+                if (minute.length < 2) minute = '0' + minute;
+                var endTime = hour+"."+minute;
+                
+                document.getElementById("sTime").value = newStartTime;
+                document.getElementById("eTime").value = endTime;
+               // document.getElementById("bsubmit").click();
+                document.getElementById("scrnN").value = "setDuration";
+                 document.getElementById("form2").action="ゆ010ゆよ0.php";
+                 document.getElementById("form2").submit();
+           
+                
+               
+                
+               // alert(endTime);
+                
+
+            }
+
+            // function myFunction() {
+            //     var x = document.getElementById("form2");
+            //     if (x.style.display === "none") {
+            //         x.style.display = "block";
+            //     } else {
+            //         x.style.display = "none";
+            //     }
+            //     }
+            </script>
+
+</head>
+<body>
+        <center>
+        
+            <form id="form2" name="form2" method="POST" action="ゆ010ゆよ0.php" >
+                <input type="hidden" name="etime" id="eTime">
+                <input type="hidden" name="stime" id="sTime">
+                <input type="hidden" name="scrnN" id="scrnN">
+                <P><h1> เวลาเริ่มลดน้ำ:</h1> </P><input size="8" type="time" id="iPut" style="height:30px;font-size:160%;text-align: center;" required ><br>
+                
+</form> 
+             
+         
+<P><h1>ระยะเวลาลดน้ำ</h1>
+     </center>
+          <br>
+         
+   
+        <table align="center" border="0" width="10%" >
+            <tr>
+              <td>  
+               <img border="0" onclick="setTime('10')" alt="W3Schools"  src="https://ftq6yg.bn.files.1drv.com/y4mUe-nJrKmvESAgXe5sXx6fq7FjYDDAQ5ewJ7F8s2zwmBmHDIo2xRNS7IvFki0jitxn_Y1nOkeyMeVlAarFoO5agi775rfxF3srvj03of1f8OAumCU5PbReOj-XrSmC1rps8H580lPf9OqyY1osrhTeTrNvKpPFT2mAmNyxH97UJxiu53A-LF1y1rj3RnE9hrzvu77e-vBdEbpQGmMVDINUw?width=960&height=640&cropmode=none" width="200" height="200">
+               
+                
+            </td>
+             <td>
+                <img border="0" onclick="setTime('15')" alt="W3Schools" src="https://ftpv1w.bn.files.1drv.com/y4mUtR-cHdAEJXJrHYfqQKgsBkt8OphyoEaGA6UZECSNLzX8lNUk8ebJgH5cjEYb8LsngzXppvynn6TqgbHRMpkxLLHVq1MzZ2KP4pcGukAFyh8N4kjJAeDaCeQLRDF_YqEec8EtGgfcEaXnuWy_TTVcEass2_d7yoY13LFqX5uPmRTA4X1hwlcXIDFlDrtviZIqe9Y-o5kjyfIqJ5ck73dsQ?width=960&height=640&cropmode=none" width="200" height="200">
+               </td>
+             
+            </tr>
+            <tr>
+              <td>
+                <img border="0" onclick="setTime('20')" alt="W3Schools" src="https://ftqeeq.bn.files.1drv.com/y4mT75Km9o_G7bFMRPsZD4x8nkYv5KhpD-2KP6arZ4fLqzxwyx3LVNuFEBzL3Fme6X6NJ4y8iZqXk7LlNuOr_yznj9veaiyprD9mrG6Qm6wEdokUs9l9Ui0vGB0kvBIQEAjPJYUWa9CGU_zbLbJJqV5iwQUyk0bCwKaxafatDfdZIRj21WZbUBnhWkdZA0Rv8sCN_wlj0UPR4RiamnEF7xTqA?width=960&height=640&cropmode=none" width="200" height="200">
+                </td>
+              <td>
+                <img border="0" onclick="setTime('30')" alt="W3Schools" src="https://ftof7g.bn.files.1drv.com/y4mqRlNCeOrHt2_AQ_9A8QcKStA27J5QIhjSidh-cSkwucdJEkPYjAsbaCRPiPgfkCn6sbSqMcHQGDN4dB0br2X-U39wJXi6QMsGKT7rA8lWdrKxZhKtR8JCSOKKZ0TQjEUAwkiJh6uglLJVq06AlAThK48-3Y5HFz3rGA_Ycwf7ntZbchHktmw-Hu0aqKuk-dLoDLFxxcZoKq0Dl4euk6UDg?width=960&height=650&cropmode=none" width="200" height="200">
+                </td>
+              
+            </tr>
+            <tr>
+            
+              
+            </tr>
+            <tr>
+             
+            </tr>
+          </table>
+        
+</body>
+</html>
