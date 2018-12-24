@@ -7,11 +7,34 @@ $content = file_get_contents('php://input');
 $events = json_decode($content, true);
 // Validate parsed JSON data
 
-if (!is_null($events['ESP'])) {
-	
+if ($text == "0001") {
+	msg = 'kkk'
 	send_LINE($events['ESP']);
-	
+	 
+	$messages = [
+        'type' => 'text',
+        'text' =>  msg
+        //'text' => $text
+      ];
+      // Make a POST Request to Messaging API to reply to sender
+      $url = 'C:/Users/RVP/Desktop/wed/updatetime.html';
+      $data = [
+        'to' => 'U83a5616b8fbc8a46e75065d20f8297ad',
+        'messages' => [$messages],
+      ];
+      $get = json_encode($data);
+      $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+      $ch = curl_init($url);
+      curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+      curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+      curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+      curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+      $result = curl_exec($ch);
+      curl_close($ch);
+      echo $result . "\r\n"; 	
 	 echo "OK";
+	send_LINE('test');
 	}
 
 
