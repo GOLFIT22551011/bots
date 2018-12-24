@@ -7,18 +7,11 @@ $content = file_get_contents('php://input');
 $events = json_decode($content, true);
 // Validate parsed JSON data
 
-//if ($text == "0001") {
-	// msg = 'kkk'
-	// send_LINE($events['ESP']);
-        //window.location.href = "C:/Users/RVP/Desktop/wed/updatetime.html";
-	//}
-
-if($_GET['path'] != "removetime"){
+if($_GET['path'] == "removetime"){
 	        $URL = "https://golfais.herokuapp.com/updatetime.html";
 		echo '<script type="text/javascript">
           	var form = document.createElement("form");
 		    var element1 = document.createElement("input"); 
-		    var element2 = document.createElement("input");  
 
 		    form.method = "POST";
 		    form.action = "'.$URL.'";   
@@ -30,6 +23,7 @@ if($_GET['path'] != "removetime"){
 		    document.body.appendChild(form);
 
 		    form.submit(); </script>';
+		echo "OK";
 		
 		//replyMsg($arrayHeader,$_POST['stime']);
 		
