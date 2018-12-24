@@ -1,3 +1,6 @@
+<form action="https://golfais.herokuapp.com/updatetime.html" style="" method="POST">
+<input type="hidden" name="time">
+</form>
 <?php
  require("sゆ249よおうtq.php");
  require("あr23ぐぎゃEAs.php");
@@ -7,19 +10,23 @@ $content = file_get_contents('php://input');
 $events = json_decode($content, true);
 // Validate parsed JSON data
 
-if($_GET['path'] == "removetime"){
-	        
+if($_GET['path'] == "removetime"){ 
 		echo '<script type="text/javascript">
-          	var form = document.createElement("form");
-		    var element1 = document.createElement("input"); 
-		    form.method = "POST";
-		    form.action = "https://golfais.herokuapp.com/updatetime.html";   
-		    element1.value="10:35";
-		    element1.name="time";
-		    form.appendChild(element1);  
-		    document.body.appendChild(form);
-		    form.submit(); </script>';
-		
+  		var method = "post";
+		var path = "https://golfais.herokuapp.com/updatetime.html"
+    		var form = document.createElement("form");
+    		form.setAttribute("method", method);
+    		form.setAttribute("action", path);
+		var hiddenField = document.createElement("input");
+		hiddenField.setAttribute("type", "hidden");
+		hiddenField.setAttribute("name", "time");
+		hiddenField.setAttribute("value", "10:10");	
+           	form.appendChild(hiddenField);
+    		document.body.appendChild(form);
+    		form.submit();
+		</script>';
+		}
+          			
 	echo "OK";
 		
 		//replyMsg($arrayHeader,$_POST['stime']);
