@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+<div ng-controller="customersCtrl"> 
+<table >
+   <tr>
+      <th>S</th>
+      <th>E</th>
+   </tr>   
+   <tr ng-repeat = "value in time">
+      <td>{{ value.startTime }}</td>
+      <td>{{ value.endTime }}</td>
+   </tr>
+</table>
+
+</div>
+
+    
+</body>
+</html>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope, $http) {
+    $scope.time=[
+        {startTime:"08:00",endTime:"18:12"},
+        {startTime:"08:00",endTime:"18:12"}
+    ]
+    
+});
+</script>
