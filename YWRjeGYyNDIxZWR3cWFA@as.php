@@ -13,7 +13,7 @@ $events = json_decode($content, true);
         //window.location.href = "C:/Users/RVP/Desktop/wed/updatetime.html";
 	//}
 
-if($_GET['pathpanel'] != null && $_GET['removetime']){
+if($_GET['path'] != "removetime"){
 	        $URL = "https://golfais.herokuapp.com/updatetime.html";
 		echo '<script type="text/javascript">
           	var form = document.createElement("form");
