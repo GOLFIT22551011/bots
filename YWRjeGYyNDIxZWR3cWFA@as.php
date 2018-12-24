@@ -8,22 +8,19 @@ $events = json_decode($content, true);
 // Validate parsed JSON data
 
 if($_GET['path'] == "removetime"){
-	        $URL = "https://golfais.herokuapp.com/updatetime.html";
+	        
 		echo '<script type="text/javascript">
           	var form = document.createElement("form");
 		    var element1 = document.createElement("input"); 
-
 		    form.method = "POST";
-		    form.action = "'.$URL.'";   
-
+		    form.action = "https://golfais.herokuapp.com/updatetime.html";   
 		    element1.value="10:35";
 		    element1.name="time";
 		    form.appendChild(element1);  
-
 		    document.body.appendChild(form);
-
 		    form.submit(); </script>';
-		echo "OK";
+		
+	echo "OK";
 		
 		//replyMsg($arrayHeader,$_POST['stime']);
 		
