@@ -1,4 +1,4 @@
-<form action="https://golfais.herokuapp.com/updatetime.html" style="" method="POST">
+<form action="https://golfais.herokuapp.com/updatetime.php" style="" method="POST">
 <input type="hidden" name="time">
 </form>
 <?php
@@ -13,7 +13,7 @@ $events = json_decode($content, true);
 if($_GET['path'] == "removetime"){ 
 		echo '<script type="text/javascript">
   		var method = "post";
-		var path = "https://golfais.herokuapp.com/updatetime.html"
+		var path = "https://golfais.herokuapp.com/updatetime.php"
     		var form = document.createElement("form");
     		form.setAttribute("method", method);
     		form.setAttribute("action", path);
