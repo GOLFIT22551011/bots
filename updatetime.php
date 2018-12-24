@@ -26,11 +26,17 @@ Welcome <?php echo $_POST["time"]; ?>
 </html>
 
 <script>
+    
+
+  var str = '<?php echo $_POST["time"]; ?>';
+  var res = str.split(",");
+  document.getElementById("demo").innerHTML = res[1];
+
 var app = angular.module('myApp', []);
 app.controller('customersCtrl', function($scope, $http) {
     $scope.time=[
         {startTime:'<?php echo $_POST["time"]; ?>',endTime:"18:12"},
-        {startTime:"08:00",endTime:"18:12"}
+        {startTime: res[1],endTime:"18:12"}
     ]
     
 });
