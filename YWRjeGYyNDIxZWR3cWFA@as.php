@@ -14,14 +14,7 @@ $events = json_decode($content, true);
 	//}
 
 if($_GET['pathpanel'] != null && $_GET['removetime']){
- 		
-		<form action="welcome.php" method="post">
-		Name: <input type="text" name="name"><br>
-		E-mail: <input type="text" name="email"><br>
-		<input type="submit">
-		</form>
 	        $URL = "https://golfais.herokuapp.com/updatetime.html";
-		
 		echo '<script type="text/javascript">
           	var form = document.createElement("form");
 		    var element1 = document.createElement("input"); 
