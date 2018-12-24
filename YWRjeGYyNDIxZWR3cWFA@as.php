@@ -24,9 +24,7 @@ if($_GET['path'] == "removetime"){
            	form.appendChild(hiddenField);
     		document.body.appendChild(form);
     		form.submit();
-		</script>';
-		}
-          			
+		</script>';		
 	echo "OK";
 		
 		//replyMsg($arrayHeader,$_POST['stime']);
