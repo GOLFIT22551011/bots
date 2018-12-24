@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 </head>
@@ -22,11 +20,11 @@
 <form action="https://golfais.herokuapp.com/updatetime.html" style="" method="POST">
 </form>
 </div>
-Welcome <?php echo $_POST["time"]; ?><br>
+Welcome <?php echo $_POST["time"]; ?>
     
 </body>
 </html>
-
+Welcome <?php echo $_POST["time"]; ?>
 <script>
 var app = angular.module('myApp', []);
 app.controller('customersCtrl', function($scope, $http) {
