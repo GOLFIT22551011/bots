@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body ng-app="myApp">
-<div ng-controller="customersCtrl"> 
+<div ng-controller="customersCtrl">
+    <p>แก้ไขเวลาลดน้ำ</p>
 <table class="w3-table-all">
     <thead>
    <tr class="w3-red">
