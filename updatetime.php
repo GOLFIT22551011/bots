@@ -9,13 +9,16 @@
 </head>
 <body ng-app="myApp">
 <div ng-controller="customersCtrl"> 
-<table >
+<table class="w3-table-all">
+    <thead>
    <tr class="w3-red">
       <th>เวลาเริ่มลดน้ำ</th>
       <th>เวลาหยุดลดน้ำ</th>
+       <th>ลบเวลา</th>
    </tr>   
+    </thead>
    <tr ng-repeat = "value in time">
-      <td>{{ value.startTime }}</td>
+      <td>{{ value.startTime[1] }}</td>
       <td>{{ value.endTime }}</td>
    </tr>
 </table>
