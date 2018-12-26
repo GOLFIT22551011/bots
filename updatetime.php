@@ -9,7 +9,7 @@
 </head>
 <body ng-app="myApp">
 <div ng-controller="customersCtrl">
-    <p>แก้ไขเวลาลดน้ำ</p>
+    <p><b>แก้ไข้เวลาลดน้ำ</b></p>
 <table class="w3-table-all">
     <thead>
    <tr class="w3-red">
