@@ -12,9 +12,9 @@
 <table class="w3-table-all">
     <thead>
    <tr class="w3-red">
-      <th><h1>เวลาเริ่มลดน้ำ</h1></th>
-      <th><h1>เวลาหยุดลดน้ำ</h1></th>
-       <th>ลบเวลา</th>
+      <th><h3>เวลาเริ่มลดน้ำ</h3></th>
+      <th><h3>เวลาหยุดลดน้ำ</h3></th>
+       <th><h3>ลบเวลา</h3></th>
    </tr>   
     </thead>
    <tr ng-repeat = "value in time">
