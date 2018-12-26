@@ -9,8 +9,8 @@
 <div ng-controller="customersCtrl"> 
 <table >
    <tr>
-      <th>S</th>
-      <th>E</th>
+      <th>เวลาเริ่มลดน้ำ</th>
+      <th>เวลาหยุดลดน้ำ</th>
    </tr>   
    <tr ng-repeat = "value in time">
       <td>{{ value.startTime }}</td>
@@ -20,8 +20,9 @@
 <form action="https://golfais.herokuapp.com/updatetime.html" style="" method="POST">
 </form>
 </div>
-Welcome <?php echo $_POST["time"]; ?>
     
+ 
+  
 </body>
 </html>
 
