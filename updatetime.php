@@ -20,6 +20,7 @@
    <tr ng-repeat = "value in time">
       <td>{{ value.startTime }}</td>
       <td>{{ value.endTime }}</td>
+       <td><input type="image" src="submit.gif" alt="Submit" width="48" height="48"></td>
    </tr>
 </table>
 <form action="https://golfais.herokuapp.com/updatetime.html" style="" method="POST">
