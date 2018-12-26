@@ -18,7 +18,7 @@
    </tr>   
     </thead>
    <tr ng-repeat = "value in time">
-      <td>{{ value.startTime[1] }}</td>
+      <td>{{ value.startTime }}</td>
       <td>{{ value.endTime }}</td>
    </tr>
 </table>
