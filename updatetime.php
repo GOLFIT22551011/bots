@@ -37,7 +37,9 @@ var app = angular.module('myApp', []);
 app.controller('customersCtrl', function($scope, $http) {
     $scope.time=[
         {startTime:'<?php echo $_POST["time"]; ?>',endTime:"18:12"},
-        {startTime: res[1],endTime:"18:12"}
+        {startTime: res[0],endTime:res[1]},
+        {startTime: res[2],endTime:res[3]},
+        {startTime: res[4],endTime:res[5]}
     ]
     
 });
