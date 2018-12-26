@@ -20,7 +20,7 @@
    <tr ng-repeat = "value in time">
       <td>{{ value.startTime }}</td>
       <td>{{ value.endTime }}</td>
-       <td><input type="image" src="ttps://onedrive.live.com/embed?cid=25D5CE47EAA8E001&resid=25D5CE47EAA8E001%21410&authkey=AIyPqmOuc_euZG8" alt="Submit" width="48" height="48"></td>
+       <td><input type="image" src="https://onedrive.live.com/embed?cid=25D5CE47EAA8E001&resid=25D5CE47EAA8E001%21410&authkey=AIyPqmOuc_euZG8" alt="Submit" width="48" height="48"></td>
        
      </tr>
 </table>
