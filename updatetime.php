@@ -27,6 +27,9 @@ Welcome <?php echo $_POST["time"]; ?>
 
 <script>
     
+     var str = '<?php echo $_POST["time"]; ?>';
+  var res = str.split(",");
+ // document.getElementById("demo").innerHTML = res[1];
 
  
 
