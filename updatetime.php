@@ -12,8 +12,8 @@
 <table class="w3-table-all">
     <thead>
    <tr class="w3-red">
-      <th>เวลาเริ่มลดน้ำ</th>
-      <th>เวลาหยุดลดน้ำ</th>
+      <th><h1>เวลาเริ่มลดน้ำ</h1></th>
+      <th><h1>เวลาหยุดลดน้ำ</h1></th>
        <th>ลบเวลา</th>
    </tr>   
     </thead>
