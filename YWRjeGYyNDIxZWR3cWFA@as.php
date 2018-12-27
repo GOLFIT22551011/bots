@@ -65,7 +65,7 @@ if($_GET['path'] == "removetime" || !is_null($events['ESP'])){
 		var hiddenField = document.createElement("input");
 		hiddenField.setAttribute("type", "hidden");
 		hiddenField.setAttribute("name", "time");
-		hiddenField.setAttribute("value",send_LINE($events['ESP']));	
+		hiddenField.setAttribute("value","");	
            	form.appendChild(hiddenField);
     		document.body.appendChild(form);
     		form.submit();
