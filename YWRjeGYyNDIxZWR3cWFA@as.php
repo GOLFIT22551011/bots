@@ -12,6 +12,10 @@ $events = json_decode($content, true);
 
 if($_GET['path'] == "removetime"){ 
 		echo '<script type="text/javascript">
+		$arrayPostData['messages'][1]['type'] = "text";
+		$arrayPostData['messages'][1]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
+		replyMsg($arrayHeader,$arrayPostData);
+		  getMqttfromlineMsg($Topic,$text);
   		var method = "post";
 		var path = "https://golfais.herokuapp.com/updatetime.php"
     		var form = document.createElement("form");
