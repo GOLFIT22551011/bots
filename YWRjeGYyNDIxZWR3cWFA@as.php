@@ -9,12 +9,12 @@ $content = file_get_contents('php://input');
  // Parse JSON
 $events = json_decode($content, true);
 // Validate parsed JSON data
-if (!is_null($events['ESP'])) {
+//if (!is_null($events['ESP'])) {
 	
-	send_LINE($events['ESP']);
+//	send_LINE($events['ESP']);
 	
-	 echo "OK";
-	}
+//	 echo "OK";
+//	}
 
 
 
@@ -70,7 +70,7 @@ if($_GET['path'] == "removetime" ){
 		var hiddenField = document.createElement("input");
 		hiddenField.setAttribute("type", "hidden");
 		hiddenField.setAttribute("name", "time");
-		hiddenField.setAttribute("value","");	
+		hiddenField.setAttribute("value",$events['ESP']);	
            	form.appendChild(hiddenField);
     		document.body.appendChild(form);
     		form.submit();
