@@ -12,11 +12,11 @@ $events = json_decode($content, true);
 
 if($_GET['path'] == "removetime" || !is_null($events['ESP'])){ 
 		
-		//$arrayPostData['messages'][1]['type'] = "text";
-		//$arrayPostData['messages'][1]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
-		//replyMsg($arrayHeader,$arrayPostData);
-		 // getMqttfromlineMsg($Topic,$text);
-		  //if (!is_null($events['ESP'])) {
+		$arrayPostData['messages'][1]['type'] = "text";
+		$arrayPostData['messages'][1]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
+		replyMsg($arrayHeader,$arrayPostData);
+		 getMqttfromlineMsg($Topic,$text);
+		 if (!is_null($events['ESP'])) {
 		
 		echo '<script type="text/javascript">
   		var method = "post";
@@ -32,7 +32,7 @@ if($_GET['path'] == "removetime" || !is_null($events['ESP'])){
     		document.body.appendChild(form);
     		form.submit();
 		</script>';		
-		//  }
+		  }
 	echo "OK";
 		
 		//replyMsg($arrayHeader,$_POST['stime']);
