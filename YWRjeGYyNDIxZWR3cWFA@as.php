@@ -10,35 +10,7 @@ $content = file_get_contents('php://input');
 $events = json_decode($content, true);
 // Validate parsed JSON data
 
-if($_GET['path'] == "removetime" || !is_null($events['ESP'])){ 
-		
-		$arrayPostData['messages'][1]['type'] = "text";
-		$arrayPostData['messages'][1]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
-		replyMsg($arrayHeader,$arrayPostData);
-		 getMqttfromlineMsg($Topic,$text);
-	
-		
-		echo '<script type="text/javascript">
-  		var method = "post";
-		var path = "https://golfais.herokuapp.com/updatetime.php"
-    		var form = document.createElement("form");
-    		form.setAttribute("method", method);
-    		form.setAttribute("action", path);
-		var hiddenField = document.createElement("input");
-		hiddenField.setAttribute("type", "hidden");
-		hiddenField.setAttribute("name", "time");
-		hiddenField.setAttribute("value","");	
-           	form.appendChild(hiddenField);
-    		document.body.appendChild(form);
-    		form.submit();
-		</script>';		
-		
-	echo "OK";
-		
-		//replyMsg($arrayHeader,$_POST['stime']);
-		
-		
-	}
+
 
 
 
@@ -75,6 +47,35 @@ echo "OK3";
     $arrayHeader[] = "Content-Type: application/json";
     $arrayHeader[] = "Authorization: Bearer {$accessToken}";
 
+if($_GET['path'] == "removetime" || !is_null($events['ESP'])){ 
+		
+		$arrayPostData['messages'][1]['type'] = "text";
+		$arrayPostData['messages'][1]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
+		replyMsg($arrayHeader,$arrayPostData);
+		 getMqttfromlineMsg($Topic,$text);
+	
+		
+		echo '<script type="text/javascript">
+  		var method = "post";
+		var path = "https://golfais.herokuapp.com/updatetime.php"
+    		var form = document.createElement("form");
+    		form.setAttribute("method", method);
+    		form.setAttribute("action", path);
+		var hiddenField = document.createElement("input");
+		hiddenField.setAttribute("type", "hidden");
+		hiddenField.setAttribute("name", "time");
+		hiddenField.setAttribute("value","");	
+           	form.appendChild(hiddenField);
+    		document.body.appendChild(form);
+    		form.submit();
+		</script>';		
+		
+	echo "OK";
+		
+		//replyMsg($arrayHeader,$_POST['stime']);
+		
+		
+	}
  
  if($text == "สวัสดีต้นข้าว"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
