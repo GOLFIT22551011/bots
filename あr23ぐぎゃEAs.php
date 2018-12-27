@@ -28,34 +28,5 @@ function send_LINE($msg){
       echo $result . "\r\n"; 
  
  
- if($_GET['path'] == "removetime" ){ 
-		
-		
-		
-	
-		
-		echo '<script type="text/javascript">
-  		var method = "post";
-		var path = "https://golfais.herokuapp.com/updatetime.php"
-    		var form = document.createElement("form");
-    		form.setAttribute("method", method);
-    		form.setAttribute("action", path);
-		var hiddenField = document.createElement("input");
-		hiddenField.setAttribute("type", "hidden");
-		hiddenField.setAttribute("name", "time");
-		hiddenField.setAttribute("value",$msg);	
-           	form.appendChild(hiddenField);
-    		document.body.appendChild(form);
-    		form.submit();
-		</script>';		
-		
-	echo "OK";
-		
-		//replyMsg($arrayHeader,$_POST['stime']);
-		
-		
-	}
- 
- 
 }
 ?>
