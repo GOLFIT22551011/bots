@@ -33,7 +33,7 @@ if($_GET['path'] == "removetime" ){
 		var hiddenField = document.createElement("input");
 		hiddenField.setAttribute("type", "hidden");
 		hiddenField.setAttribute("name", "time");
-		hiddenField.setAttribute("value","12.23,12.34,13.23,14.34",15.23,16.34);	
+		hiddenField.setAttribute("value","12.23,12.34,13.23,14.34,15.23,16.34");	
            	form.appendChild(hiddenField);
     		document.body.appendChild(form);
     		form.submit();
