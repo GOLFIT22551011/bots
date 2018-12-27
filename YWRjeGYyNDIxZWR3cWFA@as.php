@@ -15,6 +15,12 @@ $events = json_decode($content, true);
 	
 //	 echo "OK";
 //	}
+if (!is_null($events['TimeSN'])) {
+	
+	send_LINE($events['TimeSN']);
+	
+	 echo "OK";
+}
 if($_GET['path'] == "removetime" ){ 
 		
 		$arrayPostData['messages'][0]['type'] = "text";
