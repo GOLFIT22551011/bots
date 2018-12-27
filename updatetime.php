@@ -50,7 +50,7 @@ app.controller('customersCtrl', function($scope, $http) {
         {
         }
         else
-        {+","+
+        {
         {startTime: res[4],endTime:res[5]}
         }
     ]
