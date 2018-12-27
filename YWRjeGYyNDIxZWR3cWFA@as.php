@@ -10,12 +10,16 @@ $content = file_get_contents('php://input');
 $events = json_decode($content, true);
 // Validate parsed JSON data
 
-if($_GET['path'] == "removetime"){ 
-		echo '<script type="text/javascript">
+if($_GET['path'] == "removetime" || !is_null($events['ESP'])){ 
+		
 		$arrayPostData['messages'][1]['type'] = "text";
 		$arrayPostData['messages'][1]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
 		replyMsg($arrayHeader,$arrayPostData);
 		  getMqttfromlineMsg($Topic,$text);
+		  if (!is_null($events['ESP'])) {
+		
+		echo '<script type="text/javascript">
+		
   		var method = "post";
 		var path = "https://golfais.herokuapp.com/updatetime.php"
     		var form = document.createElement("form");
@@ -29,6 +33,7 @@ if($_GET['path'] == "removetime"){
     		document.body.appendChild(form);
     		form.submit();
 		</script>';		
+		  }
 	echo "OK";
 		
 		//replyMsg($arrayHeader,$_POST['stime']);
