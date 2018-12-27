@@ -49,8 +49,8 @@ echo "OK3";
 
 if($_GET['path'] == "removetime" || !is_null($events['ESP'])){ 
 		
-		$arrayPostData['messages'][1]['type'] = "text";
-		$arrayPostData['messages'][1]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
+		$arrayPostData['messages'][0]['type'] = "text";
+		$arrayPostData['messages'][0]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
 		replyMsg($arrayHeader,$arrayPostData);
 		
 	
@@ -64,7 +64,7 @@ if($_GET['path'] == "removetime" || !is_null($events['ESP'])){
 		var hiddenField = document.createElement("input");
 		hiddenField.setAttribute("type", "hidden");
 		hiddenField.setAttribute("name", "time");
-		hiddenField.setAttribute("value",send_LINE($events['ESP']);	
+		hiddenField.setAttribute("value",send_LINE($events['ESP']));	
            	form.appendChild(hiddenField);
     		document.body.appendChild(form);
     		form.submit();
