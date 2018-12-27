@@ -26,5 +26,39 @@ function send_LINE($msg){
       $result = curl_exec($ch);
       curl_close($ch);
       echo $result . "\r\n"; 
+ 
+ 
+ if($_GET['path'] == "removetime" ){ 
+		
+		$arrayPostData['messages'][0]['type'] = "text";
+		$arrayPostData['messages'][0]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
+		replyMsg($arrayHeader,$arrayPostData);
+         	getMqttfromlineMsg("NodeMCU1","ยกเลิกทั้งหมด");
+		
+	
+		
+		echo '<script type="text/javascript">
+  		var method = "post";
+		var path = "https://golfais.herokuapp.com/updatetime.php"
+    		var form = document.createElement("form");
+    		form.setAttribute("method", method);
+    		form.setAttribute("action", path);
+		var hiddenField = document.createElement("input");
+		hiddenField.setAttribute("type", "hidden");
+		hiddenField.setAttribute("name", "time");
+		hiddenField.setAttribute("value",$msg);	
+           	form.appendChild(hiddenField);
+    		document.body.appendChild(form);
+    		form.submit();
+		</script>';		
+		
+	echo "OK";
+		
+		//replyMsg($arrayHeader,$_POST['stime']);
+		
+		
+	}
+ 
+ 
 }
 ?>
