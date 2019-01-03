@@ -62,8 +62,7 @@ else if(res[4]==null || res[4]=="99.99")
     app.controller('customersCtrl', function($scope, $http) {
     $scope.time=[
         { startTime: res[0],endTime:res[1]},
-        {startTime: res[2],endTime:res[3]},
-        {imagedelete:""}
+        {startTime: res[2],endTime:res[3]}
          ]
     });
 }    
