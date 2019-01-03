@@ -40,6 +40,25 @@
   var res = str.split(",");
 
  
+if(res[0]==null || res[0]=="99.99")
+{
+    var app = angular.module('myApp', []);
+    app.controller('customersCtrl', function($scope, $http) {
+    $scope.time=[
+        { startTime: "",endTime:""},
+        {startTime: "",endTime:""}
+         ]
+    });
+}
+else if(res[2]==null || res[2]=="99.99")
+{
+    var app = angular.module('myApp', []);
+    app.controller('customersCtrl', function($scope, $http) {
+    $scope.time=[
+        { startTime: res[0],endTime:res[1]}
+         ]
+    });
+}    
 if(res[4]==null || res[4]=="99.99")
 {
     var app = angular.module('myApp', []);
@@ -49,7 +68,9 @@ if(res[4]==null || res[4]=="99.99")
         {startTime: res[2],endTime:res[3]}
          ]
     });
-}
+}    
+    
+
 else{
 var app = angular.module('myApp', []);
 app.controller('customersCtrl', function($scope, $http) {
