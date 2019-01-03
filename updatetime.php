@@ -56,7 +56,7 @@ else if(res[2]==null || res[2]=="99.99")
         { startTime: res[0],endTime:res[1]}]
     });
 }    
-if(res[4]==null || res[4]=="99.99")
+else if(res[4]==null || res[4]=="99.99")
 {
     var app = angular.module('myApp', []);
     app.controller('customersCtrl', function($scope, $http) {
