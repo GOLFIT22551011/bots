@@ -40,7 +40,7 @@
   var res = str.split(",");
 
  
-if(res[4]==null)
+if(res[4]==null || res[4]=="99.99")
 {
     var app = angular.module('myApp', []);
     app.controller('customersCtrl', function($scope, $http) {
