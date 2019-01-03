@@ -40,7 +40,17 @@
   var res = str.split(",");
 
  
-
+if(res[4]==NULL)
+{
+    var app = angular.module('myApp', []);
+    app.controller('customersCtrl', function($scope, $http) {
+    $scope.time=[
+        { startTime: res[0],endTime:res[1]},
+        {startTime: res[2],endTime:res[3]}
+         ]
+    });
+}
+else{
 var app = angular.module('myApp', []);
 app.controller('customersCtrl', function($scope, $http) {
     $scope.time=[
@@ -51,4 +61,5 @@ app.controller('customersCtrl', function($scope, $http) {
     ]
     
 });
+}
 </script>
