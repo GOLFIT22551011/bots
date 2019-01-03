@@ -40,7 +40,7 @@
   var res = str.split(",");
 
  
-if(res[4]==NULL)
+if(res[4]==null)
 {
     var app = angular.module('myApp', []);
     app.controller('customersCtrl', function($scope, $http) {
