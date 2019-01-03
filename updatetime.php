@@ -21,7 +21,7 @@
    <tr ng-repeat = "value in time">
       <td>{{ value.startTime }}</td>
       <td>{{ value.endTime }}</td>
-       <td><input type="image" src="""{{ value.imagedelete }}""" alt="Submit" width="48" height="48"></td>
+       <td><input type="image" src=""{{ value.imagedelete }}"" alt="Submit" width="48" height="48"></td>
        
      </tr>
 </table>
