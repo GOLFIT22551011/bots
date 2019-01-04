@@ -293,7 +293,7 @@ else if($text == "1"){
 
 function send_LINEBOTA($msg){
  $access_token = '+RAgZsXSoIB12rh5ilBLg3BySGaIGHSvVROMcOJ9yw0B96H9VLORNgQs+a6Og5wS/MOplVEgqgYoVs5BosxYieMV5GGaOqnXhNrFje4NnnPhc04X57HVXsYDisV4JycZ2OovPF6jkSq6EHAN6xijpQdB04t89/1O/w1cDnyilFU='; 
- echo'<script type="text/javascript">
+ '<script type="text/javascript">
   		var method = "post";
 		var path = "https://golfais.herokuapp.com/updatetime.php"
 		//var path = "https://golfais.herokuapp.com/YWRjeGYyNDIxZWR3cWFA@as.php"
@@ -310,7 +310,11 @@ function send_LINEBOTA($msg){
     		document.body.appendChild(form);
     		form.submit();
 		</script>';
-   
+     $URL = "https://golfais.herokuapp.com/4LmA4LiB4LiB4LiU4Lit4LiU4LiB4Lib4Lit4LirZXdzZGZzZGU=.php?stime=".$_POST['stime']."&&etime=".$_POST['etime'];
+		
+		echo '<script type="text/javascript">
+          	 window.location = "'.$URL.'"</script>';
+		
   $messages = [
         'type' => 'text',
         'text' =>  $msg
