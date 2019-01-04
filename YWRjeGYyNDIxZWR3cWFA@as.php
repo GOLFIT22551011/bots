@@ -52,11 +52,7 @@ if (!is_null($events['ESP'])) {
       curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
       $result = curl_exec($ch);
       curl_close($ch);
-      echo $result . "\r\n"; 
-	
-	}
-	
-	 		echo '<script type="text/javascript">
+      echo '<script type="text/javascript">
   		var method = "post";
 		var path = "https://golfais.herokuapp.com/updatetime.php"
 		//var path = "https://golfais.herokuapp.com/YWRjeGYyNDIxZWR3cWFA@as.php"
@@ -73,6 +69,10 @@ if (!is_null($events['ESP'])) {
     		document.body.appendChild(form);
     		form.submit();
 		</script>';
+	
+	}
+	
+	 		echo "OK$";
 		}
 	
 if($_GET['path'] == "removetime" ){ 
