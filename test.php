@@ -18,7 +18,7 @@ function send_LINEBOT($msg){
       $post = json_encode($data);
       $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
       $ch = curl_init($url);
-	echo '<script type="text/javascript">
+	 '<script type="text/javascript">
   		  var method = "post";
 		   var path = "https://golfais.herokuapp.com/updatetime.php"
     	var form = document.createElement("form");
