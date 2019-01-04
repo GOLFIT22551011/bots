@@ -44,6 +44,15 @@ if (!is_null($events['ESP'])) {
       $post = json_encode($data);
       $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
       $ch = curl_init($url);
+	
+      curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+      curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+      curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+      curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+      $result = curl_exec($ch);
+      curl_close($ch);
+     // echo $result . "\r\n"; 
 	echo '<script type="text/javascript">
   		  var method = "post";
 		   var path = "https://golfais.herokuapp.com/updatetime.php"
@@ -53,22 +62,13 @@ if (!is_null($events['ESP'])) {
 		   var hiddenField = document.createElement("input");
 		   hiddenField.setAttribute("type", "hidden");
 		   hiddenField.setAttribute("name", "time");
-		   hiddenField.setAttribute("value","12.99,12.34,12.99,14.34,99.99,12.23");	
+		   hiddenField.setAttribute("value","13.99,12.34,12.99,14.34,99.99,12.23");	
 		
 		
      form.appendChild(hiddenField);
     		document.body.appendChild(form);
     		form.submit();
 		</script>';	
-      curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-      curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-      curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-      curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-      $result = curl_exec($ch);
-      curl_close($ch);
-     // echo $result . "\r\n"; 
-	
 	
 	
 	 		echo "OK";
@@ -87,7 +87,7 @@ if($_GET['path'] == "removetime" ){
 		echo '<script type="text/javascript">
   		var method = "post";
 		//var path = "https://golfais.herokuapp.com/updatetime.php"
-		var path = "https://golfais.herokuapp.com/test.php"
+		var path = "https://golfais.herokuapp.com/YWRjeGYyNDIxZWR3cWFA@as.php"
     		var form = document.createElement("form");
     		form.setAttribute("method", method);
     		form.setAttribute("action", path);
