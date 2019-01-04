@@ -42,23 +42,23 @@ if($_GET['path'] == "removetime" ){
 		
 		
 		
-		echo '<script type="text/javascript">
-  		var method = "post";
+		//echo '<script type="text/javascript">
+  		//var method = "post";
 		//var path = "https://golfais.herokuapp.com/updatetime.php"
-		var path = "https://golfais.herokuapp.com/YWRjeGYyNDIxZWR3cWFA@as.php"
-    		var form = document.createElement("form");
-    		form.setAttribute("method", method);
-    		form.setAttribute("action", path);
-		var hiddenField = document.createElement("input");
-		hiddenField.setAttribute("type", "hidden");
-		hiddenField.setAttribute("name", "time");
-		  hiddenField.setAttribute("value","12.99,12.34,12.99,14.34,99.99,12.23");	
+		//var path = "https://golfais.herokuapp.com/YWRjeGYyNDIxZWR3cWFA@as.php"
+    		//var form = document.createElement("form");
+    		//form.setAttribute("method", method);
+    		//form.setAttribute("action", path);
+		//var hiddenField = document.createElement("input");
+		//hiddenField.setAttribute("type", "hidden");
+		//hiddenField.setAttribute("name", "time");
+		 // hiddenField.setAttribute("value","12.99,12.34,12.99,14.34,99.99,12.23");	
 		
 		
-           	form.appendChild(hiddenField);
-    		document.body.appendChild(form);
-    		form.submit();
-		</script>';		
+        //   	form.appendChild(hiddenField);
+    	//	document.body.appendChild(form);
+    	//	form.submit();
+	//	</script>';		
 		
 	echo "OK";
 		
