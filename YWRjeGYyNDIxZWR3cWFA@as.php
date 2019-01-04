@@ -40,7 +40,7 @@ if($_GET['path'] == "removetime" ){
 		hiddenField.setAttribute("type", "hidden");
 		hiddenField.setAttribute("name", "time");
 		//hiddenField.setAttribute("value","12.99,12.34,12.99,14.34,99.99,12.23");	
-		//hiddenField.setAttribute("value","$events['ESP']");	
+		hiddenField.setAttribute("value","$events['ESP']");	
 		
            	form.appendChild(hiddenField);
     		document.body.appendChild(form);
