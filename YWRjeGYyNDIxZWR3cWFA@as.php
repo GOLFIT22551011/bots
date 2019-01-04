@@ -4,6 +4,7 @@
 <?php
  require("sゆ249よおうtq.php");
  require("あr23ぐぎゃEAs.php");
+require("test.php");
 // Get POST body content
 $content = file_get_contents('php://input');
  // Parse JSON
@@ -21,12 +22,20 @@ if (!is_null($events['TimeSN'])) {
 	
 	 echo "OK";
 }
+if (!is_null($events['ESP'])) {
+	
+			send_LINEBOT($events['ESP']);
+	
+	 		echo "OK";
+		}
 if($_GET['path'] == "removetime" ){ 
 		
 		$arrayPostData['messages'][0]['type'] = "text";
 		$arrayPostData['messages'][0]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
 		replyMsg($arrayHeader,$arrayPostData);
          	getMqttfromlineMsg("NodeMCU1","ยกเลิกทั้งหมด");
+		
+	
 		
 		
 		
