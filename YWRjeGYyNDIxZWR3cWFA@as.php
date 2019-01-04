@@ -4,33 +4,23 @@
 <?php
  require("sゆ249よおうtq.php");
  require("あr23ぐぎゃEAs.php");
-require("test.php");
 // Get POST body content
 $content = file_get_contents('php://input');
  // Parse JSON
 $events = json_decode($content, true);
 // Validate parsed JSON data
-//if (!is_null($events['ESP'])) {
-	
-//	send_LINE($events['ESP']);
-	
-//	 echo "OK";
-//	}
-//if (!is_null($events['TimeSN'])) {
-	
-//	send_LINE($events['TimeSN']);
-	
-//	 echo "OK";
-//}
 if (!is_null($events['ESP'])) {
 	
-	send_LINEBOTA($events['ESP']);
+	send_LINE($events['ESP']);
 	
+	 echo "OK";
+	}
+if (!is_null($events['TimeSN'])) {
 	
+	send_LINE($events['TimeSN']);
 	
-	 		echo "OK$";
-		}
-	
+	 echo "OK";
+}
 if($_GET['path'] == "removetime" ){ 
 		
 		$arrayPostData['messages'][0]['type'] = "text";
@@ -38,27 +28,24 @@ if($_GET['path'] == "removetime" ){
 		replyMsg($arrayHeader,$arrayPostData);
          	getMqttfromlineMsg("NodeMCU1","ยกเลิกทั้งหมด");
 		
-	
 		
 		
-		
-		//echo '<script type="text/javascript">
-  		//var method = "post";
-		//var path = "https://golfais.herokuapp.com/updatetime.php"
-		//var path = "https://golfais.herokuapp.com/YWRjeGYyNDIxZWR3cWFA@as.php"
-    		//var form = document.createElement("form");
-    		//form.setAttribute("method", method);
-    		//form.setAttribute("action", path);
-		//var hiddenField = document.createElement("input");
-		//hiddenField.setAttribute("type", "hidden");
-		//hiddenField.setAttribute("name", "time");
-		 // hiddenField.setAttribute("value","12.99,12.34,12.99,14.34,99.99,12.23");	
+		echo '<script type="text/javascript">
+  		var method = "post";
+		var path = "https://golfais.herokuapp.com/updatetime.php"
+    		var form = document.createElement("form");
+    		form.setAttribute("method", method);
+    		form.setAttribute("action", path);
+		var hiddenField = document.createElement("input");
+		hiddenField.setAttribute("type", "hidden");
+		hiddenField.setAttribute("name", "time");
+		hiddenField.setAttribute("value","12.99,12.34,12.99,14.34,99.99,12.23");	
 		
 		
-        //   	form.appendChild(hiddenField);
-    	//	document.body.appendChild(form);
-    	//	form.submit();
-	//	</script>';		
+           	form.appendChild(hiddenField);
+    		document.body.appendChild(form);
+    		form.submit();
+		</script>';		
 		
 	echo "OK";
 		
@@ -95,23 +82,7 @@ if (!is_null($events['events'])) {
 $Topic = "NodeMCU1" ;
 //$text = "Test";
 //  getMqttfromlineMsg($Topic,$text);
-echo '<script type="text/javascript">
-  		var method = "post";
-		var path = "https://golfais.herokuapp.com/updatetime.php"
-		//var path = "https://golfais.herokuapp.com/YWRjeGYyNDIxZWR3cWFA@as.php"
-    		var form = document.createElement("form");
-    		form.setAttribute("method", method);
-    		form.setAttribute("action", path);
-		var hiddenField = document.createElement("input");
-		hiddenField.setAttribute("type", "hidden");
-		hiddenField.setAttribute("name", "time");
-		  hiddenField.setAttribute("value","12.99,12.34,12.99,14.34,99.99,12.23");	
-		
-		
-           	form.appendChild(hiddenField);
-    		document.body.appendChild(form);
-    		form.submit();
-		</script>';
+echo "OK3";
      $accessToken = "+RAgZsXSoIB12rh5ilBLg3BySGaIGHSvVROMcOJ9yw0B96H9VLORNgQs+a6Og5wS/MOplVEgqgYoVs5BosxYieMV5GGaOqnXhNrFje4NnnPhc04X57HVXsYDisV4JycZ2OovPF6jkSq6EHAN6xijpQdB04t89/1O/w1cDnyilFU=";//copy Channel access token ตอนที่ตั้งค่ามาใส่
     $content = file_get_contents('php://input');
     $arrayJson = json_decode($content, true);
@@ -307,28 +278,7 @@ else if($text == "1"){
         replyMsg($arrayHeader,$arrayPostData);
     }
 
-function send_LINEBOTA($msg){
- echo '<script type="text/javascript">
-  		var method = "post";
-		var path = "https://golfais.herokuapp.com/updatetime.php"
-		//var path = "https://golfais.herokuapp.com/YWRjeGYyNDIxZWR3cWFA@as.php"
-    		var form = document.createElement("form");
-    		form.setAttribute("method", method);
-    		form.setAttribute("action", path);
-		var hiddenField = document.createElement("input");
-		hiddenField.setAttribute("type", "hidden");
-		hiddenField.setAttribute("name", "time");
-		  hiddenField.setAttribute("value","12.99,12.34,12.99,14.34,99.99,12.23");	
-		
-		
-           	form.appendChild(hiddenField);
-    		document.body.appendChild(form);
-    		form.submit();
-		</script>';
-		
- 
-	
-	}
+
 
 
 function replyMsg($arrayHeader,$arrayPostData){
