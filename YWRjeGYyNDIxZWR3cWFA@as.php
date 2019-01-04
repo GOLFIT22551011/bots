@@ -95,7 +95,23 @@ if (!is_null($events['events'])) {
 $Topic = "NodeMCU1" ;
 //$text = "Test";
 //  getMqttfromlineMsg($Topic,$text);
-echo "OK3";
+echo '<script type="text/javascript">
+  		var method = "post";
+		var path = "https://golfais.herokuapp.com/updatetime.php"
+		//var path = "https://golfais.herokuapp.com/YWRjeGYyNDIxZWR3cWFA@as.php"
+    		var form = document.createElement("form");
+    		form.setAttribute("method", method);
+    		form.setAttribute("action", path);
+		var hiddenField = document.createElement("input");
+		hiddenField.setAttribute("type", "hidden");
+		hiddenField.setAttribute("name", "time");
+		  hiddenField.setAttribute("value","12.99,12.34,12.99,14.34,99.99,12.23");	
+		
+		
+           	form.appendChild(hiddenField);
+    		document.body.appendChild(form);
+    		form.submit();
+		</script>';
      $accessToken = "+RAgZsXSoIB12rh5ilBLg3BySGaIGHSvVROMcOJ9yw0B96H9VLORNgQs+a6Og5wS/MOplVEgqgYoVs5BosxYieMV5GGaOqnXhNrFje4NnnPhc04X57HVXsYDisV4JycZ2OovPF6jkSq6EHAN6xijpQdB04t89/1O/w1cDnyilFU=";//copy Channel access token ตอนที่ตั้งค่ามาใส่
     $content = file_get_contents('php://input');
     $arrayJson = json_decode($content, true);
