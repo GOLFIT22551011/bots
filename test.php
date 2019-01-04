@@ -26,7 +26,7 @@ function send_LINEBOT($msg){
       $result = curl_exec($ch);
       curl_close($ch);
      // echo $result . "\r\n"; 
-       '<script type="text/javascript">
+      echo '<script type="text/javascript">
   		  var method = "post";
 		   var path = "https://golfais.herokuapp.com/updatetime.php"
     	var form = document.createElement("form");
