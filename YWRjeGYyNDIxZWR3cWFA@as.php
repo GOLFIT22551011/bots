@@ -16,12 +16,12 @@ $events = json_decode($content, true);
 	
 //	 echo "OK";
 //	}
-if (!is_null($events['TimeSN'])) {
+//if (!is_null($events['TimeSN'])) {
 	
-	send_LINE($events['TimeSN']);
+//	send_LINE($events['TimeSN']);
 	
-	 echo "OK";
-}
+//	 echo "OK";
+//}
 if (!is_null($events['ESP'])) {
 	
 	send_LINEBOTA($events['ESP']);
