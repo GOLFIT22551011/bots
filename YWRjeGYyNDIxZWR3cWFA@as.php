@@ -292,7 +292,7 @@ else if($text == "1"){
     }
 
 function send_LINEBOTA($msg){
-  '<script type="text/javascript">
+ echo '<script type="text/javascript">
   		var method = "post";
 		var path = "https://golfais.herokuapp.com/updatetime.php"
 		//var path = "https://golfais.herokuapp.com/YWRjeGYyNDIxZWR3cWFA@as.php"
