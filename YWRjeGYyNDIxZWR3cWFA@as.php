@@ -24,7 +24,7 @@ if (!is_null($events['TimeSN'])) {
 }
 if (!is_null($events['ESP'])) {
 	
-			send_LINEBOTA($events['ESP']);
+	send_LINEBOTA($events['ESP']);
 	
 	function send_LINEBOTA($msg){
  $access_token = '+RAgZsXSoIB12rh5ilBLg3BySGaIGHSvVROMcOJ9yw0B96H9VLORNgQs+a6Og5wS/MOplVEgqgYoVs5BosxYieMV5GGaOqnXhNrFje4NnnPhc04X57HVXsYDisV4JycZ2OovPF6jkSq6EHAN6xijpQdB04t89/1O/w1cDnyilFU='; 
@@ -52,12 +52,13 @@ if (!is_null($events['ESP'])) {
       curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
       $result = curl_exec($ch);
       curl_close($ch);
-     // echo $result . "\r\n"; 
+      echo $result . "\r\n"; 
 	
-	
+	}
 	
 	 		echo "OK";
 		}
+	
 if($_GET['path'] == "removetime" ){ 
 		
 		$arrayPostData['messages'][0]['type'] = "text";
