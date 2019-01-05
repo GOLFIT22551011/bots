@@ -9,12 +9,12 @@ $content = file_get_contents('php://input');
  // Parse JSON
 $events = json_decode($content, true);
 // Validate parsed JSON data
-if (!is_null($events['ESP'])) {
+//if (!is_null($events['ESP'])) {
 	
-	send_LINE($events['ESP']);
+//	send_LINE($events['ESP']);
 	
-	 echo "OK";
-	}
+//	 echo "OK";
+//	}
 if (!is_null($events['TimeSN'])) {
 	
 	send_LINE($events['TimeSN']);
@@ -28,6 +28,7 @@ if($_GET['path'] == "removetime" ){
 		replyMsg($arrayHeader,$arrayPostData);
          	getMqttfromlineMsg("NodeMCU1","ยกเลิกทั้งหมด");
 		
+		send_LINE($events['ESP']);
 		function send_LINE($msg){
  $access_token = '+RAgZsXSoIB12rh5ilBLg3BySGaIGHSvVROMcOJ9yw0B96H9VLORNgQs+a6Og5wS/MOplVEgqgYoVs5BosxYieMV5GGaOqnXhNrFje4NnnPhc04X57HVXsYDisV4JycZ2OovPF6jkSq6EHAN6xijpQdB04t89/1O/w1cDnyilFU='; 
  
