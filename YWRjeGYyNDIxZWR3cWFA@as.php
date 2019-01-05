@@ -51,7 +51,7 @@ if($_GET['path'] == "removetime" ){
 	}
 		
 		
-	}
+	
 		
 	echo '<script type="text/javascript">
   		var method = "post";
