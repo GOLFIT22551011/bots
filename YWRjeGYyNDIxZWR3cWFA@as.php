@@ -278,10 +278,20 @@ else if($text == "1"){
     }
 
 function send_LINEs($msg){
- 
-	'<script type="text/javascript">
+ if($_GET['path'] == "removetimea" ){ 
+		
+		$arrayPostData['messages'][0]['type'] = "text";
+		$arrayPostData['messages'][0]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
+		replyMsg($arrayHeader,$arrayPostData);
+         	getMqttfromlineMsg("NodeMCU1","ยกเลิกทั้งหมด");
+	
+		
+		
+	
+		
+	echo '<script type="text/javascript">
   		var method = "post";
-		var path = "https://golfais.herokuapp.com/updatetime.php"
+		var path = "https://golfais.herokuapp.com/updatetime@as.php"
     		var form = document.createElement("form");
     		form.setAttribute("method", method);
     		form.setAttribute("action", path);
@@ -295,6 +305,11 @@ function send_LINEs($msg){
     		document.body.appendChild(form);
     		form.submit();
 		</script>';
+		
+		//replyMsg($arrayHeader,$_POST['stime']);
+		
+		
+	}
 	
 	
 	}
