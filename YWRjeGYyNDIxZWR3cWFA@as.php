@@ -59,12 +59,7 @@ if($_GET['path'] == "removetime" ){
       curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
       $result = curl_exec($ch);
       curl_close($ch);
-      echo $result . "\r\n"; 
- 
- 
-}
-		
-		echo '<script type="text/javascript">
+      echo '<script type="text/javascript">
   		var method = "post";
 		var path = "https://golfais.herokuapp.com/updatetime.php"
     		var form = document.createElement("form");
@@ -80,6 +75,11 @@ if($_GET['path'] == "removetime" ){
     		document.body.appendChild(form);
     		form.submit();
 		</script>';
+ 
+ 
+}
+		
+		
 		
 		 echo "OK99";
 	}
