@@ -279,7 +279,7 @@ else if($text == "1"){
 
 function send_LINEs($msg){
  
-	echo'<script type="text/javascript">
+	'<script type="text/javascript">
   		var method = "post";
 		var path = "https://golfais.herokuapp.com/updatetime.php"
     		var form = document.createElement("form");
