@@ -16,9 +16,9 @@ if (!is_null($events['ESP'])) {
 	}
 if (!is_null($events['TimeSN'])) {
 	
-	send_LINE($events['TimeSN']);
+	send_LINEs($events['TimeSN']);
 	
-	 echo "OK";
+	 echo "OKKK";
 }
 if($_GET['path'] == "removetime" ){ 
 		
