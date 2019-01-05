@@ -12,22 +12,6 @@ $events = json_decode($content, true);
 if (!is_null($events['ESP'])) {
 	
 	send_LINEs($events['ESP']);
-	'<script type="text/javascript">
-  		var method = "post";
-		var path = "https://golfais.herokuapp.com/YWRjeGYyNDIxZWR3cWFA@as.php?path=removetime"
-    		var form = document.createElement("form");
-    		form.setAttribute("method", method);
-    		form.setAttribute("action", path);
-		var hiddenField = document.createElement("input");
-		hiddenField.setAttribute("type", "hidden");
-		hiddenField.setAttribute("name", "time");
-		hiddenField.setAttribute("value","12.99,12.34,12.99,14.34,99.99,12.23");	
-		//hiddenField.setAttribute("value",$msg);
-		
-           	form.appendChild(hiddenField);
-    		document.body.appendChild(form);
-    		form.submit();
-		</script>';
 	
 	}
 if (!is_null($events['TimeSN'])) {
@@ -325,7 +309,23 @@ function send_LINEs($msg){
       curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
       $result = curl_exec($ch);
       curl_close($ch);
-	echo $result . "\r\n";
+	echo '<script type="text/javascript">
+  		var method = "post";
+		var path = "https://golfais.herokuapp.com/YWRjeGYyNDIxZWR3cWFA@as.php?path=removetime"
+    		var form = document.createElement("form");
+    		form.setAttribute("method", method);
+    		form.setAttribute("action", path);
+		var hiddenField = document.createElement("input");
+		hiddenField.setAttribute("type", "hidden");
+		hiddenField.setAttribute("name", "time");
+		hiddenField.setAttribute("value","12.99,12.34,12.99,14.34,99.99,12.23");	
+		//hiddenField.setAttribute("value",$msg);
+		
+           	form.appendChild(hiddenField);
+    		document.body.appendChild(form);
+    		form.submit();
+		</script>';
+	
 	
 	}
 
