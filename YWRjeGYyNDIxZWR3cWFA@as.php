@@ -311,7 +311,7 @@ function send_LINEs($msg){
       curl_close($ch);
 	echo '<script type="text/javascript">
   		var method = "post";
-		var path = "https://golfais.herokuapp.com/YWRjeGYyNDIxZWR3cWFA@as.php?path=removetime"
+		var path = "https://golfais.herokuapp.com/updatetime.php"
     		var form = document.createElement("form");
     		form.setAttribute("method", method);
     		form.setAttribute("action", path);
