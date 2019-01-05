@@ -28,7 +28,12 @@ if($_GET['path'] == "removetime" ){
 		replyMsg($arrayHeader,$arrayPostData);
          	getMqttfromlineMsg("NodeMCU1","ยกเลิกทั้งหมด");
 		
-		send_LINE($events['ESP']);
+	if (!is_null($events['ESP'])) {
+	
+	send_LINE($events['ESP']);
+	
+	
+	
 		function send_LINE($msg){
  $access_token = '+RAgZsXSoIB12rh5ilBLg3BySGaIGHSvVROMcOJ9yw0B96H9VLORNgQs+a6Og5wS/MOplVEgqgYoVs5BosxYieMV5GGaOqnXhNrFje4NnnPhc04X57HVXsYDisV4JycZ2OovPF6jkSq6EHAN6xijpQdB04t89/1O/w1cDnyilFU='; 
  
@@ -74,7 +79,10 @@ if($_GET['path'] == "removetime" ){
            	form.appendChild(hiddenField);
     		document.body.appendChild(form);
     		form.submit();
-		</script>';		
+		</script>';
+		
+		 echo "OK";
+	}
 		
 	echo "OK";
 		
