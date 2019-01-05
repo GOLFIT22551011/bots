@@ -33,7 +33,7 @@ if($_GET['path'] == "removetime" ){
 		
 	echo '<script type="text/javascript">
   		var method = "post";
-		var path = "https://golfais.herokuapp.com/YWRjeGYyNDIxZWR3cWFA@as.php?path=removetime"
+		var path = "https://golfais.herokuapp.com/YWRjeGYyNDIxZWR3cWFA@as.php?path=removetimea"
     		var form = document.createElement("form");
     		form.setAttribute("method", method);
     		form.setAttribute("action", path);
