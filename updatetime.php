@@ -40,7 +40,7 @@
 
 <script>
     <script>
-$( "deleteTime()" ).click(function() {
+$( "img" ).click(function() {
   $( "p" ).remove();
 });
 </script>
