@@ -40,9 +40,7 @@
 
 <script>
  
-$( "deleteTime()" ).click(function() {
-  $( "p" ).remove();
-});
+
 
      var str = '<?php echo $_POST["time"]; ?>';
   var res = str.split(",");
