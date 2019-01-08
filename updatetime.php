@@ -21,9 +21,9 @@
    <tr ng-repeat = "value in time">
       <td>{{ value.startTime }}</td>
       <td>{{ value.endTime }}</td>
-       <td><input type="image" src="https://4svp8a.bn.files.1drv.com/y4mVgFr0lURXzrx5N5zfrxABKNs9Rm7dX-FmyB61pE9dOj9-KWoHU_CBHUOldPwTfICOuZUjGkEI6NTYCmfdwPhUdkjzzpudGq9SkasOLJ338OddTstXbL4QGEMg573BPiXGBeJIyaBntgXRVtlyNVAoN0dEIZYUAFDU76-BimphYfmShsYkuHDzOacZ0o6T8YH62ywhB8rYuN9ssibt4Zdlw?width=256&height=256&cropmode=none" alt="Submit" width="48" height="48"></td>
+  
         <td>  
-               <img border="0" onclick="setTime('10')" alt="W3Schools"  src="https://ftq6yg.bn.files.1drv.com/y4mUe-nJrKmvESAgXe5sXx6fq7FjYDDAQ5ewJ7F8s2zwmBmHDIo2xRNS7IvFki0jitxn_Y1nOkeyMeVlAarFoO5agi775rfxF3srvj03of1f8OAumCU5PbReOj-XrSmC1rps8H580lPf9OqyY1osrhTeTrNvKpPFT2mAmNyxH97UJxiu53A-LF1y1rj3RnE9hrzvu77e-vBdEbpQGmMVDINUw?width=960&height=640&cropmode=none" width="200" height="200">
+               <img border="0" onclick="setTime('10')" alt="W3Schools"  src="https://4svp8a.bn.files.1drv.com/y4mVgFr0lURXzrx5N5zfrxABKNs9Rm7dX-FmyB61pE9dOj9-KWoHU_CBHUOldPwTfICOuZUjGkEI6NTYCmfdwPhUdkjzzpudGq9SkasOLJ338OddTstXbL4QGEMg573BPiXGBeJIyaBntgXRVtlyNVAoN0dEIZYUAFDU76-BimphYfmShsYkuHDzOacZ0o6T8YH62ywhB8rYuN9ssibt4Zdlw?width=256&height=256&cropmode=none" alt="Submit" width="48" height="48">
                
                 
             </td>
