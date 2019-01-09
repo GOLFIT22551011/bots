@@ -1,4 +1,4 @@
-<form action="https://golfais.herokuapp.com/updatetime.php" style="" method="POST">
+﻿<form action="https://golfais.herokuapp.com/updatetime.php" style="" method="POST">
 <input type="hidden" name="time">
 </form>
 <?php
@@ -13,7 +13,7 @@ if (!is_null($events['ESP'])) {
 	
 	send_LINE($events['ESP']);
 	
-	 echo "OK";
+	 echo "OKESP";
 	}
 if (!is_null($events['TimeSN'])) {
 	
