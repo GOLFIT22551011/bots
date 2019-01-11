@@ -14,7 +14,13 @@ if (!is_null($events['ESP'])) {
 	send_LINE($events['ESP']);
 	
 	 echo "OKESP";
-	}
+    }
+if (!is_null($events['settimeSE'])) {
+	
+    send_LINE($events['settimeSE']);
+        
+      echo "OKESP";
+          }    
 if (!is_null($events['TimeSN'])) {
 	
 	send_LINE($events['TimeSN']);
