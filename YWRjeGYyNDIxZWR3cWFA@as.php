@@ -17,7 +17,7 @@ if (!is_null($events['ESP'])) {
     }
 if (!is_null($events['settimeSE'])) {
 	
-    send_LINE($events['settimeSE']);
+    
         
       echo "OKESP";
           }    
@@ -32,7 +32,7 @@ if($_GET['path'] == "removetime" ){
 		$arrayPostData['messages'][0]['type'] = "text";
 		$arrayPostData['messages'][0]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
 		replyMsg($arrayHeader,$arrayPostData);
-         	getMqttfromlineMsg("NodeMCU1","ยกเลิกทั้งหมด");
+         	getMqttfromlineMsg("NodeMCU1","DeleteTime");
             echo $events['ESP'];
 		
 		
