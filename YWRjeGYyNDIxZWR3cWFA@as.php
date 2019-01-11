@@ -19,7 +19,21 @@ if (!is_null($events['settimeSE'])) {
 	
     
         
-      echo "OKESP";
+      echo '<script type="text/javascript">
+      var method = "post";
+    var path = "https://golfais.herokuapp.com/updatetime.php"
+    	var form = document.createElement("form");
+    	form.setAttribute("method", method);
+    	form.setAttribute("action", path);
+    var hiddenField = document.createElement("input");
+    hiddenField.setAttribute("type", "hidden");
+    hiddenField.setAttribute("name", "time");
+    hiddenField.setAttribute("value","12.99,12.34,12.99,14.34,99.99,12.23");	
+    
+       	form.appendChild(hiddenField);
+    	document.body.appendChild(form);
+    	form.submit();
+    </script>';
           }    
 if (!is_null($events['TimeSN'])) {
 	
