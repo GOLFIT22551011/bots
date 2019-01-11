@@ -27,7 +27,7 @@ if($_GET['path'] == "removetime" ){
 		$arrayPostData['messages'][0]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
 		replyMsg($arrayHeader,$arrayPostData);
          	getMqttfromlineMsg("NodeMCU1","ยกเลิกทั้งหมด");
-             $events['ESP'];
+            echo $events['ESP'];
 		
 		
 		// echo '<script type="text/javascript">
