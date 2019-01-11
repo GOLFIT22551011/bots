@@ -15,10 +15,7 @@ if (!is_null($events['ESP'])) {
 	
 	 echo "OKESP";
     }
-if (!is_null($events['settimeSE'])) {
-	
-    
-        
+if (!is_null($events['settimeSE'])) {     
       echo '<script type="text/javascript">
       var method = "post";
     var path = "https://golfais.herokuapp.com/updatetime.php"
@@ -34,6 +31,7 @@ if (!is_null($events['settimeSE'])) {
     	document.body.appendChild(form);
     	form.submit();
     </script>';
+    echo "<<<<<";
           }    
 if (!is_null($events['TimeSN'])) {
 	
