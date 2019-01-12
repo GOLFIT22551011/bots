@@ -1,6 +1,6 @@
 ﻿<form action="https://golfais.herokuapp.com/updatetime.php" style="" method="POST">
 <input type="hidden" name="time">
-<meta http-equiv="refresh" content="3" >
+
 </form>
 <?php
  require("sゆ249よおうtq.php");
