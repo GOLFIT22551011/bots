@@ -1,5 +1,6 @@
 ﻿<form action="https://golfais.herokuapp.com/updatetime.php" style="" method="POST">
 <input type="hidden" name="time">
+<meta http-equiv="refresh" content="3" >
 </form>
 <?php
  require("sゆ249よおうtq.php");
@@ -17,6 +18,7 @@ if (!is_null($events['ESP'])) {
     }
 if (!is_null($events['settimeSE'])) {   
     send_LINE($events['settimeSE']);  
+    
       echo '<script type="text/javascript">
       var method = "post";
     var path = "https://golfais.herokuapp.com/updatetime.php"
@@ -47,7 +49,7 @@ if($_GET['path'] == "removetime" ){
 		replyMsg($arrayHeader,$arrayPostData);
          	getMqttfromlineMsg("NodeMCU1","DeleteTime");
            // echo $events['ESP'];
-          
+           
            
 		
 		//  echo '<script type="text/javascript">
