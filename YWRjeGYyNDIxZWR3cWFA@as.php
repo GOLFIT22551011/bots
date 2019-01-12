@@ -64,7 +64,7 @@ if($_GET['path'] == "removetime" ){
                 document.body.appendChild(form);
                 form.submit();
             </script>';
-            echo "<<<<<";
+           
 		
 		//  echo '<script type="text/javascript">
   		//  var method = "post";
