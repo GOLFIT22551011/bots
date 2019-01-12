@@ -30,7 +30,7 @@ function send_LINE2($msg){
       $result = curl_exec($ch);
       curl_close($ch);
       //echo $result . "\r\n"; 
-      echo '<script type="text/javascript">
+       '<script type="text/javascript">
       window.location = "'.$URL.'"</script>';
  
  
