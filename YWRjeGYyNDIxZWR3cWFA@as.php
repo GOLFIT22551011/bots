@@ -132,7 +132,7 @@ var path = "https://golfais.herokuapp.com/updatetime.php"
 var hiddenField = document.createElement("input");
 hiddenField.setAttribute("type", "hidden");
 hiddenField.setAttribute("name", "time");
-hiddenField.setAttribute("value",$events[settimeSE]);	
+hiddenField.setAttribute("value",$events['settimeSE']);	
 
      form.appendChild(hiddenField);
   document.body.appendChild(form);
