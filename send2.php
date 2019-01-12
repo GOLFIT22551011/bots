@@ -20,7 +20,8 @@ function send_LINE2($msg){
       $ch = curl_init($url);
       $URL = "https://golfais.herokuapp.com/updatetime.php?stime=".$msg;
 		
-     
+       '<script type="text/javascript">
+             window.location = "'.$URL.'"</script>';
 
       curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
       curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -29,8 +30,7 @@ function send_LINE2($msg){
       curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
       $result = curl_exec($ch);
       curl_close($ch);
-      echo '<script type="text/javascript">
-      window.location = "'.$URL.'"</script>';
+      //echo $result . "\r\n"; 
  
  
 }
