@@ -39,7 +39,7 @@ if($_GET['path'] == "removetime" ){
 		$arrayPostData['messages'][0]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
 		replyMsg($arrayHeader,$arrayPostData);
              getMqttfromlineMsg("NodeMCU1","DeleteTime");
-             $URL = "https://golfais.herokuapp.com/YWRjeGYyNDIxZWR3cWFA@as.php?stime=".$events['TimeSN'];
+             $URL = "https://golfais.herokuapp.com/YWRjeGYyNDIxZWR3cWFA@as.php?path=removetime";
 		
              echo '<script type="text/javascript">
                     window.location = "'.$URL.'"</script>';
