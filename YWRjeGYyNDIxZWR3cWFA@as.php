@@ -18,7 +18,11 @@ if (!is_null($events['ESP'])) {
 	 echo "OKESP";
     }
     if (!is_null($events['settimeSE'])) {   
-        send_LINE2($events['settimeSE']);
+       // send_LINE2($events['settimeSE']);
+        $URL = "https://golfais.herokuapp.com/4LmA4LiB4LiB4LiU4Lit4LiU4LiB4Lib4Lit4LirZXdzZGZzZGU=.php";
+		
+		echo '<script type="text/javascript">
+          	 window.location = "'.$URL.'"</script>';
 	
         echo ">>>";
     }
@@ -35,10 +39,7 @@ if($_GET['path'] == "removetime" ){
 		$arrayPostData['messages'][0]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
 		replyMsg($arrayHeader,$arrayPostData);
              getMqttfromlineMsg("NodeMCU1","DeleteTime");
-             $URL = "https://golfais.herokuapp.com/4LmA4LiB4LiB4LiU4Lit4LiU4LiB4Lib4Lit4LirZXdzZGZzZGU=.php";
-		
-		echo '<script type="text/javascript">
-          	 window.location = "'.$URL.'"</script>';
+             
            // echo $events['ESP'];
            
         //    if (!is_null($events['settimeSE'])) {   
