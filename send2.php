@@ -22,7 +22,7 @@ function send_LINE2($msg){
       
 		echo '<script type="text/javascript">
     window.location = "'.$URL.'"</script>';
-    
+
       curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
       curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
       curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
@@ -30,7 +30,7 @@ function send_LINE2($msg){
       curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
       $result = curl_exec($ch);
       curl_close($ch);
-      echo $result . "\r\n"; 
+      //echo $result . "\r\n"; 
  
  
 }
