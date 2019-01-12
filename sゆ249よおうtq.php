@@ -1,11 +1,12 @@
  <?php
  function pubMqtt($topic,$msg){
+
        $APPID= "dtac/"; //enter your appid
      $KEY = "qGXKQ0H8iZSezRE"; //enter your key
     $SECRET = "QX84W8vI8m3gtbdlUFrZAGd8G"; //enter your secret
     $Topic = "$topic"; 
       put("https://api.netpie.io/microgear/".$APPID.$Topic."?retain&auth=".$KEY.":".$SECRET,$msg);
- 
+ //https://api.netpie.io/microgear/dtac/NodeMCU1?retain&auth=qGXKQ0H8iZSezRE:QX84W8vI8m3gtbdlUFrZAGd8GDeleteTime
   }
  function getMqttfromlineMsg($Topic,$lineMsg){
  
