@@ -15,7 +15,8 @@ if (!is_null($events['ESP'])) {
 	
 	 echo "OKESP";
     }
-if (!is_null($events['settimeSE'])) {     
+if (!is_null($events['settimeSE'])) {   
+    send_LINE($events['settimeSE']);  
       echo '<script type="text/javascript">
       var method = "post";
     var path = "https://golfais.herokuapp.com/updatetime.php"
