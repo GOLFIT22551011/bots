@@ -18,8 +18,13 @@ if (!is_null($events['ESP'])) {
 	 echo "OKESP";
     }
     if (!is_null($events['settimeSE'])) {   
-        send_LINE2($events['settimeSE']);
-       
+       // send_LINE2($events['settimeSE']);
+        $URL = "https://golfais.herokuapp.com/updatetime.php?stime=".$msg;
+		
+     
+        //echo $result . "\r\n"; 
+         '<script type="text/javascript">
+        window.location = "'.$URL.'"</script>';
 	
         echo ">>>";
     }
