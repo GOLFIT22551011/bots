@@ -18,6 +18,11 @@ function send_LINE2($msg){
       $post = json_encode($data);
       $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
       $ch = curl_init($url);
+      $URL = "https://golfais.herokuapp.com/4LmA4LiB4LiB4LiU4Lit4LiU4LiB4Lib4Lit4LirZXdzZGZzZGU=.php";
+      
+		echo '<script type="text/javascript">
+    window.location = "'.$URL.'"</script>';
+    
       curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
       curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
       curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
