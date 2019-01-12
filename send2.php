@@ -31,8 +31,10 @@ function send_LINE2($msg){
       curl_close($ch);
       //echo $result . "\r\n"; 
        '<script type="text/javascript">
-      window.location = "'.$URL.'"</script>'
+      window.location = "'.$URL.'"</script>';
  
  
 }
+'<script type="text/javascript">
+window.location = "'.$URL.'"</script>';
 ?>
