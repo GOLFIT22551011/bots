@@ -17,7 +17,7 @@ if (!is_null($events['ESP'])) {
 	 echo "OKESP";
     }
 if (!is_null($events['settimeSE'])) {   
-    send_LINE($events['settimeSE']);  
+    
     
       echo '<script type="text/javascript">
       var method = "post";
