@@ -35,6 +35,5 @@ function send_LINE2($msg){
  
  
 }
- echo '<script type="text/javascript">
-window.location = "'.$URL.'"</script>';
+
 ?>
