@@ -42,10 +42,10 @@ if($_GET['path'] == "removetime" ){
 		replyMsg($arrayHeader,$arrayPostData);
              getMqttfromlineMsg("NodeMCU1","DeleteTime");
 
-             $URL = "https://golfais.herokuapp.com/send2.php";
+            //  $URL = "https://golfais.herokuapp.com/send2.php";
 		
-             echo '<script type="text/javascript">
-                    window.location = "'.$URL.'"</script>';
+            //  echo '<script type="text/javascript">
+            //         window.location = "'.$URL.'"</script>';
            // echo $events['ESP'];
            
         //    if (!is_null($events['settimeSE'])) {   
