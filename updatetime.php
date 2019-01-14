@@ -37,7 +37,7 @@ $events = json_decode($content, true);
 $events['settimeSE']
 ?> 
 </div>
- {{testTime}}   
+ {{$events['settimeSE']}}   
  
   
 </body>
