@@ -31,17 +31,18 @@
 </table>
 <form action="https://golfais.herokuapp.com/updatetime.html" style="" method="POST">
 </form>
+<?php
+$content = file_get_contents('php://input');
+$events = json_decode($content, true);
+$events['settimeSE']
+?> 
 </div>
  {{testTime}}   
  
   
 </body>
 </html>
-<?php
-$content = file_get_contents('php://input');
-$events = json_decode($content, true);
-$events['settimeSE']
-?> 
+
 <script>
     var app = angular.module('myApp', []);
     app.controller('customersCtrl', function($scope, $http) {
