@@ -41,17 +41,17 @@ if (!is_null($events['settimeSE'])) {
 ?> 
 </div>
 </div>
-    
-$events['settimeSE']
-  
+   {{str}}
+   {{testTime}}   
 </body>
+
 </html>
 
 <script>
     
-  //var str = '<?php echo $_POST["time"]; ?>';
-  var str ='<?php echo $events['settimeSE'];?>';
-  
+  var str = '<?php echo $_POST["time"]; ?>';
+  $scope.str = str;
+  $scope.testTime = "<?php $content = file_get_contents('php://input'); $events = json_decode($content, true); echo $events['settimeSE']?>";
   var res = str.split(",");
   var app = angular.module('myApp', []);
  
