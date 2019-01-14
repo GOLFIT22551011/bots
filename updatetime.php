@@ -57,7 +57,7 @@ $events['settimeSE']
         // });
         if(res[0]==null || res[0]=="99.99"){
             $scope.time=[{ startTime: "",endTime:""}];
-            }sdsd
+            }
         else if(res[2]==null || res[2]=="99.99"){
             $scope.time=[{ startTime: res[0],endTime:res[1]}];
             }
