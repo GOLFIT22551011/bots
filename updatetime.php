@@ -30,13 +30,12 @@
 <?php
 $content = file_get_contents('php://input');
 $events = json_decode($content, true);
-$events['settimeSE']
+$events['settimeSE'];
 ?> 
 </div>
 </div>
     
-{{startTime}} 
-{{$events['settimeSE']}} 
+
   
 </body>
 </html>
