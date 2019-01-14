@@ -32,58 +32,34 @@
 <form action="https://golfais.herokuapp.com/updatetime.html" style="" method="POST">
 </form>
 </div>
-    
+ {{testTime}}   
  
   
 </body>
 </html>
 
 <script>
- 
-
-
-     var str = '<?php echo $_POST["time"]; ?>';
-  var res = str.split(",");
-
- 
-if(res[0]==null || res[0]=="99.99")
-{
     var app = angular.module('myApp', []);
     app.controller('customersCtrl', function($scope, $http) {
-    $scope.time=[
-        { startTime: "",endTime:""}]
-    });
-}
-else if(res[2]==null || res[2]=="99.99")
-{
-    var app = angular.module('myApp', []);
-    app.controller('customersCtrl', function($scope, $http) {
-    $scope.time=[
-        { startTime: res[0],endTime:res[1]}]
-    });
-}    
-else if(res[4]==null || res[4]=="99.99")
-{
-    var app = angular.module('myApp', []);
-    app.controller('customersCtrl', function($scope, $http) {
-    $scope.time=[
-        { startTime: res[0],endTime:res[1]},
-        {startTime: res[2],endTime:res[3]}
-         ]
-    });
-}    
+        var str = '<?php echo $_POST["time"]; ?>';
+        var res = str.split(",");
+        var mainInfo = null;
+        $http.get('settimeSE.json').success(function(data) {
+            $testTime = data;
+        });
+        if(res[0]==null || res[0]=="99.99"){
+            $scope.time=[{ startTime: "",endTime:""}]
+            }
+        else if(res[2]==null || res[2]=="99.99"){
+            $scope.time=[{ startTime: res[0],endTime:res[1]}]
+            }
+        else if(res[4]==null || res[4]=="99.99"){
+            $scope.time=[{ startTime: res[0],endTime:res[1]},{startTime: res[2],endTime:res[3]}]
+            }
+        else{
+          $scope.time=[{ startTime: res[0],endTime:res[1]},{startTime: res[2],endTime:res[3]},{startTime: res[4],endTime:res[5]}]
+             }
     
-
-else{
-var app = angular.module('myApp', []);
-app.controller('customersCtrl', function($scope, $http) {
-    $scope.time=[
-        { startTime: res[0],endTime:res[1]},
-        {startTime: res[2],endTime:res[3]},
-        {startTime: res[4],endTime:res[5]}
-    
-    ]
-    
-});
+    });
 }
 </script>
