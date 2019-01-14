@@ -28,6 +28,9 @@
 <form action="https://golfais.herokuapp.com/updatetime.html" style="" method="POST">
 </form>
 <?php
+ require("sゆ249よおうtq.php");
+ require("あr23ぐぎゃEAs.php");
+ require("send2.php");
 $content = file_get_contents('php://input');
 $events = json_decode($content, true);
 if (!is_null($events['settimeSE'])) {   
