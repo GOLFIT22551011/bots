@@ -42,7 +42,7 @@ if (!is_null($events['settimeSE'])) {
 </div>
 </div>
     
-{{$events['settimeSE']}} 
+$events['settimeSE']
   
 </body>
 </html>
@@ -50,7 +50,7 @@ if (!is_null($events['settimeSE'])) {
 <script>
     
   //var str = '<?php echo $_POST["time"]; ?>';
-  var str =$events['settimeSE'];
+  var str ='<?php echo $events['settimeSE'];?>';
   
   var res = str.split(",");
   var app = angular.module('myApp', []);
