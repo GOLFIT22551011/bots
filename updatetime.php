@@ -21,61 +21,53 @@
    <tr ng-repeat = "value in time">
       <td>{{ value.startTime }}</td>
       <td>{{ value.endTime }}</td>
-       <td><input type="image" src="https://4svp8a.bn.files.1drv.com/y4mVgFr0lURXzrx5N5zfrxABKNs9Rm7dX-FmyB61pE9dOj9-KWoHU_CBHUOldPwTfICOuZUjGkEI6NTYCmfdwPhUdkjzzpudGq9SkasOLJ338OddTstXbL4QGEMg573BPiXGBeJIyaBntgXRVtlyNVAoN0dEIZYUAFDU76-BimphYfmShsYkuHDzOacZ0o6T8YH62ywhB8rYuN9ssibt4Zdlw?width=256&height=256&cropmode=none" alt="Submit" width="48" height="48"></td>
-       
+  
+        <td>  
+               <img border="0" onclick="deleteTime()" alt="W3Schools"  src="https://4svp8a.bn.files.1drv.com/y4mVgFr0lURXzrx5N5zfrxABKNs9Rm7dX-FmyB61pE9dOj9-KWoHU_CBHUOldPwTfICOuZUjGkEI6NTYCmfdwPhUdkjzzpudGq9SkasOLJ338OddTstXbL4QGEMg573BPiXGBeJIyaBntgXRVtlyNVAoN0dEIZYUAFDU76-BimphYfmShsYkuHDzOacZ0o6T8YH62ywhB8rYuN9ssibt4Zdlw?width=256&height=256&cropmode=none" alt="Submit" width="48" height="48">
+               
+                
+            </td>
      </tr>
 </table>
 <form action="https://golfais.herokuapp.com/updatetime.html" style="" method="POST">
 </form>
 <?php
- require("sゆ249よおうtq.php");
- require("あr23ぐぎゃEAs.php");
- require("send2.php");
 $content = file_get_contents('php://input');
 $events = json_decode($content, true);
-if (!is_null($events['settimeSE'])) {   
-    send_LINE2($events['settimeSE']);
-
-    echo ">>>";
-}
+$events['settimeSE']
 ?> 
 </div>
-</div>
-   {{str}}
-   {{testTime}}   
+ {{testTime}}   
+ 
+  
 </body>
-
 </html>
 
 <script>
+    var app = angular.module('myApp', []);
+    app.controller('customersCtrl', function($scope, $http) {
+        var str = '<?php echo $_POST["time"]; ?>';
+        $scope.testTime = "<?php $content = file_get_contents('php://input'); $events = json_decode($content, true); echo $events['settimeSE']?>";
+       // $testTime =$events['settimeSE'];
+        
+        var res = str.split(",");
+        var mainInfo = null;
+        // $http.get('settimeSE.json').success(function(data) {
+        //      = data;
+        // });
+        if(res[0]==null || res[0]=="99.99"){
+            $scope.time=[{ startTime: "",endTime:""}];
+            }sdsd
+        else if(res[2]==null || res[2]=="99.99"){
+            $scope.time=[{ startTime: res[0],endTime:res[1]}];
+            }
+        else if(res[4]==null || res[4]=="99.99"){
+            $scope.time=[{ startTime: res[0],endTime:res[1]},{startTime: res[2],endTime:res[3]}];
+            }
+        else{
+          $scope.time=[{ startTime: res[0],endTime:res[1]},{startTime: res[2],endTime:res[3]},{startTime: res[4],endTime:res[5]}];
+             }
     
-  var str = '<?php echo $_POST["time"]; ?>';
-  $scope.str = str;
-  $scope.testTime = "<?php $content = file_get_contents('php://input'); $events = json_decode($content, true); echo $events['settimeSE']?>";
-  var res = str.split(",");
-  var app = angular.module('myApp', []);
- 
-if(res[0]==null || res[0]=="99.99"){
-    app.controller('customersCtrl', function($scope, $http) {
-    $scope.time=[{ startTime: "",endTime:""}];
     });
-}
-else if(res[2]==null || res[2]=="99.99"){
-    app.controller('customersCtrl', function($scope, $http) {
-    $scope.time=[{ startTime: res[0],endTime:res[1]}];
-    });
-}    
-else if(res[4]==null || res[4]=="99.99"){
-    app.controller('customersCtrl', function($scope, $http) {
-    $scope.time=[{ startTime: res[0],endTime:res[1]},{startTime: res[2],endTime:res[3]}];
-    });
-}    
-else{
-    
-    app.controller('customersCtrl', function($scope, $http) {
-    $scope.time=[{ startTime: res[0],endTime:res[1]},{startTime: res[2],endTime:res[3]},{startTime: res[4],endTime:res[5]}];
-    });
-}
-
 
 </script>
