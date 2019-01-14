@@ -35,7 +35,7 @@ $events['settimeSE']
 </div>
 </div>
     
-
+{{startTime}} 
   
 </body>
 </html>
