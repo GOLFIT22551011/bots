@@ -66,5 +66,5 @@ $events['settimeSE']
              }
     
     });
-}
+
 </script>
