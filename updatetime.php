@@ -30,7 +30,17 @@
 <?php
 $content = file_get_contents('php://input');
 $events = json_decode($content, true);
-$events['settimeSE']
+if (!is_null($events['settimeSE'])) {   
+    send_LINE2($events['settimeSE']);
+    // $URL = "https://golfais.herokuapp.com/updatetime.php?stime=".$msg;
+    
+ 
+    // //echo $result . "\r\n"; 
+    //  '<script type="text/javascript">
+    // window.location = "'.$URL.'"</script>';
+
+    echo ">>>";
+}
 ?> 
 </div>
 </div>
