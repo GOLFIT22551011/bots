@@ -42,7 +42,9 @@ $events['settimeSE']
 
 <script>
     
-  var str = '<?php echo $_POST["time"]; ?>';
+  //var str = '<?php echo $_POST["time"]; ?>';
+  var str = $events['settimeSE'];
+  
   var res = str.split(",");
   var app = angular.module('myApp', []);
  
