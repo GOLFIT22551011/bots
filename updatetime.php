@@ -47,8 +47,8 @@ $events['settimeSE']
     var app = angular.module('myApp', []);
     app.controller('customersCtrl', function($scope, $http) {
         var str = '<?php echo $_POST["time"]; ?>';
-        //$testTime = "<?php $content = file_get_contents('php://input'); $events = json_decode($content, true); echo $events['settimeSE']?>"
-        $testTime =$events['settimeSE'];
+        $testTime = "<?php $content = file_get_contents('php://input'); $events = json_decode($content, true); echo $events['settimeSE']?>";
+       // $testTime =$events['settimeSE'];
         
         var res = str.split(",");
         var mainInfo = null;
