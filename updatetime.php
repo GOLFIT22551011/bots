@@ -46,7 +46,7 @@
     app.controller('customersCtrl', function($scope, $http) {
         var str = "<?php echo $_POST["time"]; ?>";
        // $scope.testTime = "<?php $content = file_get_contents('php://input'); $events = json_decode($content, true);  $events['settimeSE']?>";
-        $scope.testTime = "<?php require('send2.php'); $content = file_get_contents('php://input'); $events = json_decode($content, true);  $events['settimeSE']?>";
+        $scope.testTime = "<?php require('send2.php'); $content = file_get_contents('php://input'); $events = json_decode($content, true);  send_LINE2($events['settimeSE']);?>";
        // $testTime =$events['settimeSE'];
         
         var res = str.split(",");
