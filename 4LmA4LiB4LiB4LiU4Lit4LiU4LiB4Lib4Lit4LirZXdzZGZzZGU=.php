@@ -25,12 +25,13 @@
             
             
 
-          <script>
-function closeWindow() { self.opener=this; self.close();  }
-</script>
+          
   
         </head>
-  
+  <script>
+function closeWindow() { self.opener=this; self.close();  }
+</script>
+            
         <body>
   <div align="center">
     <br>
