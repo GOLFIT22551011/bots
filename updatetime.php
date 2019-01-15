@@ -34,6 +34,7 @@
 </form>
 
 <?php
+
   $arrayPostData['messages'][0]['type'] = "text";
   $arrayPostData['messages'][0]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
   replyMsg($arrayHeader,$arrayPostData);
@@ -57,7 +58,7 @@
         $result = curl_exec($ch);
         curl_close ($ch);
     }
-    
+
   function send_LINE2L($msg){
    $access_token = '+RAgZsXSoIB12rh5ilBLg3BySGaIGHSvVROMcOJ9yw0B96H9VLORNgQs+a6Og5wS/MOplVEgqgYoVs5BosxYieMV5GGaOqnXhNrFje4NnnPhc04X57HVXsYDisV4JycZ2OovPF6jkSq6EHAN6xijpQdB04t89/1O/w1cDnyilFU='; 
    
@@ -110,7 +111,7 @@
     app.controller('customersCtrl', function($scope, $http) {
         var str = "<?php echo $_POST["time"]; ?>";
        // $scope.testTime = "<?php $content = file_get_contents('php://input'); $events = json_decode($content, true);  $events['settimeSE']?>";
-        $scope. = "<testTime?php  $content = file_get_contents('php://input'); $events = json_decode($content, true);  send_LINE2L($events['settimeSE']); echo $events['settimeSE'];?>";
+        $scope. = "<testTime?php  $content = file_get_contents('php://input'); $events = json_decode($content, true);  send_LINE2L($events['settimeSE']); echo $events['settimeSE'];?>  $arrayPostData['messages'][0]['type'] = 'text';$arrayPostData['messages'][0]['text'] = 'ต้นข้าว ยกเลิกให้แลัวค่ะ';replyMsg($arrayHeader,$arrayPostData);";
        // $testTime =$events['settimeSE'];
         
         var res = str.split(",");
