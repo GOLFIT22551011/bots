@@ -6,6 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta http-equiv="refresh" content="2">
 </head>
 <body ng-app="myApp">
 <div ng-controller="customersCtrl">
@@ -35,7 +36,7 @@
 <?php
   
   function send_LINE2L($msg){
-   $access_token = '+SRAgZsXSoIB12rh5ilBLg3BySGaIGHSvVROMcOJ9yw0B96H9VLORNgQs+a6Og5wS/MOplVEgqgYoVs5BosxYieMV5GGaOqnXhNrFje4NnnPhc04X57HVXsYDisV4JycZ2OovPF6jkSq6EHAN6xijpQdB04t89/1O/w1cDnyilFU='; 
+   $access_token = '+RAgZsXSoIB12rh5ilBLg3BySGaIGHSvVROMcOJ9yw0B96H9VLORNgQs+a6Og5wS/MOplVEgqgYoVs5BosxYieMV5GGaOqnXhNrFje4NnnPhc04X57HVXsYDisV4JycZ2OovPF6jkSq6EHAN6xijpQdB04t89/1O/w1cDnyilFU='; 
    
      
     $messages = [
@@ -86,7 +87,7 @@
     app.controller('customersCtrl', function($scope, $http) {
         var str = "<?php echo $_POST["time"]; ?>";
        // $scope.testTime = "<?php $content = file_get_contents('php://input'); $events = json_decode($content, true);  $events['settimeSE']?>";
-        $scope.testTime = "<?php  $content = file_get_contents('php://input'); $events = json_decode($content, true);  send_LINE2L($events['settimeSE']); echo $events['settimeSE'];?>";
+        $scope. = "<testTime?php  $content = file_get_contents('php://input'); $events = json_decode($content, true);  send_LINE2L($events['settimeSE']); echo $events['settimeSE'];?>";
        // $testTime =$events['settimeSE'];
         
         var res = str.split(",");
