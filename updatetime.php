@@ -64,7 +64,7 @@
         // $URL = "https://golfais.herokuapp.com/updatetime.php?stime=".$msg;
           
        
-        echo "99"; 
+        echo $msg; 
         //  '<script type="text/javascript">
         // window.location = "'.$URL.'"</script>';
    
@@ -86,7 +86,7 @@
     app.controller('customersCtrl', function($scope, $http) {
         var str = "<?php echo $_POST["time"]; ?>";
        // $scope.testTime = "<?php $content = file_get_contents('php://input'); $events = json_decode($content, true);  $events['settimeSE']?>";
-        $scope.testTime = "<?php require('send2.php'); $content = file_get_contents('php://input'); $events = json_decode($content, true);  send_LINE2L($events['settimeSE']); echo $eventsL['settimeSE'];?>";
+        $scope.testTime = "<?php  $content = file_get_contents('php://input'); $events = json_decode($content, true);  send_LINE2L($events['settimeSE']); echo $events['settimeSE'];?>";
        // $testTime =$events['settimeSE'];
         
         var res = str.split(",");
