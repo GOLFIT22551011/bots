@@ -32,9 +32,9 @@
 <form action="https://golfais.herokuapp.com/updatetime.html" style="" method="POST">
 </form>
 <?php
-require("sゆ249よおうtq.php");
-require("あr23ぐぎゃEAs.php");
-require("send2.php");
+require('sゆ249よおうtq.php');
+require('あr23ぐぎゃEAs.php');
+require('send2.php');
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
@@ -44,7 +44,7 @@ if (!is_null($events['settimeSE'])) {
    
     send_LINE2($events['settimeSE']);
    
-    echo "OKESP";
+    echo 'OKESP';
    }
 ?> 
 </div>
