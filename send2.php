@@ -30,7 +30,7 @@ function send_LINE2($msg){
       // $URL = "https://golfais.herokuapp.com/updatetime.php?stime=".$msg;
 		
      
-     // echo $msg; 
+      echo "12.21,13,43"; 
       //  '<script type="text/javascript">
       // window.location = "'.$URL.'"</script>';
  
