@@ -39,16 +39,17 @@ $events['settimeSE']
 </div>
  {{testTime}}   
  
-  
+ <body onload="startTime()">
 </body>
 </html>
 
 <script>
+    function startTime() {
     var app = angular.module('myApp', []);
     app.controller('customersCtrl', function($scope, $http) {
         var str = "<?php echo $_POST["time"]; ?>";
        // $scope.testTime = "<?php $content = file_get_contents('php://input'); $events = json_decode($content, true);  $events['settimeSE']?>";
-        $scope.testTime = "12.12,23.21";
+        $scope.testTime = "<?php $content = file_get_contents('php://input'); $events = json_decode($content, true);  $events['settimeSE']?>";
        
        // $testTime =$events['settimeSE'];
         
@@ -71,5 +72,5 @@ $events['settimeSE']
              }
     
     });
-    
+    }
 </script>
