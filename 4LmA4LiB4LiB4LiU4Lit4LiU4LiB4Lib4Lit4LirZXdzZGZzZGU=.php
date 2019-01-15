@@ -45,7 +45,7 @@ function closeWindow() { self.opener=this; self.close();  }
        <?php
           
           //  echo $_GET['etime'];
-              $file = fopen('text.txt','a+')  or die("Unable to open file!");
+              $file = fopen('Log.txt','a+')  or die("Unable to open file!");
               $str = "\r\nทดสอบเขียนข้อมูลลงในไฟล์ \r\nต่อจากข้อมูลเดิม\r\n";
               fwrite($file,$str);
               fclose($file);
