@@ -25,14 +25,7 @@
             
             
 </style>
-          <script>
-function closeWindow() 
-            { 
-              closeWindow.close(); 
-            }
-</script>
-          
-  
+         
         </head>
            
         <body>
@@ -54,7 +47,7 @@ function closeWindow()
         ?>
       
        </h1>
-    <button id="closeWindow()" class="button button4" style="width:200px;" onclick="closeWindow()">บันทึกข้อมูล</button>
+    <button id="closeWindow()" class="button button4" style="width:200px;" onclick="close_window();return false;">บันทึกข้อมูล</button>
     
       </div>
                 
