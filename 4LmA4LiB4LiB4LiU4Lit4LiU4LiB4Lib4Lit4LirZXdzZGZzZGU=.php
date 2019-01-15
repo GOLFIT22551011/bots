@@ -47,7 +47,7 @@
         ?>
       
        </h1>
-    <button onclick="javascript:window.open('','_self').close();">บันทึกข้อมูล</button>
+    <button style="width:200px;" onclick="javascript:window.open('','_self').close();">บันทึกข้อมูล</button>
  
     
       </div>
