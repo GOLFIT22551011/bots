@@ -28,7 +28,7 @@
           <script>
 function closeWindow() 
             { 
-              window.close(); 
+              closeWindow.close(); 
             }
 </script>
           
