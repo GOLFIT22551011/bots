@@ -55,7 +55,7 @@ function closeWindow() { self.opener=this; self.close();  }
                 
 <?
 
-$strFileName = "thaicreate.txt";
+$strFileName = "Log.txt";
 
 $objFopen = fopen($strFileName, 'a');
 
