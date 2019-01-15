@@ -36,7 +36,7 @@
 </div>
  {{testTime}}   
  
- <body onload="startTime()">
+
 </body>
 </html>
 
