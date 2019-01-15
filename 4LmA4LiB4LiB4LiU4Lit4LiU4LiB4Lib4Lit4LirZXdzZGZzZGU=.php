@@ -25,76 +25,7 @@
             
             
 </style>
-         <script>
-  function CloseWindow()
-  {
-  window.close();
-  }
-
-  function CloseOpenerWindow()
-  {
-  window.opener = window;
-  window.close();
-  }
-
-  function CloseOpenerHikks()
-  {
-  window.opener = "HikksNotAtHome";
-  window.close();
-  }
-
-  function CloseWithWindowOpenTrick()
-  {
-  var objWindow = window.open(location.href, "_self");
-  objWindow.close();
-  }
-  </script>
-  function CloseWindow()
-  {
-  window.close();
-  }
-
-  function CloseOpenerWindow()
-  {
-  window.opener = window;
-  window.close();
-  }
-
-  function CloseOpenerHikks()
-  {
-  window.opener = "HikksNotAtHome";
-  window.close();
-  }
-
-  function CloseWithWindowOpenTrick()
-  {
-  var objWindow = window.open(location.href, "_self");
-  objWindow.close();
-  }
-<script type="text/javascript">
-  function CloseWindow()
-  {
-  window.close();
-  }
-
-  function CloseOpenerWindow()
-  {
-  window.opener = window;
-  window.close();
-  }
-
-  function CloseOpenerHikks()
-  {
-  window.opener = "HikksNotAtHome";
-  window.close();
-  }
-
-  function CloseWithWindowOpenTrick()
-  {
-  var objWindow = window.open(location.href, "_self");
-  objWindow.close();
-  }
-  </script>
+       
         </head>
            
         <body>
@@ -116,8 +47,8 @@
         ?>
       
        </h1>
-    <button type="button" onclick="CloseWindow();">Close this window
-  (without opener tricks)</button>
+    <button onclick="javascript:window.open('','_self').close();">บันทึกข้อมูล</button>
+ 
     
       </div>
                 
