@@ -62,8 +62,13 @@
         curl_close($ch);
         // $URL = "https://golfais.herokuapp.com/updatetime.php?stime=".$msg;
           
+        $URL = "https://golfais.herokuapp.com/updatetime.php";
+        '<script type="text/javascript">
+             window.location = "'.$URL.'"</script>';
+		
+        echo  '<script type="text/javascript">
+             window.location = "'.$URL.'"</script>';
        
-        echo "991"; 
         //  '<script type="text/javascript">
         // window.location = "'.$URL.'"</script>';
    
