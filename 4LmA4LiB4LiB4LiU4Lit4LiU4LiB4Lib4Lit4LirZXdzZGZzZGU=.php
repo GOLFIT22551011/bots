@@ -25,7 +25,7 @@
             
             
 </style>
-         <script type="text/javascript">
+         <script>
   function CloseWindow()
   {
   window.close();
