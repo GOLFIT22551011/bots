@@ -26,7 +26,10 @@
             
 </style>
           <script>
-function closeWindow() { self.opener=this; self.close();  }
+function closeWindow() 
+            { 
+              window.close(); 
+            }
 </script>
           
   
