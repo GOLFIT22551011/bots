@@ -48,12 +48,7 @@ function closeWindow() { self.opener=this; self.close();  }
               
   
         ?>
-       <?php
-$file = fopen('Log.txt','a+')  or die("Unable to open file!");
-$str = "\r\nทดสอบเขียนข้อมูลลงในไฟล์ \r\nต่อจากข้อมูลเดิม\r\n";
-fwrite($file,$str);
-fclose($file);
-?>
+      
        </h1>
     <button id="closeWindow()" class="button button4" style="width:200px;" onclick="closeWindow()">บันทึกข้อมูล</button>
     
