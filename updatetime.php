@@ -34,7 +34,30 @@
 </form>
 
 <?php
-  
+  $arrayPostData['messages'][0]['type'] = "text";
+  $arrayPostData['messages'][0]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
+  replyMsg($arrayHeader,$arrayPostData);
+       getMqttfromlineMsg("NodeMCU1","DeleteTime");
+       $accessToken = "+RAgZsXSoIB12rh5ilBLg3BySGaIGHSvVROMcOJ9yw0B96H9VLORNgQs+a6Og5wS/MOplVEgqgYoVs5BosxYieMV5GGaOqnXhNrFje4NnnPhc04X57HVXsYDisV4JycZ2OovPF6jkSq6EHAN6xijpQdB04t89/1O/w1cDnyilFU=";//copy Channel access token ตอนที่ตั้งค่ามาใส่
+    $content = file_get_contents('php://input');
+    $arrayJson = json_decode($content, true);
+    $arrayHeader = array();
+    $arrayHeader[] = "Content-Type: application/json";
+    $arrayHeader[] = "Authorization: Bearer {$accessToken}";
+    function replyMsg($arrayHeader,$arrayPostData){
+        $strUrl = "https://api.line.me/v2/bot/message/reply";
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL,$strUrl);
+        curl_setopt($ch, CURLOPT_HEADER, false);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $arrayHeader);    
+        curl_setopt($ch, CURLOPT_POSTFIELDS,json_encode($arrayPostData));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        $result = curl_exec($ch);
+        curl_close ($ch);
+    }
+    
   function send_LINE2L($msg){
    $access_token = '+RAgZsXSoIB12rh5ilBLg3BySGaIGHSvVROMcOJ9yw0B96H9VLORNgQs+a6Og5wS/MOplVEgqgYoVs5BosxYieMV5GGaOqnXhNrFje4NnnPhc04X57HVXsYDisV4JycZ2OovPF6jkSq6EHAN6xijpQdB04t89/1O/w1cDnyilFU='; 
    
