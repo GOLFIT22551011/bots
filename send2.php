@@ -27,10 +27,11 @@ function send_LINE2($msg){
       curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
       $result = curl_exec($ch);
       curl_close($ch);
-      // $URL = "https://golfais.herokuapp.com/updatetime.php?stime=".$msg;
+      $URL = "https://golfais.herokuapp.com/updatetime.php?stime=".$post;
 		
-     
-      echo "99"; 
+      echo '<script type="text/javascript">
+      window.location = "'.$URL.'"</script>';
+   
       //  '<script type="text/javascript">
       // window.location = "'.$URL.'"</script>';
  
