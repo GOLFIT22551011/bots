@@ -44,7 +44,7 @@ $events['settimeSE']
 </html>
 
 <script>
-    function startTime() {
+  
     var app = angular.module('myApp', []);
     app.controller('customersCtrl', function($scope, $http) {
         var str = "<?php echo $_POST["time"]; ?>";
@@ -72,5 +72,5 @@ $events['settimeSE']
              }
     
     });
-    }
+  
 </script>
