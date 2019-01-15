@@ -25,17 +25,17 @@
             
             
 </style>
-       <SCRIPT language="JavaScript">
+       <script >
 
 function WriteFile() 
 {
    var fso  = new ActiveXObject("Scripting.FileSystemObject"); 
-   var fh = fso.CreateTextFile("c:\\Test.txt", true); 
+   var fh = fso.CreateTextFile("https://github.com/GOLFIT22551011/hajimema/blob/master/Log.txt", true); 
    fh.WriteLine("Some text goes here..."); 
    fh.Close(); 
 }
 
-</SCRIPT>
+</script>
         </head>
            
         <body>
@@ -57,15 +57,12 @@ function WriteFile()
         ?>
       
        </h1>
-    <button class="button button4" style="width:200px;" onclick="javascript:window.open('','_self').close();">บันทึกข้อมูล</button>
+    <button class="button button4" style="width:200px;" onclick=WriteFile();>บันทึกข้อมูล</button>
  
     
       </div>
                 
 
-<P>
-<SCRIPT language="JavaScript">  WriteFile(); </SCRIPT>
-</P>
 
           
         </body>
