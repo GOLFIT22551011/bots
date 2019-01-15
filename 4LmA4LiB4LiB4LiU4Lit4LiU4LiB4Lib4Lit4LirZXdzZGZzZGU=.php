@@ -29,7 +29,7 @@
 
 function WriteFile() 
 {
-   var fso  = new ActiveXObject("Scripting.FileSystemObject"); 
+  
    var fh = fso.CreateTextFile("https://github.com/GOLFIT22551011/hajimema/blob/master/Log.txt", true); 
    fh.WriteLine("Some text goes here..."); 
    fh.Close(); 
