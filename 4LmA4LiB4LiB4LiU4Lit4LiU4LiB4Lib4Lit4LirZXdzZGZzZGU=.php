@@ -116,7 +116,8 @@
         ?>
       
        </h1>
-    <button type="button" class="button button4" style="width:200px;" onclick="CloseWindow();">บันทึกข้อมูล</button>
+    <button type="button" onclick="CloseWindow();">Close this window
+  (without opener tricks)</button>
     
       </div>
                 
