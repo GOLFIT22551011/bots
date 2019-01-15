@@ -88,7 +88,7 @@ else
 {
 
 echo "File can not write";
-x
+
 }
  
 
