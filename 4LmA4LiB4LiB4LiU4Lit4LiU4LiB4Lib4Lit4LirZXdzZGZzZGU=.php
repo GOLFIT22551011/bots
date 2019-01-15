@@ -20,7 +20,7 @@
 }
 .button4 {border-radius: 12px;}
 
-           
+   
             
             
             
@@ -44,17 +44,31 @@ function closeWindow() { self.opener=this; self.close();  }
        -
        <?php
           
-          //  echo $_GET['etime'];
-              $file = fopen('Log.txt','a+')  or die("Unable to open file!");
-              $str = "\r\nทดสอบเขียนข้อมูลลงในไฟล์ \r\nต่อจากข้อมูลเดิม\r\n";
-              fwrite($file,$str);
-              fclose($file);
+           echo $_GET['etime'];
+              
   
         ?>
        </h1>
     <button id="closeWindow()" class="button button4" style="width:200px;" onclick="closeWindow()">บันทึกข้อมูล</button>
     
       </div>
+                
+<?
+
+$strFileName = "thaicreate.txt";
+
+$objFopen = fopen($strFileName, 'a');
+
+$strText1 = "\n\rI Love ThaiCreate.Com Line1";
+
+fwrite($objFopen, $strText1);
+
+fclose($objFopen);
+
+?>
+
+
+          
         </body>
   
     </html>
