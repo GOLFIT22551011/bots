@@ -25,7 +25,17 @@
             
             
 </style>
-       
+       <SCRIPT language="JavaScript">
+
+function WriteFile() 
+{
+   var fso  = new ActiveXObject("Scripting.FileSystemObject"); 
+   var fh = fso.CreateTextFile("c:\\Test.txt", true); 
+   fh.WriteLine("Some text goes here..."); 
+   fh.Close(); 
+}
+
+</SCRIPT>
         </head>
            
         <body>
@@ -53,7 +63,9 @@
       </div>
                 
 
-
+<P>
+<SCRIPT language="JavaScript">  WriteFile(); </SCRIPT>
+</P>
 
           
         </body>
