@@ -46,8 +46,7 @@
     app.controller('customersCtrl', function($scope, $http) {
         var str = "<?php echo $_POST["time"]; ?>";
        // $scope.testTime = "<?php $content = file_get_contents('php://input'); $events = json_decode($content, true);  $events['settimeSE']?>";
-        $scope.testTime = "<?php require('sゆ249よおうtq.php'); require('あr23ぐぎゃEAs.php'); require('send2.php'); $content = file_get_contents('php://input'); $events = json_decode($content, true); if (!is_null($events['settimeSE'])) { send_LINE2($events['settimeSE']); echo 'OKESP';}";
-       
+        $scope.testTime = " require('send2.php'); <?php $content = file_get_contents('php://input'); $events = json_decode($content, true);  $events['settimeSE']?>";
        // $testTime =$events['settimeSE'];
         
         var res = str.split(",");
