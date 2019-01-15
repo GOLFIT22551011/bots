@@ -48,12 +48,7 @@ function closeWindow() { self.opener=this; self.close();  }
               
   
         ?>
-       </h1>
-    <button id="closeWindow()" class="button button4" style="width:200px;" onclick="closeWindow()">บันทึกข้อมูล</button>
-    
-      </div>
-                
-<?
+       <?php
 
 $strFileName = "Log.txt";
 
@@ -66,6 +61,12 @@ fwrite($objFopen, $strText1);
 fclose($objFopen);
 
 ?>
+       </h1>
+    <button id="closeWindow()" class="button button4" style="width:200px;" onclick="closeWindow()">บันทึกข้อมูล</button>
+    
+      </div>
+                
+
 
 
           
