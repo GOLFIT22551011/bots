@@ -38,36 +38,7 @@
  
 </div>
  {{testTime}}   
- <script>
-  
-  var app = angular.module('myApp', []);
-  app.controller('customersCtrl', function($scope, $http) {
-      var str = "<?php echo $_POST["time"]; ?>";
-     // $scope.testTime = "<?php $content = file_get_contents('php://input'); $events = json_decode($content, true);  $events['settimeSE']?>";
-     // $scope.testTime = "<?php  $content = file_get_contents('php://input'); $events = json_decode($content, true); send_LINE2($events['settimeSE']);  echo $events['settimeSE'];?>";
-     // $testTime =$events['settimeSE'];
-        $testTime ="<?php $msg;?>";
-     var res = str.split(",");
-      var mainInfo = null;
-      // $http.get('settimeSE.json').success(function(data) {
-      //      = data;
-      // });
-      if(res[0]==null || res[0]=="99.99"){
-          $scope.time=[{ startTime: "",endTime:""}];
-          }
-      else if(res[2]==null || res[2]=="99.99"){
-          $scope.time=[{ startTime: res[0],endTime:res[1]}];
-          }
-      else if(res[4]==null || res[4]=="99.99"){
-          $scope.time=[{ startTime: res[0],endTime:res[1]},{startTime: res[2],endTime:res[3]}];
-          }
-      else{
-        $scope.time=[{ startTime: res[0],endTime:res[1]},{startTime: res[2],endTime:res[3]},{startTime: res[4],endTime:res[5]}];
-           }
-  
-  });
-
-</script>
+ 
 
 </body>
 <?php
@@ -79,15 +50,15 @@ $content = file_get_contents('php://input');
 $events = json_decode($content, true);
 // Validate parsed JSON data
 if (!is_null($events['settimeSE'])) {
-	
-	send_LINE2($events['settimeSE']);
+	3
+	send_LINE($events['settimeSE']);
 	
 	 echo "OKESP";
     }
 
 
 
-    function send_LINE2($msg){
+    function send_LINE3($msg){
         $access_token = '+RAgZsXSoIB12rh5ilBLg3BySGaIGHSvVROMcOJ9yw0B96H9VLORNgQs+a6Og5wS/MOplVEgqgYoVs5BosxYieMV5GGaOqnXhNrFje4NnnPhc04X57HVXsYDisV4JycZ2OovPF6jkSq6EHAN6xijpQdB04t89/1O/w1cDnyilFU='; 
         
           
@@ -131,7 +102,36 @@ if (!is_null($events['settimeSE'])) {
 
 
 ?>
+<script>
+  
+  var app = angular.module('myApp', []);
+  app.controller('customersCtrl', function($scope, $http) {
+      var str = "<?php echo $_POST["time"]; ?>";
+     // $scope.testTime = "<?php $content = file_get_contents('php://input'); $events = json_decode($content, true);  $events['settimeSE']?>";
+     // $scope.testTime = "<?php  $content = file_get_contents('php://input'); $events = json_decode($content, true); send_LINE2($events['settimeSE']);  echo $events['settimeSE'];?>";
+     // $testTime =$events['settimeSE'];
+        $testTime ="<?php $msg;?>";
+     var res = str.split(",");
+      var mainInfo = null;
+      // $http.get('settimeSE.json').success(function(data) {
+      //      = data;
+      // });
+      if(res[0]==null || res[0]=="99.99"){
+          $scope.time=[{ startTime: "",endTime:""}];
+          }
+      else if(res[2]==null || res[2]=="99.99"){
+          $scope.time=[{ startTime: res[0],endTime:res[1]}];
+          }
+      else if(res[4]==null || res[4]=="99.99"){
+          $scope.time=[{ startTime: res[0],endTime:res[1]},{startTime: res[2],endTime:res[3]}];
+          }
+      else{
+        $scope.time=[{ startTime: res[0],endTime:res[1]},{startTime: res[2],endTime:res[3]},{startTime: res[4],endTime:res[5]}];
+           }
+  
+  });
 
+</script>
 
 </html>
 
