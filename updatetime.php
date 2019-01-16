@@ -42,8 +42,7 @@
 
 </body>
 <?php
-require('sゆ249よおうtq.php');
-require('あr23ぐぎゃEAs.php');
+
 
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -89,7 +88,7 @@ if (!is_null($events['settimeSE'])) {
              // $URL = "https://golfais.herokuapp.com/updatetime.php?stime=".$post;
                
             
-             echo "99"; 
+             echo "88"; 
              //  '<script type="text/javascript">
              // window.location = "'.$URL.'"</script>';
         
