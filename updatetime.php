@@ -44,7 +44,7 @@
 <?php
 require('sゆ249よおうtq.php');
 require('あr23ぐぎゃEAs.php');
-require('send2.php');
+
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
