@@ -7,6 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
+<?php
+require("sゆ249よおうtq.php");
+require("あr23ぐぎゃEAs.php");
+require("send2.php");
+// Get POST body content
+$content = file_get_contents('php://input');
+// Parse JSON
+$events = json_decode($content, true);
+// Validate parsed JSON data
+if (!is_null($events['settimeSE'])) {
+   
+   send_LINE($events['settimeSE']);
+   
+    echo "OKESP";
+   }
+
+?>
 <body ng-app="myApp">
 <div ng-controller="customersCtrl">
     <p><b>แก้ไข้เวลาลดน้ำ</b></p>
