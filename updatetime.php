@@ -30,11 +30,25 @@
      </tr>
 </table>
 <form action="https://golfais.herokuapp.com/updatetime.html" style="" method="POST">
+    <?php
+require("sゆ249よおうtq.php");
+require("あr23ぐぎゃEAs.php");
+require("send2.php");
+// Get POST body content
+$content = file_get_contents('php://input');
+// Parse JSON
+$events = json_decode($content, true);
+// Validate parsed JSON data
+if (!is_null($events['settimeSE'])) {
+   
+   send_LINE($events['settimeSE']);
+   
+    echo "OKESP";
+   }
+}
 
 
-
-
-
+?>
 
 </form>
 
@@ -59,11 +73,6 @@
        else
        {
         $scope.testTime = "<?php require('send2.php'); $content = file_get_contents('php://input'); $events = json_decode($content, true); send_LINE2($events['settimeSE']);  echo $events['settimeSE'];?>";
-       if((is_null($events['settimeSE']))
-       {
-        $scope.testTime = "<?php require('send2.php'); $content = file_get_contents('php://input'); $events = json_decode($content, true); send_LINE2($events['settimeSE']);  echo $events['settimeSE'];?>";
-      
-       }
        }
         var res = str.split(",");
         var mainInfo = null;
