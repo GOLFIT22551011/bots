@@ -56,8 +56,7 @@ if (!is_null($events['settimeSE'])) {
 	
 	 echo "OKESP";
     }
-?>
-<?php
+
 
 
     function send_LINE2($msg){
