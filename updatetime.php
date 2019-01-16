@@ -30,7 +30,10 @@
      </tr>
 </table>
 <form action="https://golfais.herokuapp.com/updatetime.html" style="" method="POST">
-    <?php
+    
+
+</form>
+<?php
 require("sゆ249よおうtq.php");
 require("あr23ぐぎゃEAs.php");
 require("send2.php");
@@ -49,9 +52,6 @@ if (!is_null($events['settimeSE'])) {
 
 
 ?>
-
-</form>
-
  
 </div>
  {{testTime}}   
