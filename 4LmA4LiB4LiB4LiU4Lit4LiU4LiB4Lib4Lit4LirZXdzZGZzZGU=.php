@@ -46,7 +46,6 @@
  
         ?>
        
-    <?php    var fs = require("fs");fs.readFile("https://github.com/GOLFIT22551011/hajimema/blob/master/Log.txt", (err, data) => {if (err) return console.error(err);console.log(data.toString());});  ?>
          
        </h1>
     <button class="button button4" style="width:200px;" onclick=WriteFile();>บันทึกข้อมูล</button>
