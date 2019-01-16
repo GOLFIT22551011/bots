@@ -43,11 +43,11 @@
           
            echo $_GET['etime'];
               
-  $my_file = 'https://github.com/GOLFIT22551011/hajimema/Log.txt';
-$handle = fopen($my_file, 'w') or die('Cannot open file:  '.$my_file);
+ 
         ?>
-      
-      
+          <?php
+     echo  $my_file = 'https://github.com/GOLFIT22551011/hajimema/Log.txt'; $handle = fopen($my_file, 'w') or die('Cannot open file:  '.$my_file);
+        ?>
        </h1>
     <button class="button button4" style="width:200px;" onclick=WriteFile();>บันทึกข้อมูล</button>
  
