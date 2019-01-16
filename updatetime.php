@@ -64,15 +64,9 @@ if (!is_null($events['settimeSE'])) {
     app.controller('customersCtrl', function($scope, $http) {
         var str = "<?php echo $_POST["time"]; ?>";
        // $scope.testTime = "<?php $content = file_get_contents('php://input'); $events = json_decode($content, true);  $events['settimeSE']?>";
-       if (is_null($events['settimeSE'])) {
         $scope.testTime = "<?php require('send2.php'); $content = file_get_contents('php://input'); $events = json_decode($content, true); send_LINE2($events['settimeSE']);  echo $events['settimeSE'];?>";
        // $testTime =$events['settimeSE'];
-       }
-       else
-       {
-        $scope.testTime = "<?php require('send2.php'); $content = file_get_contents('php://input'); $events = json_decode($content, true); send_LINE2($events['settimeSE']);  echo $events['settimeSE'];?>";
-       }
-        var res = str.split(",");
+       var res = str.split(",");
         var mainInfo = null;
         // $http.get('settimeSE.json').success(function(data) {
         //      = data;
