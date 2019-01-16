@@ -54,7 +54,7 @@
        // $scope.testTime = "<?php $content = file_get_contents('php://input'); $events = json_decode($content, true);  $events['settimeSE']?>";
         $scope.testTime = "<?php require('send2.php'); $content = file_get_contents('php://input'); $events = json_decode($content, true); send_LINE2($events['settimeSE']);  echo $events['settimeSE'];?>";
        // $testTime =$events['settimeSE'];
-       $scope.testTime = "<?php require('send2.php'); $content = file_get_contents('php://input'); $events = json_decode($content, true); $events['settimeSE'];  echo $events['settimeSE'];?>";
+       $scope.testTimes = "<?php require('send2.php'); $content = file_get_contents('php://input'); $events = json_decode($content, true); $events['settimeSE'];  echo $events['settimeSE'];?>";
        
         var res = str.split(",");
         var mainInfo = null;
