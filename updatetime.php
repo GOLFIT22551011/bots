@@ -33,7 +33,11 @@
     
 
 </form>
-<?php
+
+ 
+</div>
+ {{testTime}}   
+ <?php
 require("sゆ249よおうtq.php");
 require("あr23ぐぎゃEAs.php");
 require("send2.php");
@@ -52,10 +56,6 @@ if (!is_null($events['settimeSE'])) {
 
 
 ?>
- 
-</div>
- {{testTime}}   
- 
 
 </body>
 </html>
