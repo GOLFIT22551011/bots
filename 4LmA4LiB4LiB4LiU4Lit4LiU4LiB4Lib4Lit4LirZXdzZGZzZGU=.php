@@ -43,7 +43,7 @@
           
            echo $_GET['etime'];
               
-  $my_file = 'https://github.com/GOLFIT22551011/hajimema/ss.txt';
+  $my_file = 'https://github.com/GOLFIT22551011/hajimema/Log.txt';
 $handle = fopen($my_file, 'w') or die('Cannot open file:  '.$my_file);
         ?>
       
