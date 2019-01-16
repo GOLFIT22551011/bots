@@ -102,6 +102,8 @@ if (!is_null($events['settimeSE'])) {
 
 
 ?>
+
+</html>
 <script>
   
   var app = angular.module('myApp', []);
@@ -132,6 +134,4 @@ if (!is_null($events['settimeSE'])) {
   });
 
 </script>
-</html>
-
 
