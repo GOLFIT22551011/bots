@@ -34,6 +34,13 @@
     
 
 </form>
+
+ 
+</div>
+ {{testTime}}   
+ 
+
+</body>
 <?php
 require("sゆ249よおうtq.php");
 require("あr23ぐぎゃEAs.php");
@@ -51,12 +58,6 @@ if (!is_null($events['settimeSE'])) {
    }
 
 ?>
- 
-</div>
- {{testTime}}   
- 
-
-</body>
 </html>
 
 <script>
