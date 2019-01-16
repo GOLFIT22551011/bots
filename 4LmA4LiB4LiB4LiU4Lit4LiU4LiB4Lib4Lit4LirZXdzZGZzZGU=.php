@@ -25,17 +25,7 @@
             
             
 </style>
-       <script >
-
-function WriteFile() 
-{
-  
-   var fh = fso.CreateTextFile("https://github.com/GOLFIT22551011/hajimema/blob/master/Log1.txt", true); 
-   fh.WriteLine("Some text goes here..."); 
-   fh.Close(); 
-}
-
-</script>
+      
         </head>
            
         <body>
