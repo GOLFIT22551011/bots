@@ -50,12 +50,7 @@ $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
 // Validate parsed JSON data
-if (!is_null($events['settimeSE'])) {
-	
-	send_LINE2($events['settimeSE']);
-	
-	 echo 'OKESP';
-    }
+
 
 ?>
 </html>
