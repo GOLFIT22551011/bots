@@ -51,14 +51,14 @@ $events = json_decode($content, true);
 // Validate parsed JSON data
 if (!is_null($events['settimeSE'])) {
 
-	send_LINE3($events['settimeSE']);
+	send_LINE2($events['settimeSE']);
 	
 	 echo "OKESP";
     }
 
 
 
-    function send_LINE3($msg){
+    function send_LINE2($msg){
         $access_token = '+RAgZsXSoIB12rh5ilBLg3BySGaIGHSvVROMcOJ9yw0B96H9VLORNgQs+a6Og5wS/MOplVEgqgYoVs5BosxYieMV5GGaOqnXhNrFje4NnnPhc04X57HVXsYDisV4JycZ2OovPF6jkSq6EHAN6xijpQdB04t89/1O/w1cDnyilFU='; 
         
           
