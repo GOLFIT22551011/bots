@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+    <script src="https://cdn.netpie.io/microgear.js"></script>
+<script>
+  
+
+//=============================================================================================
+
+  const APPID = "dtac";
+  const KEY = "qGXKQ0H8iZSezRE";
+  const SECRET = "QX84W8vI8m3gtbdlUFrZAGd8G";
+
+  const ALIAS = "switch";         //  
+  
+
+  var microgear = Microgear.create({
+    key: KEY,
+    secret: SECRET,
+    alias : ALIAS
+  });
+
+  microgear.on('message',function(topic,msg) {
+    var splitString = msg.split(",");
+    var htmlCode = "";
+    for(var i=1;i<=splitString.length;i++){
+      if(i%2 !== 0 && splitString[i] !== "" && splitString[i] !== undefined){
+        htmlCode = htmlCode + "<tr><td>"+splitString[i]+"</td><td>"+splitString[i]+"</td>"+"<td><img border='0' onclick='deleteTime("+i+")' alt='W3Schools'  src='https://4svp8a.bn.files.1drv.com/y4mVgFr0lURXzrx5N5zfrxABKNs9Rm7dX-FmyB61pE9dOj9-KWoHU_CBHUOldPwTfICOuZUjGkEI6NTYCmfdwPhUdkjzzpudGq9SkasOLJ338OddTstXbL4QGEMg573BPiXGBeJIyaBntgXRVtlyNVAoN0dEIZYUAFDU76-BimphYfmShsYkuHDzOacZ0o6T8YH62ywhB8rYuN9ssibt4Zdlw?width=256&height=256&cropmode=none' alt='Submit' width='48' height='48'></td></tr>";
+      }
+        
+    }
+    
+    document.getElementById("raw_data").innerHTML =  htmlCode;
+    
+    
+    var split_msg = msg.split("/"); //String data = "/" +String(Humidity) + "/" + String(Temp);
+    console.log(msg);  // for debug
+    if(typeof(split_msg[0])!='undefined' && split_msg[0]==""){
+      document.getElementById("Humidity_temp").innerHTML = "Humidity = " + split_msg[1] + " % ,Temp = " + split_msg[2] + " c";
+    }
+  });
+
+  microgear.on('connected', function() {
+    microgear.setAlias(ALIAS);
+    document.getElementById("connected_NETPIE").innerHTML = "Connected to NETPIE"
+  });
+
+  microgear.on('present', function(event) {
+    console.log(event);
+  });
+
+  microgear.on('absent', function(event) {
+    console.log(event);
+  });
+
+  microgear.resettoken(function(err) {
+    microgear.connect(APPID);
+  });
+</script>
+<body>
+
+<h1 id="connected_NETPIE"></h1>
+<p id="11"></p>
+<p id="get_topic"></p>
+<strong id="Humidity_temp"></strong>
+
+<div >
+  <p><b>แก้ไข้เวลาลดน้ำ</b></p>
+<table class="w3-table-all">
+    <thead>
+   <tr class="w3-red">
+    <th><h5>เวลาเริ่มลดน้ำ</h5></th>
+    <th><h5>เวลาหยุดลดน้ำ</h5></th>
+     <th><h5>ลบเวลา</h5></th>
+   </tr>   
+    </thead>
+    <tbody id="raw_data"></tbody>
+   
+     <!-- <td>{{ value.startTime }}</td>
+      <td>{{ value.endTime }}</td>
+  
+        <td>  
+               <img border="0" onclick="deleteTime()" alt="W3Schools"  src="https://4svp8a.bn.files.1drv.com/y4mVgFr0lURXzrx5N5zfrxABKNs9Rm7dX-FmyB61pE9dOj9-KWoHU_CBHUOldPwTfICOuZUjGkEI6NTYCmfdwPhUdkjzzpudGq9SkasOLJ338OddTstXbL4QGEMg573BPiXGBeJIyaBntgXRVtlyNVAoN0dEIZYUAFDU76-BimphYfmShsYkuHDzOacZ0o6T8YH62ywhB8rYuN9ssibt4Zdlw?width=256&height=256&cropmode=none" alt="Submit" width="48" height="48">
+               
+                
+            </td> -->
+</table>
+<form action="https://golfais.herokuapp.com/updatetime.html" style="" method="POST">
+</form>
+</div>
+  
+ 
+  
+
+
+
+
+
+</body>
+
+</html>
