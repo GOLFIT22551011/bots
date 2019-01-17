@@ -48,7 +48,7 @@
 
   microgear.on('connected', function() {
     microgear.setAlias(ALIAS);
-    
+    document.getElementById("connected_NETPIE").innerHTML = "Connected to NETPIE"
   });
 
   microgear.on('present', function(event) {
@@ -65,7 +65,7 @@
 </script>
 <body>
 
-
+<h1 id="connected_NETPIE"></h1>
 <p id="11"></p>
 <p id="get_topic"></p>
 <strong id="Humidity_temp"></strong>
