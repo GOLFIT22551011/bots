@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     </head>
     <script src="https://cdn.netpie.io/microgear.js"></script>
+    
 <script type="text/javascript">
   
 //=============================================================================================
@@ -42,6 +43,8 @@
     arrayLocalTime[index+1] = "99.99";
     console.log(arrayLocalTime);
     newTable(arrayLocalTime);
+
+    getMqttfromlineMsg("NodeMCU1","DeleteTime");
   }
 
   function newTable(tempArray){
@@ -72,6 +75,7 @@
     microgear.connect(APPID);
   });
 </script>
+
 <body>
 
 <h1 id="connected_NETPIE"></h1>
@@ -100,11 +104,14 @@
                 
             </td> -->
 </table>
+
 <form action="https://golfais.herokuapp.com/updatetime.html" style="" method="POST">
+
 </form>
+
 </div>
   
- 
+
   
 
 
@@ -112,5 +119,6 @@
 
 
 </body>
+
 
 </html>
