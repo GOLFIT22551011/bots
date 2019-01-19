@@ -1,4 +1,5 @@
-﻿<html>
+﻿<!DOCTYPE >
+<html>
   
         <head>
   
@@ -25,7 +26,16 @@
             
             
 </style>
-      
+<script>
+function quitBox(cmd)
+{   
+    if (cmd=='quit')
+    {
+        open(location, '_self').close();
+    }   
+    return false;   
+}
+</script>  
         </head>
            
         <body>
@@ -34,7 +44,7 @@
      <h1> ยกเลิกการ รดน้ำให้แลัวค่ะ<br>
          
        </h1>
-    <button class="button button4" style="width:200px;" onclick="window.close();">บันทึกข้อมูล</button>
+    <button class="button button4" style="width:200px;" onclick="return quitBox('quit');">บันทึกข้อมูล</button>
  
     
       </div>
