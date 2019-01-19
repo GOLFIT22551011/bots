@@ -27,13 +27,10 @@
             
 </style>
 <script>
-function quitBox(cmd)
-{   
-    if (cmd=='quit')
-    {
-        open(location, '_self').close();
-    }   
-    return false;   
+function leave() {
+  var myWindow = window.open("", "_self");
+  myWindow.document.write("");
+  setTimeout (function() {myWindow.close();},1000);
 }
 </script>  
         </head>
@@ -41,16 +38,14 @@ function quitBox(cmd)
         <body>
   <div align="center">
     <br>
-     <h1> ยกเลิกการ รดน้ำให้แลัวค่ะ<br>
-         
-       </h1>
-    <button class="button button4" style="width:200px;" onclick="return quitBox('quit');">บันทึกข้อมูล</button>
- 
-    
-      </div>
-                
-
-
+     <h1> ยกเลิกการ รดน้ำให้แลัวค่ะ</h1>
+     <br>
+     <td>  
+      <img border="0" onclick="setTime('10')" alt="W3Schools"  src="https://vdp9jg.bn.files.1drv.com/y4mKerg48xUmjhD0xK7QLgfKWu5B5S6LfQv3-L7s7FJMvgZ_6WZ-KQBiP27oM3P4Pf2Pkcx6_cls9cEqZsxoF7E03Oou7VO9ASEVi7u9yH9QlgMp2DDispSmdpDyoPoCuMWzAGDHaxuv18YkYVTY2T47o1rYOR5_RgC_jEg78QZZawMtHYmMW8dcwONmdeV8uohrQAtcfFjfN22PlyS_WvZ5g?width=656&height=296&cropmode=none" width="400" height="200">
+      
+       
+   </td>
+     
           
         </body>
   
