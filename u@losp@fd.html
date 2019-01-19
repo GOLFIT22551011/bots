@@ -79,20 +79,9 @@
   function setdelete(duration="1") {
                 // alert(i);
                 var nowDate = new Date();
-                var startTime = document.getElementById("iPut");
-                var timePart1 = startTime.value.substring(0, 2);
-                var timePart2 = startTime.value.substring(3, 5);
-                var newStartTime = timePart1+"."+timePart2;
+                var newStartTime ="0";
                       
-                var newDate = new Date(nowDate.getFullYear(),nowDate.getMonth(),nowDate.getDay(),timePart1,timePart2);
-                var endDate = new Date(nowDate.getFullYear(),nowDate.getMonth(),nowDate.getDay(),timePart1,parseInt(timePart2)+parseInt(duration));
-                var hour = ""+endDate.getHours();
-                var minute =""+endDate.getMinutes();
-                
-                if (hour.length < 2) hour = '0' + hour;
-                if (minute.length < 2) minute = '0' + minute;
-                var endTime = hour+"."+minute;
-                
+                 
                 document.getElementById("sTime").value = newStartTime;
                 document.getElementById("eTime").value = endTime;
                // document.getElementById("bsubmit").click();
