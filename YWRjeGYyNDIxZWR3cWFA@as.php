@@ -114,7 +114,7 @@ echo "KO_END";
 
     else if($_POST['scrnN'] == "setdelete"){
       send_LINE("ต้นข้าว ยกเลิกให้แลัวค่ะ");
-      getMqttfromlineMsg($Topic,ยกเลิกทั้งหมด);
+      getMqttfromlineMsg($Topic,"ยกเลิกทั้งหมด");
       $URL = "https://golfais.herokuapp.com/fafwfdxcsjflkajLKJKALSjfalkjfKL97897813Lib4Lit4LirZXdzZGZzZGU=.html";
 		
       echo '<script type="text/javascript">
