@@ -27,8 +27,13 @@ if($_GET['path'] == "removetime" ){
 		$arrayPostData['messages'][0]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
 		replyMsg($arrayHeader,$arrayPostData);
              getMqttfromlineMsg("NodeMCU1","DeleteTime");
+             $this->config->load('configs',TRUE);
+
+             // โหลดค่าในคีย์ = key ในไฟล์ configs
+             $key = $this->config->item('encodeKey','configs');  
+             
             
-             $URL = "https://golfais.herokuapp.com/u@losp@fd.html";
+             $URL = $key;
 		
              echo '<script type="text/javascript">
              window.location = "'.$URL.'"</script>';
