@@ -121,8 +121,20 @@ echo "KO_END";
         $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
 	$arrayPostData['messages'][1]['type'] = "text";
         $arrayPostData['messages'][1]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
-        replyMsg($arrayHeader,$arrayPostData);
-        $text == "ยกเลิกลดน้ำ";
+        //replyMsg($arrayHeader,$arrayPostData);
+      
+        $strUrl = "https://api.line.me/v2/bot/message/reply";
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL,$strUrl);
+        curl_setopt($ch, CURLOPT_HEADER, false);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $arrayHeader);    
+        curl_setopt($ch, CURLOPT_POSTFIELDS,json_encode($arrayPostData));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        $result = curl_exec($ch);
+        curl_close ($ch);
+
       getMqttfromlineMsg($Topic,$text);
       $URL = "https://golfais.herokuapp.com/fafwfdxcsjflkajLKJKALSjfalkjfKL97897813Lib4Lit4LirZXdzZGZzZGU=.html";
 		
