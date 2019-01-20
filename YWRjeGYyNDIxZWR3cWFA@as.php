@@ -1,11 +1,9 @@
 ﻿<form action="https://golfais.herokuapp.com/updatetime.php" style="" method="POST">
 <input type="hidden" name="time">
-
 </form>
 <?php
  require("sゆ249よおうtq.php");
  require("あr23ぐぎゃEAs.php");
- require("send2.php");
 // Get POST body content
 $content = file_get_contents('php://input');
  // Parse JSON
@@ -16,9 +14,7 @@ if (!is_null($events['ESP'])) {
 	send_LINE($events['ESP']);
 	
 	 echo "OKESP";
-    }
-   
-
+	}
 if (!is_null($events['TimeSN'])) {
 	
 	send_LINE($events['TimeSN']);
@@ -36,6 +32,7 @@ if($_GET['path'] == "removetime" ){
 		
              echo '<script type="text/javascript">
              window.location = "'.$URL.'"</script>';
+             
 	echo "OK";
 		
 		
