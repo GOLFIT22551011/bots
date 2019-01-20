@@ -31,8 +31,8 @@ if($_GET['path'] == "removetime" ){
 		$arrayPostData['messages'][0]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
 		replyMsg($arrayHeader,$arrayPostData);
              getMqttfromlineMsg("NodeMCU1","DeleteTime");
-             $this->config->load('configs',TRUE);
-             $key = $this->config->item('encodeKey','configs');  
+             $this->config->load('configs.php',TRUE);
+             $key = $this->config->item('encodeKey','configs.php');  
              $URL = $key;
 		
              echo '<script type="text/javascript">
