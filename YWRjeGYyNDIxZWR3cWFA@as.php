@@ -1,7 +1,4 @@
-﻿<form action="https://golfais.herokuapp.com/updatetime.php" style="" method="POST">
-<input type="hidden" name="time">
-</form>
-<?php
+﻿<?php
  require("sゆ249よおうtq.php");
  require("あr23ぐぎゃEAs.php");
 // Get POST body content
@@ -30,10 +27,8 @@ if($_GET['path'] == "removetime" ){
              $this->config->load('configs',TRUE);
 
              // โหลดค่าในคีย์ = key ในไฟล์ configs
-             $key = $this->config->item('encodeKey','configs');  
              
-            
-             $URL = $key;
+             $URL = "https://golfais.herokuapp.com/u@losp@fd.html";
 		
              echo '<script type="text/javascript">
              window.location = "'.$URL.'"</script>';
