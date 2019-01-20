@@ -19,12 +19,6 @@ if (!is_null($events['ESP'])) {
     }
     if (!is_null($events['settimeSE'])) {   
         send_LINE2($events['settimeSE']);
-        // $URL = "https://golfais.herokuapp.com/updatetime.php?stime=".$msg;
-		
-     
-        // //echo $result . "\r\n"; 
-        //  '<script type="text/javascript">
-        // window.location = "'.$URL.'"</script>';
 	
         echo ">>>";
     }
@@ -46,25 +40,6 @@ if($_GET['path'] == "removetime" ){
 		
              echo '<script type="text/javascript">
              window.location = "'.$URL.'"</script>';
-    
-    //         echo '<script type="text/javascript">
-    //         var method = "post";
-    //       var path = "https://golfais.herokuapp.com/u@losp@fd.html"
-    //           var form = document.createElement("form");
-    //           form.setAttribute("method", method);
-    //           form.setAttribute("action", path);
-    //       var hiddenField = document.createElement("input");
-    //       hiddenField.setAttribute("type", "hidden");
-    //       hiddenField.setAttribute("name", "time");
-    //       hiddenField.setAttribute("value","");	
-    //    //  hiddenField.setAttribute("value","<?php $events[settimeSE];");
-    //              form.appendChild(hiddenField);
-    //           document.body.appendChild(form);
-    //           form.submit();
-    //       </script>';
-         
-		
-		
 	echo "OK";
 		
 		
@@ -122,10 +97,6 @@ echo "KO_END";
 	 
     }
 	else if($_POST['stime'] != null && $_POST['etime'] != null && $_POST['scrnN'] == "setDuration"){
- 		//send_LINE(substr($_POST['stime'],0,2));
-	      	//send_LINE(substr($_POST['stime'],3,5));
-		//send_LINE(substr($_POST['etime'],0,2));
-		//send_LINE(substr($_POST['etime'],3,5));
 		send_LINE(" ตั้งเวลาตั้งแต่ " .$_POST['stime']." ถึง " .$_POST['etime']." ให้เรียบร้อยแลัวค่ะ");
 		
 		//send_LINE("จัดให้ค่าาา ตั้งเวลาลดน้ำเรียบร้อยแลัวค่ะ");
@@ -136,20 +107,13 @@ echo "KO_END";
 		
 		echo '<script type="text/javascript">
           	 window.location = "'.$URL.'"</script>';
-		 
-		//echo ''
-		 
-		 
-		// +$_POST['stime']+"&&"+
-     		// </script>';
-		
-		//replyMsg($arrayHeader,$_POST['stime']);
 		
 		
     }
     
 
     else if($_POST['scrnN'] == "setdelete"){
+        send_LINE("https://vdp9jg.bn.files.1drv.com/y4mKerg48xUmjhD0xK7QLgfKWu5B5S6LfQv3-L7s7FJMvgZ_6WZ-KQBiP27oM3P4Pf2Pkcx6_cls9cEqZsxoF7E03Oou7VO9ASEVi7u9yH9QlgMp2DDispSmdpDyoPoCuMWzAGDHaxuv18YkYVTY2T47o1rYOR5_RgC_jEg78QZZawMtHYmMW8dcwONmdeV8uohrQAtcfFjfN22PlyS_WvZ5g?width=656&height=296&cropmode=none");
         $image_url = "https://vdp9jg.bn.files.1drv.com/y4mKerg48xUmjhD0xK7QLgfKWu5B5S6LfQv3-L7s7FJMvgZ_6WZ-KQBiP27oM3P4Pf2Pkcx6_cls9cEqZsxoF7E03Oou7VO9ASEVi7u9yH9QlgMp2DDispSmdpDyoPoCuMWzAGDHaxuv18YkYVTY2T47o1rYOR5_RgC_jEg78QZZawMtHYmMW8dcwONmdeV8uohrQAtcfFjfN22PlyS_WvZ5g?width=656&height=296&cropmode=none";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
@@ -158,6 +122,7 @@ echo "KO_END";
 	$arrayPostData['messages'][1]['type'] = "text";
         $arrayPostData['messages'][1]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
         replyMsg($arrayHeader,$arrayPostData);
+
       getMqttfromlineMsg($Topic,$text);
       $URL = "https://golfais.herokuapp.com/fafwfdxcsjflkajLKJKALSjfalkjfKL97897813Lib4Lit4LirZXdzZGZzZGU=.html";
 		
