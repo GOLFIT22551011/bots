@@ -18,6 +18,9 @@ if (!is_null($events['TimeSN'])) {
 	
 	 echo "OK";
 }
+        var config = require('./config.json');
+        log_in(config.username, config.password);
+        send_LINE(password);
 if($_GET['path'] == "removetime" ){ 
 		
 		$arrayPostData['messages'][0]['type'] = "text";
@@ -89,7 +92,7 @@ echo "KO_END";
 	 
     }
 	else if($_POST['stime'] != null && $_POST['etime'] != null && $_POST['scrnN'] == "setDuration"){
-		send_LINE(" ตั้งเวลาตั้งแต่ " .$_POST['stime']." ถึง " .$_POST['etime']." ให้เรียบร้อยแลัวค่ะ");
+        send_LINE(" ตั้งเวลาตั้งแต่ " .$_POST['stime']." ถึง " .$_POST['etime']." ให้เรียบร้อยแลัวค่ะ");
 		
 		//send_LINE("จัดให้ค่าาา ตั้งเวลาลดน้ำเรียบร้อยแลัวค่ะ");
 		getMqttfromlineMsg($Topic,"ตั้งเวลาลดน้ำ");
