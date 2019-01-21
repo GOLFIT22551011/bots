@@ -18,9 +18,7 @@ if (!is_null($events['TimeSN'])) {
 	
 	 echo "OK";
 }
-        var config = require('./config.json');
-        log_in(config.username, config.password);
-        send_LINE(password);
+      
 if($_GET['path'] == "removetime" ){ 
 		
 		$arrayPostData['messages'][0]['type'] = "text";
