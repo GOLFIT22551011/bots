@@ -1,5 +1,10 @@
-<configuration>
-    <appSettings>
-            <add key="var1" value="SomeValue"/>
-      </appSettings>
-<configuration>
+<?php
+
+return (object) array(
+    'host' => 'localhost',
+    'username' => 'root',
+    'pass' => 'password',
+    'database' => 'db'
+);
+
+?>
