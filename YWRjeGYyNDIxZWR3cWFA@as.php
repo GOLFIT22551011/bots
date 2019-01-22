@@ -145,7 +145,7 @@ echo "KO_END";
     }
 
     else if($text == "ลดน้ำ2"){
-        $image_url = "https://umqjbq.bn.files.1drv.com/y4mtaVjRQeslYl-6zBO6lWjLGB40C9G0uDBA9xrfpX44Hpxj5sgt2KXHDN5gjYf1OYZayNBHZvy7_CJlsmHvye1ofxKvhzOsnmCPKA_-E0lgLYX2z2SENaBhIqeF4d3GLdXDHxNcjShKzZz-EhTtpBBy_nIOHg0hfvzAPMZMHbt-LbRZ9ISRJro_ZGMLAbXsaQ6EGe5dqcGG7GEOaBR7HVXPw?width=656&height=296&cropmode=none";
+        $image_url =$ini_array['image2'];
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
