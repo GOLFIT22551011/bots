@@ -1,9 +1,9 @@
  <?php
  function pubMqtt($topic,$msg){
-
-       $APPID= "dtac/"; //enter your appid
-     $KEY = "oxVHLZcD5D1W2TD"; //enter your key
-    $SECRET = "guQEm6YgBnSiHsMtYRpRFNIII"; //enter your secret
+   $ini_array = parse_ini_file("sample.ini");
+    $APPID= $ini_array['APPIDS']; //enter your appid
+     $KEY =$ini_array['KEYS'] ; //enter your key
+    $SECRET =$ini_array['SECRETS'] ; //enter your secret
     $Topic = "$topic"; 
       put("https://api.netpie.io/microgear/".$APPID.$Topic."?retain&auth=".$KEY.":".$SECRET,$msg);
  //https://api.netpie.io/microgear/dtac/NodeMCU1?retain&auth=qGXKQ0H8iZSezRE:QX84W8vI8m3gtbdlUFrZAGd8GDeleteTime
