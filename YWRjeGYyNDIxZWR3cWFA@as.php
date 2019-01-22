@@ -64,11 +64,7 @@ if (!is_null($events['events'])) {
 
 
 $Topic = "NodeMCU1" ;
-//$text = "Test";
-//  getMqttfromlineMsg($Topic,$text);
-
 echo "KO_END";
-  //   $accessToken = "+RAgZsXSoIB12rh5ilBLg3BySGaIGHSvVROMcOJ9yw0B96H9VLORNgQs+a6Og5wS/MOplVEgqgYoVs5BosxYieMV5GGaOqnXhNrFje4NnnPhc04X57HVXsYDisV4JycZ2OovPF6jkSq6EHAN6xijpQdB04t89/1O/w1cDnyilFU=";//copy Channel access token ตอนที่ตั้งค่ามาใส่
   $ini_array = parse_ini_file("sample.ini");
   $accessToken=$ini_array['accessToken']; 
   $content = file_get_contents('php://input');
@@ -119,7 +115,7 @@ echo "KO_END";
     }
 ////////////////////////////////////////////////////
     else if($text == "ดูพื้นที่ลดน้ำ"){
-        $image_url = "https://vdp9jg.bn.files.1drv.com/y4mKerg48xUmjhD0xK7QLgfKWu5B5S6LfQv3-L7s7FJMvgZ_6WZ-KQBiP27oM3P4Pf2Pkcx6_cls9cEqZsxoF7E03Oou7VO9ASEVi7u9yH9QlgMp2DDispSmdpDyoPoCuMWzAGDHaxuv18YkYVTY2T47o1rYOR5_RgC_jEg78QZZawMtHYmMW8dcwONmdeV8uohrQAtcfFjfN22PlyS_WvZ5g?width=656&height=296&cropmode=none";
+        $image_url = $ini_array['see_water'];
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
@@ -157,7 +153,7 @@ echo "KO_END";
 	
     }
 else if($text == "ลดน้ำ3"){
-        $image_url = "https://umptha.bn.files.1drv.com/y4mDEZjNYOFD2RR8kHF10P-B-Oc5xelWGbiskH-krPwYGI_OL2qy25FJrb5O7lE6IXLQQ6KSmJGzmRHWS6bCYs9WinhMaO3RJ6tH35nToHoW8MV9mmyH-Q1Oq3miI6U0ZWI7xDb_3-ol-M0QHQo5sA03FAOtFWI66Xtr49p23lL-oX9jZjHpp4p7gB6MF50YjX9HT4xO6QLwFbvg4Miat0RVw?width=656&height=296&cropmode=none";
+        $image_url =$ini_array['image3'];
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
@@ -168,7 +164,7 @@ else if($text == "ลดน้ำ3"){
 	  getMqttfromlineMsg($Topic,$text);
     }
 else if($text == "ลดน้ำ4"){
-        $image_url = "https://umqcvg.bn.files.1drv.com/y4mLLhxlinGjZUdU75RkbqMACvN22AL2HKJi2Mn3HMyxE3b0oh56iQ5qhDgGakOB38CKr1aBplH63d-48DknxJCGl78etjWJX8bNbzeTq7p9kbcKDTt4Q8Z6gXPAmasa-FTMGNuxXfqUKRowcAQEr-3eCw4TtUFzHtNy7VsqFx5TSpfDWHpzjIc0h33x6B4pPO4Yd_H3Y0v_x--5vYijgRG0w?width=656&height=296&cropmode=none";
+        $image_url =$ini_array['image4'];
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
@@ -179,7 +175,7 @@ else if($text == "ลดน้ำ4"){
 	  getMqttfromlineMsg($Topic,$text);
     }
 else if($text == "ลดน้ำ5"){
-        $image_url = "https://umodmw.bn.files.1drv.com/y4meeDXcgTAIEuhCY5sRPI5HZRtbuvtL1BSqFtiE4xwSiHiUA2Pnr_McS5jaIJ_91EpK4_PomeXgARugjoCkwe4L0knuA0AGcCQgLOmxrSCUsUJ9zCacIwJS6V9CL03VdNvCVEdhcKaBGm7edqXbmuTmkuDdBknzG22PNF_1ODaVAN5vD8Adh9aIqQT481dke8JRAUztopJYnFtbRKz3A-rrg?width=656&height=296&cropmode=none";
+        $image_url =$ini_array['image5'];
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
@@ -190,7 +186,7 @@ else if($text == "ลดน้ำ5"){
 	  getMqttfromlineMsg($Topic,$text);
     }
 else if($text == "ลดน้ำ6"){
-        $image_url = "https://umq4pw.bn.files.1drv.com/y4mKo9HhaTQ4DNOKmS2RWd_br7BR61WBqQxF4xUsRhdWnDWaiYPzeZxPiT4-CKDcavONceEdLJDhZV0FDevWaXxFuW0Kuf2mVWF6F-TV4Jey4JqdZ8quN97o1ukz4QadQw_B4uRI5RRyyD0aUjvzzgqSKEkfOROtblS_HAtxUYltqGj1eALDRlULvAdmxRr-QH-Y1UD7_hJq0xlUw7GcSwUjw?width=656&height=296&cropmode=none";
+        $image_url =$ini_array['image6'];
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
@@ -203,8 +199,8 @@ else if($text == "ลดน้ำ6"){
 
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
-else if($text == "ดูสถานะ"){
-        $image_url = "https://vdp9jg.bn.files.1drv.com/y4mKerg48xUmjhD0xK7QLgfKWu5B5S6LfQv3-L7s7FJMvgZ_6WZ-KQBiP27oM3P4Pf2Pkcx6_cls9cEqZsxoF7E03Oou7VO9ASEVi7u9yH9QlgMp2DDispSmdpDyoPoCuMWzAGDHaxuv18YkYVTY2T47o1rYOR5_RgC_jEg78QZZawMtHYmMW8dcwONmdeV8uohrQAtcfFjfN22PlyS_WvZ5g?width=656&height=296&cropmode=none";
+else if($text == "ดูสถานะ"){ 
+        $image_url =$ini_array['statusimage'];
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
@@ -225,7 +221,7 @@ else if($text == "ตั้งเวลาลดน้ำ"){
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
 else if($text == "ยกเลิกทั้งหมด"){
-        $image_url = "https://vdp9jg.bn.files.1drv.com/y4mKerg48xUmjhD0xK7QLgfKWu5B5S6LfQv3-L7s7FJMvgZ_6WZ-KQBiP27oM3P4Pf2Pkcx6_cls9cEqZsxoF7E03Oou7VO9ASEVi7u9yH9QlgMp2DDispSmdpDyoPoCuMWzAGDHaxuv18YkYVTY2T47o1rYOR5_RgC_jEg78QZZawMtHYmMW8dcwONmdeV8uohrQAtcfFjfN22PlyS_WvZ5g?width=656&height=296&cropmode=none";
+        $image_url =$ini_array['Cancel_all'];
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
@@ -236,7 +232,7 @@ else if($text == "ยกเลิกทั้งหมด"){
 	  getMqttfromlineMsg($Topic,$text);
     }
 else if($text == "ยกเลิกลดน้ำ"){
-        $image_url = "https://vdp9jg.bn.files.1drv.com/y4mKerg48xUmjhD0xK7QLgfKWu5B5S6LfQv3-L7s7FJMvgZ_6WZ-KQBiP27oM3P4Pf2Pkcx6_cls9cEqZsxoF7E03Oou7VO9ASEVi7u9yH9QlgMp2DDispSmdpDyoPoCuMWzAGDHaxuv18YkYVTY2T47o1rYOR5_RgC_jEg78QZZawMtHYmMW8dcwONmdeV8uohrQAtcfFjfN22PlyS_WvZ5g?width=656&height=296&cropmode=none";
+        $image_url =$ini_array['Cancel_alls'];
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "image";
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
