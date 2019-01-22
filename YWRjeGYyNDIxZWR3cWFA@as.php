@@ -70,7 +70,7 @@ $Topic = "NodeMCU1" ;
 echo "KO_END";
   //   $accessToken = "+RAgZsXSoIB12rh5ilBLg3BySGaIGHSvVROMcOJ9yw0B96H9VLORNgQs+a6Og5wS/MOplVEgqgYoVs5BosxYieMV5GGaOqnXhNrFje4NnnPhc04X57HVXsYDisV4JycZ2OovPF6jkSq6EHAN6xijpQdB04t89/1O/w1cDnyilFU=";//copy Channel access token ตอนที่ตั้งค่ามาใส่
   $ini_array = parse_ini_file("sample.ini");
-  $accessToken=$ini_array['db_name']; ;
+  $accessToken=$ini_array['accessToken']; ;
   $content = file_get_contents('php://input');
     $arrayJson = json_decode($content, true);
     $arrayHeader = array();
