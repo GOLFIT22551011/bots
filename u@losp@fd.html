@@ -13,9 +13,10 @@
     
 <script type="text/javascript">
 
-  const APPID = "dtac";
-  const KEY = "oxVHLZcD5D1W2TD";
-  const SECRET = "guQEm6YgBnSiHsMtYRpRFNIII";
+  const APPID = $APPIDSS;
+  const KEY = $KEYSS;
+  const SECRET =$SECRETSS;
+
 
   const ALIAS = "switch";         //  
   
@@ -104,7 +105,9 @@
 <body>
   <?php
   $ini_array = parse_ini_file("sample.ini");
-  $accessToken=$ini_array['APPIDS']; 
+  $APPIDSS=$ini_array['APPIDS']; 
+  $KEYSS=$ini_array['KEYS']; 
+  $SECRETSS=$ini_array['SECRETS']; 
   ?>
 
 <p id="11"></p>
