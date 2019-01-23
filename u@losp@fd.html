@@ -12,9 +12,9 @@
     <script src="https://cdn.netpie.io/microgear.js"></script>
     
 <script type="text/javascript">
- // const ini = require('ini');
-  const config = ini.parse(fs.readFileSync('sample.ini', 'utf-8'));
-  const degreeType = sample.APPIDS;
+var fs = require('fs') , ini = require('ini')
+var config = ini.parse(fs.readFileSync('./sample.ini', 'utf-8'));
+
 
   const APPID = sample.APPIDS;
   const KEY = "oxVHLZcD5D1W2TD";
