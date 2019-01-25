@@ -13,9 +13,9 @@
     
 <script type="text/javascript">
 
-  const APPID ="<?php  $APPIDSS; ?>";
-  const KEY = "<?php  $KEYSS; ?>";
-  const SECRET ="<?php  $SECRETSS; ?>";
+  const APPID ="<?php echo $APPIDSS; ?>";
+  const KEY = "<?php  echo $KEYSS; ?>";
+  const SECRET ="<?php echo $SECRETSS; ?>";
   alert("AS");
 
   const ALIAS = "switch";         //  
@@ -104,10 +104,10 @@
 
 <body>
   <?php
-  $ini_array = parse_ini_file("sample.ini");
-  $APPIDSS=$ini_array['APPIDS']; 
-  $KEYSS=$ini_array['KEYS']; 
-  $SECRETSS=$ini_array['SECRETS']; 
+  echo $ini_array = parse_ini_file("sample.ini");
+  echo $APPIDSS=$ini_array['APPIDS']; 
+  echo $KEYSS=$ini_array['KEYS']; 
+  echo $SECRETSS=$ini_array['SECRETS']; 
   ?>
 
 <p id="11"></p>
