@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 
+<?php
+$ini_array = parse_ini_file("sample.ini");
+$APPIDSS=$ini_array['APPIDS']; 
+$KEYSS=$ini_array['KEYS']; 
+$SECRETSS=$ini_array['SECRETS']; 
+?>;
 <html>
   
     <head>
@@ -13,10 +19,10 @@
     
 <script type="text/javascript">
 
-  const APPID ="<?php  $ini_array = parse_ini_file('sample.ini'); echo $ini_array['APPIDS'];?> ";
-  const KEY = "<?php  $ini_array = parse_ini_file('sample.ini');  echo $ini_array['KEYSS'];?> ";
-  const SECRET ="<?php  $ini_array = parse_ini_file('sample.ini');  echo $ini_array['SECRETSS'];?> ";
-  alert("AS");
+  const APPID =$APPIDSS;
+  const KEY = $KEYSS;
+  const SECRET =$SECRETSS;
+
 
   const ALIAS = "switch";         //  
   
