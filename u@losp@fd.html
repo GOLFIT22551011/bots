@@ -2,9 +2,7 @@
 <!DOCTYPE html>
 
 <html>
-  <?php
-echo "aaaa"; 
-?>
+ 
 
     <head>
         <meta charset="UTF-8">
@@ -19,11 +17,19 @@ echo "aaaa";
   // <?php $ini_array = parse_ini_file('sample.ini'); $APPIDSS=$ini_array['APPIDS'];  echo $APPIDSS;?>
   // const APPID =  ;
   // alert(APPID);
-  const KEY =  "<?php echo $_GET['APP'];?>";
-  const SECRET ="<?php echo $_GET['KE'];?>";
+  function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?]+([^=&&]+)=([^&&]*)/gi,function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+  const KEY =  getUrlVars()["APP"];
+  const SECRET =getUrlVars()["KE"];
   
 
-  const ALIAS ="<?php echo $_GET['SECR'];?>";         //  
+  const ALIAS =getUrlVars()["SECR"];        //  
   
   var arrayLocalTime = [];
   var microgear = Microgear.create({
