@@ -20,15 +20,19 @@ if (!is_null($events['TimeSN'])) {
 }
       
 if($_GET['path'] == "removetime" ){ 
-		
+        $ini_array = parse_ini_file("sample.ini");
+        $APPIDSS=$ini_array['APPIDS']; 
+        $KEYSS=$ini_array['KEYS']; 
+        $SECRETSS=$ini_array['SECRETS']; 
+        
 		$arrayPostData['messages'][0]['type'] = "text";
 		$arrayPostData['messages'][0]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
 		replyMsg($arrayHeader,$arrayPostData);
              getMqttfromlineMsg("NodeMCU1","DeleteTime");
              
-
+          
              
-             $URL = "https://golfais.herokuapp.com/u@losp@fd.html";
+             $URL = "https://golfais.herokuapp.com/u@losp@fd.html?APP=".$APPIDSS."&&KE=".$KEYSS."&&SECR=".$SECRETSS;
 		
              echo '<script type="text/javascript">
              window.location = "'.$URL.'"</script>';
