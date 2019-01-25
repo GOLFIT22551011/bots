@@ -27,12 +27,12 @@
   const APPID =  getUrlVars()["APP"].replace("/", "");
   const KEY  =getUrlVars()["KE"];
   const SECRET  =getUrlVars()["SECR"]; 
-  //const ALIAS = "switch";         //  
+  const ALIAS = getUrlVars()["SWIT"];         //  
   var arrayLocalTime = [];
   var microgear = Microgear.create({
     key: KEY,
-    secret: SECRET//,
-   // alias : ALIAS
+    secret: SECRET,
+    alias : ALIAS
   });
 
   microgear.on('message',function(topic,msg) {
