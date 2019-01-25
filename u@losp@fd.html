@@ -3,11 +3,9 @@
 
 <html>
   <?php
-$ini_array = parse_ini_file("sample.ini");
-$APPIDSS=$ini_array['APPIDS']; 
-$KEYSS=$ini_array['KEYS']; 
-$SECRETSS=$ini_array['SECRETS']; 
+echo "aaaa"; 
 ?>
+
     <head>
         <meta charset="UTF-8">
         <title>Document</title>
@@ -18,8 +16,9 @@ $SECRETSS=$ini_array['SECRETS'];
     <script src="https://cdn.netpie.io/microgear.js"></script>
     
 <script type="text/javascript">
-
-  const APPID ="<?php echo $APPIDSS ?> ";
+  // <?php $ini_array = parse_ini_file('sample.ini'); $APPIDSS=$ini_array['APPIDS'];  echo $APPIDSS;?>
+  // const APPID =  ;
+  // alert(APPID);
   const KEY = "<?php  echo $KEYSS ?>";
   const SECRET ="<?php echo $SECRETSS ?>";
   
