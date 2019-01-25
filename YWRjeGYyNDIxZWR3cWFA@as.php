@@ -24,7 +24,7 @@ if($_GET['path'] == "removetime" ){
         $APPIDSS=$ini_array['APPIDS']; 
         $KEYSS=$ini_array['KEYS']; 
         $SECRETSS=$ini_array['SECRETS']; 
-        
+        $SWITCHSS =$ini_array['SWITCHS'] ; 
 		$arrayPostData['messages'][0]['type'] = "text";
 		$arrayPostData['messages'][0]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
 		replyMsg($arrayHeader,$arrayPostData);
@@ -32,7 +32,7 @@ if($_GET['path'] == "removetime" ){
              
           
              
-             $URL = "https://golfais.herokuapp.com/u@losp@fd.html?APP=".$APPIDSS."&&KE=".$KEYSS."&&SECR=".$SECRETSS;
+             $URL = "https://golfais.herokuapp.com/u@losp@fd.html?APP=".$APPIDSS."&&KE=".$KEYSS."&&SECR=".$SECRETSS."&&SWIT=".$SWITCHSS;
 		
              echo '<script type="text/javascript">
              window.location = "'.$URL.'"</script>';
