@@ -24,9 +24,10 @@
     });
     return vars;
 }
-  const KEY =  getUrlVars()["APP"].replace("/", "");
-  const SECRET =getUrlVars()["KE"];
-  const ALIAS =getUrlVars()["SECR"]; 
+  const APPID =  getUrlVars()["APP"].replace("/", "");
+  const KEY  =getUrlVars()["KE"];
+  const SECRET  =getUrlVars()["SECR"]; 
+  const ALIAS = "switch";         //  
   var arrayLocalTime = [];
   var microgear = Microgear.create({
     key: KEY,
