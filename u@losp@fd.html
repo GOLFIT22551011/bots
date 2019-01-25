@@ -13,9 +13,9 @@
     
 <script type="text/javascript">
 
-  const APPID ="<?php  $ini_array = parse_ini_file('sample.ini'); $APPIDSS=$ini_array['APPIDS'];?> ";
-  const KEY = "<?php  $ini_array = parse_ini_file('sample.ini'); $APPIDSS=$ini_array['KEYSS'];?> ";
-  const SECRET ="<?php  $ini_array = parse_ini_file('sample.ini'); $APPIDSS=$ini_array['SECRETSS'];?> ";
+  const APPID ="<?php  $ini_array = parse_ini_file('sample.ini'); echo $ini_array['APPIDS'];?> ";
+  const KEY = "<?php  $ini_array = parse_ini_file('sample.ini');  echo $ini_array['KEYSS'];?> ";
+  const SECRET ="<?php  $ini_array = parse_ini_file('sample.ini');  echo $ini_array['SECRETSS'];?> ";
   alert("AS");
 
   const ALIAS = "switch";         //  
@@ -103,13 +103,7 @@
 </script>
 
 <body>
-  <?php
-   $ini_array = parse_ini_file("sample.ini");
-   $APPIDSS=$ini_array['APPIDS']; 
-   $KEYSS=$ini_array['KEYS']; 
-   $SECRETSS=$ini_array['SECRETS']; 
-  ?>
-
+ 
 <p id="11"></p>
 <p id="get_topic"></p>
 <strong id="Humidity_temp"></strong>
