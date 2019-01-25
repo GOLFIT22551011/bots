@@ -19,7 +19,7 @@
   // alert(APPID);
   function getUrlVars() {
     var vars = {};
-    var parts = window.location.href.replace(/[?&/]+([^=&฿]+)=([^&&]*)/gi,function(m,key,value) {
+    var parts = window.location.href.replace(/[?&]+([^=&฿]+)=([^&&]*)/gi,function(m,key,value) {
         vars[key] = value;
     });
     return vars;
@@ -27,7 +27,9 @@
   const KEY =  getUrlVars()["APP"];
   alert(getUrlVars()["APP"]);
   const SECRET =getUrlVars()["KE"];
-  const ALIAS =getUrlVars()["SECR"];    
+  alert(getUrlVars()["KE"]);
+  const ALIAS =getUrlVars()["SECR"];  
+  alert(getUrlVars()["SECR"]);  
   var arrayLocalTime = [];
   var microgear = Microgear.create({
     key: KEY,
