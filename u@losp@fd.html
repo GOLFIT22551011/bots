@@ -1,13 +1,13 @@
+
 <!DOCTYPE html>
 
-<?php
+<html>
+  <?php
 $ini_array = parse_ini_file("sample.ini");
 $APPIDSS=$ini_array['APPIDS']; 
 $KEYSS=$ini_array['KEYS']; 
 $SECRETSS=$ini_array['SECRETS']; 
-?>;
-<html>
-  
+?>
     <head>
         <meta charset="UTF-8">
         <title>Document</title>
@@ -19,10 +19,10 @@ $SECRETSS=$ini_array['SECRETS'];
     
 <script type="text/javascript">
 
-  const APPID =$APPIDSS;
-  const KEY = $KEYSS;
-  const SECRET =$SECRETSS;
-
+  const APPID ="<?php echo $APPIDSS ?> ";
+  const KEY = "<?php  echo $KEYSS ?>";
+  const SECRET ="<?php echo $SECRETSS ?>";
+  
 
   const ALIAS = "switch";         //  
   
@@ -110,7 +110,8 @@ $SECRETSS=$ini_array['SECRETS'];
 
 <body>
  
-<p id="12"></p>
+
+<p id="11"></p>
 <p id="get_topic"></p>
 <strong id="Humidity_temp"></strong>
 
