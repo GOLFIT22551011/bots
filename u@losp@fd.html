@@ -50,9 +50,11 @@
     arrayLocalTime[index+1] = "99.99";
     console.log(arrayLocalTime);
     newTable(arrayLocalTime);
-   // getMqttfromlineMsg("NodeMCU1",arrayLocalTime);
-    microgear.chat("NodeMCU1","ลดน้ำ2");
-    alert(arrayLocalTime);
+    var   splitlTime=arrayLocalTime.split(",");
+    microgear.chat("NodeMCU1","ตั้งเวลาลดน้ำ");
+   
+
+    alert(splitlTime);
   }
 
   function newTable(tempArray){
