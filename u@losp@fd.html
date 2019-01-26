@@ -21,10 +21,10 @@
     });
     return vars;
 }
-  const APPID =  "dtac/";//getUrlVars()["APP"].replace("/", "");
-  const KEYS  ="oxVHLZcD5D1W2TD";//getUrlVars()["KE"];
-  const SECRET  ="guQEm6YgBnSiHsMtYRpRFNIII";//getUrlVars()["SECR"]; 
-  const ALIAS = "switch";//getUrlVars()["SWIT"];         //  
+  const APPID = getUrlVars()["APP"].replace("/", "");
+  const KEYS  =getUrlVars()["KE"];
+  const SECRET  =getUrlVars()["SECR"]; 
+  const ALIAS =getUrlVars()["SWIT"];         //  
 
   var arrayLocalTime = [];
   var microgear = Microgear.create({
