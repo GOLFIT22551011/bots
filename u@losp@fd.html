@@ -14,9 +14,6 @@
     <script src="https://cdn.netpie.io/microgear.js"></script>
     
 <script type="text/javascript">
-  // <?php $ini_array = parse_ini_file('sample.ini'); $APPIDSS=$ini_array['APPIDS'];  echo $APPIDSS;?>
-  // const APPID =  ;
-  // alert(APPID);
   function getUrlVars() {
     var vars = {};
     var parts = window.location.href.replace(/[?&]+([^=&฿]+)=([^&&]*)/gi,function(m,key,value) {
@@ -52,7 +49,7 @@
     arrayLocalTime[index+1] = "99.99";
     console.log(arrayLocalTime);
     newTable(arrayLocalTime);
-    getMqttfromlineMsg("NodeMCU1",arrayLocalTime);
+    alert(arrayLocalTime);
   }
 
   function newTable(tempArray){
@@ -93,7 +90,7 @@
           
                // document.getElementById("bsubmit").click();
                 document.getElementById("scrnN").value = "setdelete";
-                 document.getElementById("form2").action="https://golfais.herokuapp.com/YWRjeGYyNDIxZWR3cWFA@as.php?path=removetime";
+                 document.getElementById("form2").action="YWRjeGYyNDIxZWR3cWFA@as.php";
                  document.getElementById("form2").submit();
            
                 
