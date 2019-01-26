@@ -234,21 +234,7 @@ else if($text == "ยกเลิกทั้งหมด"){
         $arrayPostData['messages'][1]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
         replyMsg($arrayHeader,$arrayPostData);
 	  getMqttfromlineMsg($Topic,$text);
-    }
-else if($text == "ยกเลิกลดน้ำ"){
-        $image_url =$ini_array['Cancel_alls'];
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "image";
-        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
-        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
-	$arrayPostData['messages'][1]['type'] = "text";
-        $arrayPostData['messages'][1]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
-        replyMsg($arrayHeader,$arrayPostData);
-	  getMqttfromlineMsg($Topic,$text);
-    }
-
-   
-
+    }   
  else{
 	$arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
