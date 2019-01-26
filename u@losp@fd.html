@@ -14,6 +14,9 @@
     <script src="https://cdn.netpie.io/microgear.js"></script>
     
 <script type="text/javascript">
+  // <?php $ini_array = parse_ini_file('sample.ini'); $APPIDSS=$ini_array['APPIDS'];  echo $APPIDSS;?>
+  // const APPID =  ;
+  // alert(APPID);
   function getUrlVars() {
     var vars = {};
     var parts = window.location.href.replace(/[?&]+([^=&฿]+)=([^&&]*)/gi,function(m,key,value) {
@@ -49,7 +52,7 @@
     arrayLocalTime[index+1] = "99.99";
     console.log(arrayLocalTime);
     newTable(arrayLocalTime);
-    alert(arrayLocalTime);
+    getMqttfromlineMsg("NodeMCU1",arrayLocalTime);
   }
 
   function newTable(tempArray){
