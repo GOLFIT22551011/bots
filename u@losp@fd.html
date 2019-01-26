@@ -51,16 +51,19 @@
     arrayLocalTime[index+1] = "99.99";
     console.log(arrayLocalTime);
     newTable(arrayLocalTime);
-    u=u+1;
-    
+    var u=u+1;
+    alert(u);
    if(u==2){}
     var   splitlTime=arrayLocalTime;
+
     microgear.chat("NodeMCU1","ตั้งเวลาลดน้ำ");
    for(var i =0;i<=arrayLocalTime.length;i++)
    {
     microgear.chat("NodeMCU1",arrayLocalTime[i]);
+    alert(arrayLocalTime[i]);
    }
    u=0;
+   
   }
   
 
