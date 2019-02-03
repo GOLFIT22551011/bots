@@ -48,7 +48,7 @@
        
          
        </h1></font>
-    <button class="button button4" style="width:200px;" onclick=WriteFile();>บันทึกข้อมูล</button>
+    
  
     
       </div>
