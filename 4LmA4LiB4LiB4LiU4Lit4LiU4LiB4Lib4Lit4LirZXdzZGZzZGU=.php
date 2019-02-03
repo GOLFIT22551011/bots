@@ -31,7 +31,7 @@
         <body>
   <div align="center">
     <br>
-     <h1> ตั้งเวลารดน้ำสำเร็จแลัวค่ะ<br>
+   <font size="7">  <h1> ตั้งเวลารดน้ำสำเร็จแลัวค่ะ<br>
           เริ่ม
         <?php
           
@@ -47,7 +47,7 @@
         ?>
        
          
-       </h1>
+       </h1></font>
     <button class="button button4" style="width:200px;" onclick=WriteFile();>บันทึกข้อมูล</button>
  
     
