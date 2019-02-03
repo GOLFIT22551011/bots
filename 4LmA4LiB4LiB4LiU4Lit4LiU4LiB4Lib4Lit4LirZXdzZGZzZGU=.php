@@ -48,7 +48,7 @@
        
          
        </h1></font>
-     <img border="0" onclick="setTime('10')" alt="W3Schools"  src="https://ftq6yg.bn.files.1drv.com/y4mUe-nJrKmvESAgXe5sXx6fq7FjYDDAQ5ewJ7F8s2zwmBmHDIo2xRNS7IvFki0jitxn_Y1nOkeyMeVlAarFoO5agi775rfxF3srvj03of1f8OAumCU5PbReOj-XrSmC1rps8H580lPf9OqyY1osrhTeTrNvKpPFT2mAmNyxH97UJxiu53A-LF1y1rj3RnE9hrzvu77e-vBdEbpQGmMVDINUw?width=960&height=640&cropmode=none" width="500" height="500">
+     <img border="0" onclick="setTime('10')" alt="W3Schools"  src="https://4swtna.bn.files.1drv.com/y4mlkw0mChRGoIguOya7a_5NQO7Tir0cUPEA98gwJFfrhN9Wc3Q1kODP8HfVNrudx0cGzajMvqj77LNPWErDQy0ktr4kdmXKfI5-rGDOmtt5huGDtg6oBvXFHajW1SRzZQMrB0y2JLPcEIFIF_HMo9id9xCDbE98V0T5s5OUbCdmi6xiqNBcD51HsSz7hy5tHfGRrzjDkbBdqXmCLA8-Or1Zg?width=346&height=346&cropmode=none" width="500" height="500">
  
     
       </div>
