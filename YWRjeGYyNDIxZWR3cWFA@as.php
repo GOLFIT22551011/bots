@@ -31,8 +31,8 @@ if($_GET['path'] == "removetime" ){
              getMqttfromlineMsg("NodeMCU1","DeleteTime");
              
           
-             
-             $URL = "https://sot1.herokuapp.com/u@losp@fd.html?APP=".$APPIDSS."&&KE=".$KEYSS."&&SECR=".$SECRETSS."&&SWIT=".$SWITCHSS;
+             $ini_array = parse_ini_file("sample.ini");
+             $URL = "https://".$ini_array['SOTSS'].".herokuapp.com/u@losp@fd.html?APP=".$APPIDSS."&&KE=".$KEYSS."&&SECR=".$SECRETSS."&&SWIT=".$SWITCHSS;
 		
              echo '<script type="text/javascript">
              window.location = "'.$URL.'"</script>';
@@ -98,7 +98,8 @@ echo "KO_END";
 		getMqttfromlineMsg($Topic,"ตั้งเวลาลดน้ำ");
 		getMqttfromlineMsg($Topic,$_POST['stime']);
 		getMqttfromlineMsg($Topic,$_POST['etime']);
-	        $URL = "https://sot1.herokuapp.com/4LmA4LiB4LiB4LiU4Lit4LiU4LiB4Lib4Lit4LirZXdzZGZzZGU=.php?stime=".$_POST['stime']."&&etime=".$_POST['etime'];
+		$ini_array = parse_ini_file("sample.ini");
+	        $URL = "https://".$ini_array['SOTSS'].".herokuapp.com/4LmA4LiB4LiB4LiU4Lit4LiU4LiB4Lib4Lit4LirZXdzZGZzZGU=.php?stime=".$_POST['stime']."&&etime=".$_POST['etime'];
 		
 		echo '<script type="text/javascript">
           	 window.location = "'.$URL.'"</script>';
@@ -110,7 +111,8 @@ echo "KO_END";
     else if($_POST['scrnN'] == "setdelete"){
       send_LINE("ต้นข้าว ยกเลิกให้แลัวค่ะ");
       getMqttfromlineMsg($Topic,"ยกเลิกทั้งหมด");
-      $URL = "https://sot1.herokuapp.com/fafwfdxcsjflkajLKJKALSjfalkjfKL97897813Lib4Lit4LirZXdzZGZzZGU=.html";
+       $ini_array = parse_ini_file("sample.ini");
+      $URL = "https://".$ini_array['SOTSS'].".herokuapp.com/fafwfdxcsjflkajLKJKALSjfalkjfKL97897813Lib4Lit4LirZXdzZGZzZGU=.html";
 		
       echo '<script type="text/javascript">
              window.location = "'.$URL.'"</script>';
