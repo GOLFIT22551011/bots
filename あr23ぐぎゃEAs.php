@@ -16,7 +16,7 @@ function send_LINE($msg){
         
         'messages' => [$messages],
       ];
-      $post = json_encode($data);
+      $post = json_encode($messages);
       $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
       $ch = curl_init($url);
 	  curl_setopt($ch, CURLOPT_URL,$url);
