@@ -65,18 +65,12 @@ if($_GET['path'] == "removetime" ){
         $SWITCHSS =$ini_array['SWITCHS'] ; 
 	
 	
-	        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+	 $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา มีอะไรให้รับใช้ค่ะ";
         replyMsg($arrayHeader,$arrayPostData);
-             getMqttfromlineMsg("NodeMCU1","DeleteTime");
              
-          
-             $ini_array = parse_ini_file("sample.ini");
-             $URL = "https://".$ini_array['SOTSS'].".herokuapp.com/u@losp@fd.html?APP=".$APPIDSS."&&KE=".$KEYSS."&&SECR=".$SECRETSS."&&SWIT=".$SWITCHSS;
-		
-             echo '<script type="text/javascript">
-             window.location = "'.$URL.'"</script>';
+           
              
 	echo "OK";
 		
