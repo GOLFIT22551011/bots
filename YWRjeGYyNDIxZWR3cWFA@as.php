@@ -19,49 +19,7 @@ if (!is_null($events['TimeSN'])) {
 	 echo "OK";
 }
       
-if($_GET['path'] == "removetime" ){ 
-        $ini_array = parse_ini_file("sample.ini");
-        $APPIDSS=$ini_array['APPIDS']; 
-        $KEYSS=$ini_array['KEYS']; 
-        $SECRETSS=$ini_array['SECRETS']; 
-        $SWITCHSS =$ini_array['SWITCHS'] ; 
-	
-	if (!is_null($events['events'])) {
-	echo "line bot";
-	// Loop through each event
-	foreach ($events['events'] as $event) {
-		// Reply only when message sent is in 'text' format
-		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
-			// Get text sent
-			$text = $event['message']['text'];
-			// Get replyToken
-			$replyToken = $event['replyToken'];
-			// Build message to reply back
-			$Topic = "NodeMCU1" ;
-			//getMqttfromlineMsg($Topic,$text);
-			   
-			
-		}
-	}
-}
-	         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-		$arrayPostData['messages'][0]['type'] = "text";
-		$arrayPostData['messages'][0]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
-		replyMsg($arrayHeader,$arrayPostData);
-             getMqttfromlineMsg("NodeMCU1","DeleteTime");
-             
-          
-             $ini_array = parse_ini_file("sample.ini");
-             $URL = "https://".$ini_array['SOTSS'].".herokuapp.com/u@losp@fd.html?APP=".$APPIDSS."&&KE=".$KEYSS."&&SECR=".$SECRETSS."&&SWIT=".$SWITCHSS;
-		
-             echo '<script type="text/javascript">
-             window.location = "'.$URL.'"</script>';
-             
-	echo "OK";
-		
-		
-	}
- 
+
 
 
 
@@ -97,6 +55,34 @@ echo "KO_END";
     $arrayHeader[] = "Content-Type: application/json";
     $arrayHeader[] = "Authorization: Bearer {$accessToken}";
 
+
+
+if($_GET['path'] == "removetime" ){ 
+        $ini_array = parse_ini_file("sample.ini");
+        $APPIDSS=$ini_array['APPIDS']; 
+        $KEYSS=$ini_array['KEYS']; 
+        $SECRETSS=$ini_array['SECRETS']; 
+        $SWITCHSS =$ini_array['SWITCHS'] ; 
+	
+	
+	         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+		$arrayPostData['messages'][0]['type'] = "text";
+		$arrayPostData['messages'][0]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
+		replyMsg($arrayHeader,$arrayPostData);
+             getMqttfromlineMsg("NodeMCU1","DeleteTime");
+             
+          
+             $ini_array = parse_ini_file("sample.ini");
+             $URL = "https://".$ini_array['SOTSS'].".herokuapp.com/u@losp@fd.html?APP=".$APPIDSS."&&KE=".$KEYSS."&&SECR=".$SECRETSS."&&SWIT=".$SWITCHSS;
+		
+             echo '<script type="text/javascript">
+             window.location = "'.$URL.'"</script>';
+             
+	echo "OK";
+		
+		
+	}
+ 
 
  if($text == "สวัสดีต้นข้าว1"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
