@@ -30,7 +30,7 @@ if($_GET['path'] == "removetime" ){
 		replyMsg($arrayHeader,$arrayPostData);
              getMqttfromlineMsg("NodeMCU1","DeleteTime");
              
-             $text="สวัสดีต้นข้าว"
+             $text="สวัสดีต้นข้าว";
              $ini_array = parse_ini_file("sample.ini");
              $URL = "https://".$ini_array['SOTSS'].".herokuapp.com/u@losp@fd.html?APP=".$APPIDSS."&&KE=".$KEYSS."&&SECR=".$SECRETSS."&&SWIT=".$SWITCHSS;
 		
