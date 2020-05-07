@@ -30,7 +30,7 @@ if($_GET['path'] == "removetime" ){
 		replyMsg($arrayHeader,$arrayPostData);
              getMqttfromlineMsg("NodeMCU1","DeleteTime");
              
-             $text="สวัสดีต้นข้าว";
+             text="สวัสดีต้นข้าว";
             
          
 	}
@@ -69,7 +69,7 @@ $Topic = "NodeMCU1" ;
     $arrayHeader = array();
     $arrayHeader[] = "Content-Type: application/json";
     $arrayHeader[] = "Authorization: Bearer {$accessToken}";
-    $text = "สวัสดีต้นข้าว";
+    text = "สวัสดีต้นข้าว";
 
  if($text == "สวัสดีต้นข้าว"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
