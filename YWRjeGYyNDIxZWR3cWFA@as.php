@@ -19,21 +19,7 @@ if (!is_null($events['TimeSN'])) {
 	 echo "OK";
 }
       
-if($_GET['path'] == "removetime" ){ 
-        $ini_array = parse_ini_file("sample.ini");
-        $APPIDSS=$ini_array['APPIDS']; 
-        $KEYSS=$ini_array['KEYS']; 
-        $SECRETSS=$ini_array['SECRETS']; 
-        $SWITCHSS =$ini_array['SWITCHS'] ; 
-		$arrayPostData['messages'][0]['type'] = "text";
-		$arrayPostData['messages'][0]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
-		replyMsg($arrayHeader,$arrayPostData);
-             getMqttfromlineMsg("NodeMCU1","DeleteTime");
-             
-             text="สวัสดีต้นข้าว";
-            
-         
-	}
+
  
 
 
@@ -56,12 +42,27 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-
+if($_GET['path'] == "removetime1" ){ 
+        $ini_array = parse_ini_file("sample.ini");
+  $accessToken=$ini_array['accessToken']; 
+  $content = file_get_contents('php://input');
+    $arrayJson = json_decode($content, true);
+    $arrayHeader = array();
+    $arrayHeader[] = "Content-Type: application/json";
+    $arrayHeader[] = "Authorization: Bearer {$accessToken}";
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา มีอะไรให้รับใช้ค่ะ";
+        replyMsg($arrayHeader,$arrayPostData);
+ 
+		
+		
+	}
 	
 
 
 $Topic = "NodeMCU1" ;
-
+echo "KO_END";
   $ini_array = parse_ini_file("sample.ini");
   $accessToken=$ini_array['accessToken']; 
   $content = file_get_contents('php://input');
@@ -69,7 +70,7 @@ $Topic = "NodeMCU1" ;
     $arrayHeader = array();
     $arrayHeader[] = "Content-Type: application/json";
     $arrayHeader[] = "Authorization: Bearer {$accessToken}";
-    text = "สวัสดีต้นข้าว";
+
 
  if($text == "สวัสดีต้นข้าว"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
@@ -77,6 +78,16 @@ $Topic = "NodeMCU1" ;
         $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา มีอะไรให้รับใช้ค่ะ";
         replyMsg($arrayHeader,$arrayPostData);
     }
+else if($_GET['path'] == "removetime" ){ 
+     
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา มีอะไรให้รับใช้ค่ะ";
+        replyMsg($arrayHeader,$arrayPostData);
+ 
+		
+		
+	}
     else if($text == "ต้นข้าว"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
