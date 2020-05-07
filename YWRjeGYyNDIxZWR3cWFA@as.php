@@ -61,7 +61,7 @@ if (!is_null($events['events'])) {
 
 
 $Topic = "NodeMCU1" ;
-echo "KO_END";
+
   $ini_array = parse_ini_file("sample.ini");
   $accessToken=$ini_array['accessToken']; 
   $content = file_get_contents('php://input');
@@ -69,7 +69,7 @@ echo "KO_END";
     $arrayHeader = array();
     $arrayHeader[] = "Content-Type: application/json";
     $arrayHeader[] = "Authorization: Bearer {$accessToken}";
-
+    $text = "สวัสดีต้นข้าว";
 
  if($text == "สวัสดีต้นข้าว"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
