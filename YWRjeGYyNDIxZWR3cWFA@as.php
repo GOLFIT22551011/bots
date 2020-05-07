@@ -58,21 +58,10 @@ echo "KO_END";
 
 
 if($_GET['path'] == "removetime" ){ 
-        $ini_array = parse_ini_file("sample.ini");
-        $APPIDSS=$ini_array['APPIDS']; 
-        $KEYSS=$ini_array['KEYS']; 
-        $SECRETSS=$ini_array['SECRETS']; 
-        $SWITCHSS =$ini_array['SWITCHS'] ; 
-	
-	
-	 $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา มีอะไรให้รับใช้ค่ะ";
         replyMsg($arrayHeader,$arrayPostData);
-             
-           
-             
-	echo "OK";
 		
 		
 	}
