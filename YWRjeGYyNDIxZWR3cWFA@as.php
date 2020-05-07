@@ -65,10 +65,10 @@ if($_GET['path'] == "removetime" ){
         $SWITCHSS =$ini_array['SWITCHS'] ; 
 	
 	
-	         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-		$arrayPostData['messages'][0]['type'] = "text";
-		$arrayPostData['messages'][0]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
-		replyMsg($arrayHeader,$arrayPostData);
+	        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา มีอะไรให้รับใช้ค่ะ";
+        replyMsg($arrayHeader,$arrayPostData);
              getMqttfromlineMsg("NodeMCU1","DeleteTime");
              
           
