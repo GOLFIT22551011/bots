@@ -25,6 +25,25 @@ if($_GET['path'] == "removetime" ){
         $KEYSS=$ini_array['KEYS']; 
         $SECRETSS=$ini_array['SECRETS']; 
         $SWITCHSS =$ini_array['SWITCHS'] ; 
+	
+	if (!is_null($events['events'])) {
+	echo "line bot";
+	// Loop through each event
+	foreach ($events['events'] as $event) {
+		// Reply only when message sent is in 'text' format
+		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+			// Get text sent
+			$text = $event['message']['text'];
+			// Get replyToken
+			$replyToken = $event['replyToken'];
+			// Build message to reply back
+			$Topic = "NodeMCU1" ;
+			//getMqttfromlineMsg($Topic,$text);
+			   
+			
+		}
+	}
+}
 	         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
 		$arrayPostData['messages'][0]['type'] = "text";
 		$arrayPostData['messages'][0]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
