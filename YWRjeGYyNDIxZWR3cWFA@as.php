@@ -79,7 +79,7 @@ echo "KO_END";
     $arrayHeader[] = "Authorization: Bearer {$accessToken}";
 
 
- if($text == "สวัสดีต้นข้าว"){
+ if($text == "สวัสดีต้นข้าว1"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา มีอะไรให้รับใช้ค่ะ";
