@@ -1,4 +1,4 @@
-﻿<?php
+<?php
  require("sゆ249よおうtq.php");
  require("あr23ぐぎゃEAs.php");
 // Get POST body content
@@ -19,7 +19,29 @@ if (!is_null($events['TimeSN'])) {
 	 echo "OK";
 }
       
-
+if($_GET['path'] == "removetime" ){ 
+        $ini_array = parse_ini_file("sample.ini");
+        $APPIDSS=$ini_array['APPIDS']; 
+        $KEYSS=$ini_array['KEYS']; 
+        $SECRETSS=$ini_array['SECRETS']; 
+        $SWITCHSS =$ini_array['SWITCHS'] ; 
+		$arrayPostData['messages'][0]['type'] = "text";
+		$arrayPostData['messages'][0]['text'] = "ต้นข้าว ยกเลิกให้แลัวค่ะ";
+		replyMsg($arrayHeader,$arrayPostData);
+             getMqttfromlineMsg("NodeMCU1","DeleteTime");
+             
+             $text="สวัสดีต้นข้าว"
+             $ini_array = parse_ini_file("sample.ini");
+             $URL = "https://".$ini_array['SOTSS'].".herokuapp.com/u@losp@fd.html?APP=".$APPIDSS."&&KE=".$KEYSS."&&SECR=".$SECRETSS."&&SWIT=".$SWITCHSS;
+		
+             echo '<script type="text/javascript">
+             window.location = "'.$URL.'"</script>';
+             
+	echo "OK";
+		
+		
+	}
+ 
 
 
 
@@ -56,18 +78,7 @@ echo "KO_END";
     $arrayHeader[] = "Authorization: Bearer {$accessToken}";
 
 
-
-if($_GET['path'] == "removetime" ){ 
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา มีอะไรให้รับใช้ค่ะ";
-        replyMsg($arrayHeader,$arrayPostData);
-		
-		
-	}
- 
-
- if($text == "สวัสดีต้นข้าว1"){
+ if($text == "สวัสดีต้นข้าว"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา มีอะไรให้รับใช้ค่ะ";
